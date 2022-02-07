@@ -1,0 +1,1362 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="BokkeNasu" href="http://sugarsbn.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="BokkeNasu" href="http://sugarsbn.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="BokkeNasu" href="http://sugarsbn.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://sugarsbn.github.io/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+
+
+
+  <title>
+概率论与数理统计 |
+SuBonan = BokkeNasu</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">概率论与数理统计
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="作成日：2021-12-06 09:05:13">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">投稿日</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-06T09:05:13+08:00">2021-12-06</time>
+  </span>
+  <span class="item" title="単語数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">単語数</span>
+    <span>5.5k</span>
+    <span class="text">単語</span>
+  </span>
+  <span class="item" title="読書の時間">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">読書の時間</span>
+    <span>5 分</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="ナビゲーションバーの切り替え">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">SuBonan</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr54au9pi5j30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5cgrwdhkj30sg0in7ey.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53z18g73j30xc0nlqv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr54bsztscj30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr53vy6mkpj32540u0x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr5ceevli2j30xc0or1hc.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">ホーム</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="http://sugarsbn.github.io/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="SuBonan">
+    <meta itemprop="description" content=", やがて、平凡な人になる">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="BokkeNasu">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p><em>没有什么比年轻时代更感寂寞的了。</em>——《こころ》</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+<a id="more"></a>
+<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="随机事件及其概率"><a href="#随机事件及其概率" class="headerlink" title="随机事件及其概率"></a>随机事件及其概率</h2><h3 id="随机事件及其运算"><a href="#随机事件及其运算" class="headerlink" title="随机事件及其运算"></a>随机事件及其运算</h3><p><strong>随机试验</strong>：</p>
+<blockquote>
+<ul>
+<li>试验可在相同条件下重复进行。</li>
+<li>试验的结果不止一个，且都明确可知。</li>
+<li>每次试验之前，不知道哪个结果将会出现。</li>
+</ul>
+</blockquote>
+<ul>
+<li>试验$E$中的每一个可能结果称为<strong>基本事件</strong>，或称为<strong>样本点</strong>，所有基本事件组成的集合称为试验$E$的样本空间，记为$\Omega$。</li>
+<li>具有某种性质的样本点构成的集合称为试验$E$的<strong>随机事件</strong>，简称为<strong>事件</strong>。用大写字母表示。事件是样本空间的子集。</li>
+<li>在随机试验中，事件A发生当且仅当A包含的某一样本点出现。</li>
+<li>又样本空间中所有的样本点组成的事件称为<strong>必然事件</strong>，就用$\Omega$表示，而空集则为不可能事件。</li>
+</ul>
+<p>事件的关系：包含、并、交、差、互不相容事件、对立事件都可以对应集合关系。</p>
+<h3 id="古典概型与几何概型"><a href="#古典概型与几何概型" class="headerlink" title="古典概型与几何概型"></a>古典概型与几何概型</h3><blockquote>
+<p>定义：设在相同的条件下，进行了n次试验，在这n次试验中事件A出现了m次，则称：</p>
+<script type="math/tex; mode=display">
+f_n(A)=\frac{m}{n}</script><p>为随机事件A在n次试验中出现的频率，m称为频数。</p>
+</blockquote>
+<ul>
+<li>经验表明，当试验次数相当大时，频率总是稳定于某一常数附近，以某一常数为中心作微小的摆动，这称为<strong>频率的稳定性</strong>。</li>
+</ul>
+<blockquote>
+<p>定义：在大量重复试验中，若事件A发生的频率稳定在某一常数p附近摆动，则称改常数p为事件A发生的<strong>概率</strong>，记为$P(A)=p$。</p>
+</blockquote>
+<ul>
+<li>注意n足够大，有$f_n(A)\approx P(A)$。</li>
+</ul>
+<blockquote>
+<p>古典概型定义：设试验结果共有n个基本事件$\omega_1,…,\omega_n$，而且这些事件发生的可能性相等。事件A由其中的m个基本事件组成，则事件A的概率为：</p>
+<script type="math/tex; mode=display">
+P(A)=\frac{m}{n}</script></blockquote>
+<ul>
+<li>注意古典概型要求了：<ul>
+<li>基本事件是<strong>有限可数的</strong>。</li>
+<li>每次试验中，每个基本事件发生是<strong>等可能的</strong>。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>几何概型定义：如果试验$E$的可能结果可以几何地表示为某区域$\Omega$中的一个点，并且点落在$\Omega$中某区域A的概率与A的测度成正比，而与A的形状无关。则随机点落在区域A的概率为：</p>
+<script type="math/tex; mode=display">
+P(A)=\frac{mA}{m\Omega}</script><p>其中$mA$表示A的测度。</p>
+</blockquote>
+<h3 id="概率的公理化定理及其性质"><a href="#概率的公理化定理及其性质" class="headerlink" title="概率的公理化定理及其性质"></a>概率的公理化定理及其性质</h3><ul>
+<li>几何概型中，由于计算事件的概率需要几何图形的测度，因此不能把不可测集当作事件。于是我们可以递归定义事件集合。（即产生了全部的合法事件）</li>
+</ul>
+<blockquote>
+<ul>
+<li>$\Omega \in \mathscr{F} $</li>
+<li>若$A\in\mathscr{F}$，则$\bar{A} \in \mathscr{F}$</li>
+<li>若$A_n\in\mathscr{F},n=1,2,3,…$，则$\bigcup_{n=1}^{\infin}A_n\in\mathscr{F}$（其实这个要求结合上前两个也就可以证明集合对交封闭）</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>满足上述三个规定的子集称为$\sigma$<strong>域</strong>，或称$\sigma$<strong>代数</strong>，在概率论中我们称为<strong>事件域</strong>。</p>
+<ul>
+<li><p>例：<strong>一维博雷尔域</strong>：一切形如$[a,b)$的有界左闭右开的开区间构成的集类产生的$\sigma$域。（注意并不是说博雷尔$\sigma$域中所有元素都是形如$[a,b)$的，而是说元素都是由$\{[a,b)|a,b\in R\}$和上面三条规则生成的）对博雷尔域，有：</p>
+<ul>
+<li>$\{x\}=\bigcap_{n=1}^\infin[x,x+\frac{1}{n})$</li>
+<li>$(x,y)=[x,y)- \{ x \}$</li>
+<li>$[x,y]=[x,y)+ \{ x \}$</li>
+<li>$(x,y]=[x,y)+ \{ y \}- \{ x \}$</li>
+</ul>
+<p>因此，任何一维实数区间都是博雷尔域中的元素。</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>概率的公理化：对于样本空间的一个事件域，若对于事件域中的任何一个事件A，都有一个实数$P(A)$与之对应，并且满足：</p>
+<ul>
+<li><p>非负性：$P(A)\geq 0$</p>
+</li>
+<li><p>规范性：$P(\Omega)\geq 0$</p>
+</li>
+<li><p>可列可加性：对于两两互不相容的可列个事件$A_1,…,A_n,…$，有</p>
+<script type="math/tex; mode=display">
+P(\sum_{i=1}^\infin A_i)=\sum_{i=1}^\infin P(A_i)</script></li>
+</ul>
+<p>则称$P(A)$为事件A的<strong>概率</strong>。</p>
+</blockquote>
+<p>显然概率有可列可加，可减，单调性等等。</p>
+<ul>
+<li><strong>上下连续性</strong>：若有$A_1\subset A_2\subset …\subset A_n\subset…$，则：<script type="math/tex; mode=display">
+P(\bigcup_{i=1}^\infin A_i)=\lim_{n\rightarrow\infin}P(A_n)\\</script>若有$A_1\supset A_2\supset…\subset A_n\supset…$，则：<script type="math/tex; mode=display">
+P(\bigcap_{i=1}^\infin A_i)=\lim_{n\rightarrow\infin}P(A_n)</script></li>
+</ul>
+<blockquote>
+<p><strong>概率空间</strong>：三元组$(\Omega,\mathscr{F},P)$。</p>
+</blockquote>
+<h3 id="条件概率与事件独立性"><a href="#条件概率与事件独立性" class="headerlink" title="条件概率与事件独立性"></a>条件概率与事件独立性</h3><ul>
+<li>事件A发生的前提下，事件B发生的概率称为<strong>条件概率</strong>，记为：$P(B|A)$。</li>
+</ul>
+<blockquote>
+<p>设$(\Omega,\mathscr{F},P)$是一个概率空间，$A\in\mathscr{F}$，$P(A)&gt;0$。则对任意$B\in\mathscr{F}$，记：</p>
+<script type="math/tex; mode=display">
+P(B|A)=\frac{P(AB)}{P(A)}</script></blockquote>
+<ul>
+<li><p>条件概率也满足：</p>
+<ul>
+<li>非负性：$\forall B,P(B|A)\geq 0$</li>
+<li>规范性：$P(\Omega|A)=1$</li>
+<li>可列可加性：$P(\sum_{i=1}^\infin A_i|B)=\sum_{i=1}^\infin P(A_i|B)$</li>
+</ul>
+</li>
+<li><p>条件概率的乘法公式：</p>
+<script type="math/tex; mode=display">
+P(A_1A_2...A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1A_2...A_{n-1})\\
+P(A_1A_2...A_{n-1})>0</script></li>
+</ul>
+<blockquote>
+<p>若对概率空间中的两个事件A，B，有：</p>
+<script type="math/tex; mode=display">
+P(AB)=P(A)P(B)</script><p>则称事件A与事件B是<strong>相互独立</strong>。否则称他们不相互独立，或<strong>相依</strong>的。</p>
+</blockquote>
+<ul>
+<li>定理：若事件A与B相互独立，则事件$\bar{A}$和$B$也是相互独立的。</li>
+</ul>
+<blockquote>
+<p>对于三个事件$A,B,C$，若有：</p>
+<script type="math/tex; mode=display">
+\begin{cases}P(AB)=P(A)P(B)\\P(AC)=P(A)P(C)\\P(BC)=P(B)P(C)\end{cases}</script><p>则称它们<strong>两两独立</strong>。若有：</p>
+<script type="math/tex; mode=display">
+\begin{cases}P(AB)=P(A)P(B)\\P(AC)=P(A)P(C)\\P(BC)=P(B)P(C)\\P(ABC)=P(A)P(B)P(C)\end{cases}</script><p>则称A, B, C<strong>相互独立</strong>。</p>
+</blockquote>
+<ul>
+<li>相互独立可以推出两两独立，但两两独立无法推出相互独立。一般地，对于一个事件序列$A_1,…,A_n,…$，若其中任意有限个事件都相互独立，则称$A_1,…,A_n,…$是<strong>独立事件序列</strong>。</li>
+</ul>
+<h3 id="全概率公式与贝叶斯公式"><a href="#全概率公式与贝叶斯公式" class="headerlink" title="全概率公式与贝叶斯公式"></a>全概率公式与贝叶斯公式</h3><blockquote>
+<p>定义：设$A_1,…,A_n$是一组事件，若它们两两互不相容，而且：</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n A_i=\Omega</script><p>则称它们是样本空间的一个<strong>分割</strong>，亦称<strong>完备事件组</strong>。</p>
+<p>全概率公式：对于$\Omega$的一个分割$A_1,…,A_n,P(A_i)&gt;0$,有：</p>
+<script type="math/tex; mode=display">
+\forall B\in\mathscr{F},P(B)=\sum_{i=1}^nP(B|A_i)</script></blockquote>
+<ul>
+<li>我愿称之为形式化的分类讨论。</li>
+</ul>
+<blockquote>
+<p>贝叶斯公式：对于概率空间$(\Omega,\mathscr{F},P)$，$A_1,A_2,…,A_n$是样本空间的一个分割，则对任意$B\in\mathscr{F}$，$P(B)&gt;0$，有：</p>
+<script type="math/tex; mode=display">
+P(A_k|B)=\frac{P(A_k)P(B|A_k)}{\sum_{j=1}^n P(A_j)P(B|A_j)},k=1,2,...,n</script></blockquote>
+<ul>
+<li>我愿称之为展开的概率反演。$P(A|B)=P(AB)/P(B)=P(AB)/P(A)<em>P(A)/P(B)=P(B|A)</em>P(A)/P(B)$。</li>
+</ul>
+<h3 id="伯努利概型"><a href="#伯努利概型" class="headerlink" title="伯努利概型"></a>伯努利概型</h3><blockquote>
+<p>若试验$E_1$的任一结果（事件）都与试验$E_2$的任一结果（事件）相互独立，则称这两个试验相互独立。若试验$E_1,…,E_n$相互独立，则称其为<strong>n重重复试验</strong>。</p>
+<p>若试验$E_1$的可能结果只有$A$和$\bar{A}$，则称其为<strong>伯努利试验</strong>。若将$E_1$重复进行n次，且n次试验都相互独立，则称为<strong>n重伯努利试验</strong>。</p>
+</blockquote>
+<ul>
+<li>n重伯努利试验中，事件A发生k次的概率：<script type="math/tex; mode=display">
+P_n(k)=C_n^kp^k(1-p)^{n-k},P(A)=p</script></li>
+</ul>
+<h2 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h2><h3 id="随机变量与分布函数"><a href="#随机变量与分布函数" class="headerlink" title="随机变量与分布函数"></a>随机变量与分布函数</h3><blockquote>
+<p><strong>定义</strong>：设$X(\omega)$是定义在概率空间$(\Omega,\mathscr{F},P)$上的单值实函数，即对每个$\omega\in\Omega$，都有$X(\omega)\in R$，并且对任意$x\in R$，$\{\omega|X(\omega)\leq x\}$都是随机事件（即其$\in\mathscr{F}$）则称$X(\omega)$是概率空间上的<strong>随机变量</strong>。通常简记为X。</p>
+</blockquote>
+<ul>
+<li>分布函数：$X\sim F(x)=P(X\leq x)$。定理：<ul>
+<li>单调不减：$a&lt;b\Rightarrow F(a)\leq F(b)$。</li>
+<li>$0\leq F(x)\leq 1,\lim_{n\rightarrow +\infin}F(x)=1,\lim_{n\rightarrow-\infin}F(x)=-1$。</li>
+<li>右连续性：$F(x)$在任何点x处右连续。<ul>
+<li>用$\bigcap\{X\leq x+\frac{1}{n}\}=\{X\leq x\}$和右极限$=\lim_{n\rightarrow\infin}F(x+\frac{1}{n})$来证明。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>随机变量有离散型，非离散型（连续型，奇异型）等等分类。</li>
+</ul>
+<h3 id="离散型随机变量及其分布"><a href="#离散型随机变量及其分布" class="headerlink" title="离散型随机变量及其分布"></a>离散型随机变量及其分布</h3><blockquote>
+<p>设离散型随机变量X的所有可能取得值为$x_1,…,x_n$，而X取$x_k$的概率为$p_k$，即$P(X=x_k)=p_k(k=1,…,n)$。</p>
+<p>称上式为随机变量X的<strong>概率分布律</strong>。</p>
+</blockquote>
+<ul>
+<li><p>常见分布：</p>
+<ul>
+<li><p>退化分布：$P(X=C)=1$</p>
+</li>
+<li><p>两点分布：$P(X=0)=p,P(X=1)=1-p$</p>
+</li>
+<li><p>二项分布：$P(X=k)=C_n^kp^k(1-p)^{n-k}$</p>
+<ul>
+<li>当$(n+1)p$为整数时，在$k=(n+1)p,(n+1)p-1$处概率取得最大值。若不为整数，则在$[(n+1)p]$取得最大值。于是$[(n+1)p]$称为二项分布$B(n,p)$的<strong>最可能出现次数</strong>，或称<strong>最可能值</strong>。</li>
+<li>$E[X]=np,D(X)=np(1-p)$</li>
+</ul>
+</li>
+<li><p>几何分布：$P(X=k)=(1-p)^{k-1}p$，记为$X\sim G(p)$。有$\sum_{i=1}^\infin P(X=k)=1$。</p>
+</li>
+<li><p>超几何分布：N件产品中有M件次品，现抽n件出来，其中的次品数服从超几何分布：</p>
+<script type="math/tex; mode=display">
+P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=1,..,min(n,M)</script></li>
+</ul>
+</li>
+<li></li>
+</ul>
+<blockquote>
+<p><strong>泊松定理</strong>：设随机变量$X_n\sim B(n,p_n),(n=1,2,…)$。若有$\lim_{n\rightarrow\infin}np_n=\lambda$，则有：</p>
+<script type="math/tex; mode=display">
+\lim_{n\rightarrow\infin}P(X_n=k)=\frac{\lambda^k}{k!}e^{-\lambda}</script></blockquote>
+<ul>
+<li><p>泊松分布：$X\sim P(\lambda)$：</p>
+<script type="math/tex; mode=display">
+P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda},k=0,1,2,...</script><p>自然界很多稀疏现象都服从泊松分布，故其又称为<strong>稀疏现象律</strong>。泊松分布最可能值为$\lambda,\lambda -1$或$[\lambda]$。 </p>
+<ul>
+<li>$E[X]=\lambda,D(X)=\lambda$</li>
+</ul>
+</li>
+</ul>
+<h3 id="连续型随机变量及其分布"><a href="#连续型随机变量及其分布" class="headerlink" title="连续型随机变量及其分布"></a>连续型随机变量及其分布</h3><blockquote>
+<p>定义：设随机变量X的概率分布函数为$F(x)$，如果存在一个函数$f(x)$，对于任意实数x，都有：</p>
+<script type="math/tex; mode=display">
+F(x)=\int_{-\infin}^xf(t)dt,x\in R</script><p>则称X为<strong>连续性随机变量</strong>，$f(x)$为X的<strong>概率密度函数</strong>。</p>
+</blockquote>
+<ul>
+<li><p>连续型随机变量有：$P(X=a)=0,P(a\leq X\leq b)=P(a&lt;X\leq b)=P(a\leq X&lt;b)=P(a&lt;X&lt;b)$。</p>
+</li>
+<li><p>一个事件概率为零，他并不一定是不可能事件（空集）。同样，概率为1的也不一定是必然事件。</p>
+</li>
+<li><p>常见分布：</p>
+<ul>
+<li><p>均匀分布：$X\sim U[a,b]$：</p>
+<script type="math/tex; mode=display">
+f(x)=\begin{cases}\frac{1}{b-a}&a\leq x\leq b\\0&else\end{cases}</script></li>
+<li><p>指数分布：$X\sim E(\lambda)$:</p>
+<script type="math/tex; mode=display">
+f(x)=\begin{cases}\lambda e^{-\lambda x}&x>0\\0&x\leq 0\end{cases}</script><ul>
+<li>指数分布具有<strong>无记忆性</strong>：$P(X&gt;s+t|X&gt;s)=P(X&gt;t)$。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>$E[X]=\frac{1}{\lambda},D(X)=\frac{1}{\lambda^2}$</p>
+<ul>
+<li><p>正态分布：$X\sim N(\mu,\sigma^2)$:</p>
+<script type="math/tex; mode=display">
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},x\in R</script><ul>
+<li>标准正态分布的概率函数和分布函数记为$\varphi(x),\Phi(x)$。有$\Phi(-x)=1-\Phi(x)$（关于y轴对称）。</li>
+<li>3$\sigma$原则：正态分布几何全部的取值都落在$[\mu-3\sigma,\mu+3\sigma]$内。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><ul>
+<li><p>定理：设连续型随机变量$X$具有概率密度函数$f_X(x)$，其可能的取值范围为$(a,b)$（可以到无穷）。则：</p>
+<ul>
+<li><p>若函数$y=g(x)$在区间$(a,b)$上严格单调，其反函数$x=g^{-1}(y)$有连续的导函数，则$Y=g(X)$也是连续型随机变量，其概率密度函数为：</p>
+<script type="math/tex; mode=display">
+f_Y(y)=\begin{cases}f_X(g^{-1}(y))|(g^{-1})'(y)|& min(g(a),g(b))<y<max(g(a),b(b))\\0&else\end{cases}</script></li>
+<li><p>若函数$y=g(x)$在区间$(a,b)$中不重叠的区间$I_1,…,I_n$上逐段严格单调，其反函数$h_1(y),…,h_n(y)$在段内均有连续导函数，则Y也是连续型随机变量：</p>
+<script type="math/tex; mode=display">
+f_Y(y)=\sum_{i=1}^nf_X(h_i(y))|h_i'(y)|</script></li>
+</ul>
+</li>
+</ul>
+<h2 id="多维随机变量及其分布"><a href="#多维随机变量及其分布" class="headerlink" title="多维随机变量及其分布"></a>多维随机变量及其分布</h2><h3 id="二维随机变量及其分布"><a href="#二维随机变量及其分布" class="headerlink" title="二维随机变量及其分布"></a>二维随机变量及其分布</h3><blockquote>
+<p>定义：设$(X,Y)$是二位随机变量，对任意实数$x,y$，二元函数$ F(x,y)=P(X\leq x,Y\leq y)$称为随机变量$(X,Y)$的联合分布函数。</p>
+</blockquote>
+<ul>
+<li>特别地，如果二阶偏导数$f(x,y)$连续（即与求偏导顺序无关），则定义$f(x,y)=\frac{\partial^2F(x,y)}{\partial x\partial y}$为<strong>联合密度函数</strong>。<ul>
+<li>二维正态分布</li>
+<li>二维均匀分布</li>
+</ul>
+</li>
+</ul>
+<h3 id="边缘分布"><a href="#边缘分布" class="headerlink" title="边缘分布"></a>边缘分布</h3><blockquote>
+<p>记二维随机变量的分布函数$F(x,y)$关于$X$和$Y$的边缘分布函数为$F_X(x)=F(x,+\infin),F_Y(y)=F(+\infin,y)$。同样也有边缘概率密度函数：$f_X(x)=\int_{-\infin}^{+\infin}f(x,y)dy$。</p>
+</blockquote>
+<ul>
+<li>二维正态分布的边缘分布仍为正态分布。</li>
+<li>边缘分布的理解就是不论y取什么，只考虑x的取值情况。就像对多量子比特系统中，对单一比特进行测量之后引起的系统的坍塌。</li>
+</ul>
+<h3 id="条件分布"><a href="#条件分布" class="headerlink" title="条件分布"></a>条件分布</h3><blockquote>
+<p>条件概率分布函数的定义为：$F_{Y|X}(y|x)=\frac{F(x,y)}{f_X(x)}=\int_{-\infin}^y\frac{f(x,v)dv}{f_X(x)}$，条件概率密度函数为$f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}$</p>
+</blockquote>
+<h3 id="随机变量的独立性"><a href="#随机变量的独立性" class="headerlink" title="随机变量的独立性"></a>随机变量的独立性</h3><blockquote>
+<p>若对二维随机变量$(X,Y)$，有$\forall x,y.F(x,y)=F_X(x)F_Y(y)$或$f(x,y)=f_X(x)f_Y(y)$（两式等价），则称X与Y<strong>相互独立</strong>。</p>
+</blockquote>
+<h3 id="二维随机变量函数的分布"><a href="#二维随机变量函数的分布" class="headerlink" title="二维随机变量函数的分布"></a>二维随机变量函数的分布</h3><p>令$Z=g(X,Y)$，一般会先求$Z$的分布函数$F_Z(z)=\iint_{g(x,y)\leq z}f(x,y)dxdy$，然后再求导得到$f_Z(z)$。</p>
+<ul>
+<li>若$Z=X+Y$，有$f_Z(z)=\int_{-\infin}^{+\infin}f(x,z-x)dx=\int_{-\infin}^{+\infin}f(z-y,y)dy$。（令$u=x+y$）<strong>概率密度函数卷积公式</strong></li>
+<li>若$Z=\frac{X}{Y}$，有$f_Z(z)=\int_{-\infin}^{+\infin}f(yz,y)|y|dy$。</li>
+<li>若$Z=max(X,Y)$，有$F_Z(z)=F_X(z)F_Y(z)$。（若X，Y相互独立）</li>
+<li>若$Z=min(X,Y)$，有$F_Z(z)=1-[1-F_X(z)][1-F_Y(z)]$。</li>
+</ul>
+<h2 id="随机变量的数字特征与极限定理"><a href="#随机变量的数字特征与极限定理" class="headerlink" title="随机变量的数字特征与极限定理"></a>随机变量的数字特征与极限定理</h2><h3 id="数学期望"><a href="#数学期望" class="headerlink" title="数学期望"></a>数学期望</h3><blockquote>
+<p>设连续型随机变量$X$的概率密度函数为$f(x)$，若积分$\int_{-\infin}^{+\infin}xf(x)dx$绝对收敛，则称该积分值为X的数学期望。</p>
+</blockquote>
+<ul>
+<li><p>若积分$\int_{-\infin}^{+\infin}g(x)f(x)dx$绝对收敛，则有：</p>
+<script type="math/tex; mode=display">
+E[g(X)]=\int_{-\infin}^{+\infin}g(x)f(x)dx</script></li>
+<li><p>对任意随机变量X，Y都有$E[X+Y]=E[X]+E[Y]$，但只有当它们独立时，才有$E[XY]=E[X]E[Y]$。</p>
+</li>
+<li>柯西-施瓦泽不等式：$(E[XY])^2\leq E[X^2]E[Y^2]$。</li>
+</ul>
+<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><blockquote>
+<p>设X是随机变量，如果$E[(X-E(X))^2]$存在，则称之为X的方差，记为$D(X)$。</p>
+</blockquote>
+<ul>
+<li>$D(X)=E[(X-E[X])^2]=E[X^2]-2E[X]E[X]+E[X]^2=E[X^2]-E[X]^2$。</li>
+</ul>
+<h3 id="协方差与相关系数"><a href="#协方差与相关系数" class="headerlink" title="协方差与相关系数"></a>协方差与相关系数</h3><blockquote>
+<p>定义$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$称为随机变量$X$和$Y$的<strong>协方差</strong>，$\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$称为随机变量X和Y的<strong>相关系数</strong>。</p>
+</blockquote>
+<ul>
+<li>常用计算协方差方法：$Cov(X,Y)=E[XY]-E[X][Y]$。</li>
+<li>性质：<ul>
+<li>$Cov(X,Y)=Cov(Y,X)$</li>
+<li>$Cov(a_1X+b_1,a_2Y+b_2)=a_1a_2Cov(X,Y)$</li>
+<li>$Cov(X_1+X_2,Y)=Cov(X_1,Y)+Cov(X_2,y)$</li>
+<li>$D(X\pm Y)=D(X)+D(Y)\pm 2Cov(X,Y)$</li>
+<li>$X,Y$独立$\Leftrightarrow Cov(X,Y)=0$</li>
+<li>$|\rho_{XY}|\leq 1$，且取等的充要条件是$X$和$Y$呈线性关系。</li>
+</ul>
+</li>
+<li><p>一般来说，$|\rho_{XY}|$越大，X和Y的“线性相关”越强，若$\rho_{XY}=0$，则它们独立。注意，当且仅当$\rho_{XY}=0$时称他们<strong>不相关</strong>。</p>
+</li>
+<li><p>$X$和$Y$独立$\Rightarrow Cov(X,Y)=0$，反之不一定成立。譬如$X\sim U[-1,1],Y=X^2$。</p>
+</li>
+</ul>
+<blockquote>
+<p>称$E[X^k]$为X的<strong>k阶原点矩</strong>。</p>
+<p>称$E[(X-E[X])^2]$为X的<strong>k阶中心矩</strong>。</p>
+<p>称$E[X^kY^l]$为X和Y的<strong>k+l阶混合矩</strong>。</p>
+<p>称$E[(X-E[X])^k(Y-E[Y])^l]$为X和Y的<strong>k+l阶中心混合矩</strong>。</p>
+</blockquote>
+<h3 id="大数定律"><a href="#大数定律" class="headerlink" title="大数定律"></a>大数定律</h3><blockquote>
+<p>切比雪夫不等式：</p>
+<script type="math/tex; mode=display">
+\forall \varepsilon>0,P(|X-E[X]|\geq\varepsilon)\leq\frac{D(X)}{\varepsilon^2}</script></blockquote>
+<ul>
+<li><p>切比雪夫大数定律：</p>
+<p>设随机变量$X_1,…,X_n,…$相互独立，且有相同的数学期望和方差，即：$E[X_k]\equiv \mu,D(X_k)\equiv \sigma^2$，则有：</p>
+<script type="math/tex; mode=display">
+\forall\varepsilon >0,\lim_{n\rightarrow\infin}P(|\frac{1}{n}\sum_{k=1}^nX_k-\mu|<\varepsilon)=1</script></li>
+<li><p>辛钦大数定律：</p>
+<p>设随机变量$X_1,…,X_n,…$独立同分布，且有相同的数学期望，即$E[X_k]\equiv\mu$，则：</p>
+<script type="math/tex; mode=display">
+\forall\varepsilon>0,\lim_{n\rightarrow\infin}P(|\frac{1}{n}\sum_{k=1}^{n}X_k-\mu|<\varepsilon)=1</script><p>它不要求方差的存在，但要求同分布。</p>
+</li>
+<li><p>伯努利大数定律：</p>
+<p>在伯努利概型中（n次独立重复试验，k为事件A发生的次数，每次试验A发生的概率为p），有：</p>
+<script type="math/tex; mode=display">
+\forall\varepsilon>0,\lim_{n\rightarrow\infin}P(|\frac{k_n}{n}-p|<\varepsilon)=1</script><p>伯努利大数定律从理论上说明任一随机事件的<strong>频率具有稳定性</strong>。因此可以在大量试验后，将发生的频率近似作为概率。</p>
+</li>
+</ul>
+<h3 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h3><p>很多独立随机变量的极限分布是正态分布。</p>
+<ul>
+<li><p>列维-林德伯格中心极限定理：</p>
+<p>设$X_1,X_2,…,X_n,…$是独立同分布的随机变量：$E[X_k]\equiv \mu,D(X_k)\equiv\sigma^2$，则有：</p>
+<script type="math/tex; mode=display">
+\forall x,\lim_{n\rightarrow\infin}P(\frac{\sum_{i=1}^nX_k-n\mu}{\sigma\sqrt{n}}\leq x)=\Phi(x)</script><p>即独立同分布的随机变量之和$\sum_{i=1}^nX_k$近似于正态分布$N(n\mu,n\sigma^2)$。所以$\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$近似服从$N(0,1)$。</p>
+</li>
+<li><p>蒂莫夫-拉普拉斯中心极限定理：</p>
+<p>设$Y_n$服从二项分布$B(n,p)$，则有：</p>
+<script type="math/tex; mode=display">
+\forall x,\lim_{n\rightarrow\infin}P(\frac{Y_n-np}{\sqrt{np(1-p)}}\leq x)=\Phi(x)</script><p>即n充分大时，二项分布近似于服从$N(np,np(1-p))$。</p>
+</li>
+<li><p>不同分布的中心极限定理：<br>设$X_1,…,X_n,…$是独立不同分布的随机变量，$D(X_i)=\sigma_i^2$。若：</p>
+<script type="math/tex; mode=display">
+\begin{cases}\lim_{n\rightarrow\infin}\sum_{i=1}^n\sigma_i^2=\infin\\\lim_{n\rightarrow\infin}\frac{max(\sigma_i^2)}{n}=0\end{cases}</script><p>则：</p>
+<script type="math/tex; mode=display">
+Y=\lim_{n\rightarrow\infin}\frac{\sum_{i=1}^nX_i}{n}</script><p>服从正态分布。它表示，由足够多的随机变量，但每个随机变量又不起决定性作用，他们的平均随机变量服从正态分布。</p>
+</li>
+</ul>
+<h1 id="数理统计"><a href="#数理统计" class="headerlink" title="数理统计"></a>数理统计</h1><h2 id="数理统计基本知识"><a href="#数理统计基本知识" class="headerlink" title="数理统计基本知识"></a>数理统计基本知识</h2><h3 id="总体与样本"><a href="#总体与样本" class="headerlink" title="总体与样本"></a>总体与样本</h3><ul>
+<li><p>从整体中抽取的<strong>待测</strong>的个体组成的集合称为<strong>样本</strong>。</p>
+<p><strong>简单随机样本</strong>需要满足：</p>
+</li>
+<li><p>独立性：$X_1,…,X_n$是相互独立的随机变量。</p>
+</li>
+<li>代表性：$X_1,…,X_n$要与总体$X$有相同的分布。</li>
+</ul>
+<blockquote>
+<p>设$X_1,…,X_n$为来自总体$X$的简单随机样本，则有：</p>
+<ul>
+<li>$X_1,…,X_n$的联合分布函数为：$F_{X_1,…,X_n}(x_1,…,x_n)=\prod_{i=1}^n F(x_i)$，其中$F(x)$是总体$X$的分布函数。</li>
+<li>$E[X_i]\equiv E[X],D(X_i)\equiv D(X)$。</li>
+</ul>
+</blockquote>
+<h3 id="统计量与三大分布"><a href="#统计量与三大分布" class="headerlink" title="统计量与三大分布"></a>统计量与三大分布</h3><p>不含任何未知参数，只关于样本的实值函数称为样本的一个统计量。常用统计量：</p>
+<ul>
+<li>均值：$\bar{X}=\sum_{i=1}^nX_i$</li>
+<li>样本方差：$S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2=\frac{1}{n-1}(\sum_{i=1}^nX_i^2-n\bar{X})$，这里为什么是除以$n-1$呢，是因为要保证标准差的无偏性，在后面“估计量的优劣评价”中会提到。</li>
+<li>样本标准差：$S=\sqrt{S^2}$</li>
+<li>样本k阶原点矩：$A_k=\frac{1}{n}\sum_{i=1}^nX_i^k$</li>
+<li><p>样本k阶中心矩：$B_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2$</p>
+</li>
+<li><p>顺序统计量：最小、最大统计量$max(X_1,…,X_n),min(X_1,…,X_n)$</p>
+</li>
+</ul>
+<p>二维统计量：</p>
+<ul>
+<li>协方差：$S_{XY}^2=\frac{1}{n-1}\sum_{i=1}^n（X_i-\bar{X})(Y_i-\bar{Y})$</li>
+<li>样本相关系数：$\rho_{XY} = \frac{S_{XY}^2}{S_X S_Y}$</li>
+</ul>
+<hr>
+<p>三大分布：</p>
+<ul>
+<li><p>$\chi^2$分布：</p>
+<p>设随机变量$X_1,…,X_n$独立且都服从标准正态分布，则：</p>
+<script type="math/tex; mode=display">
+\chi^2=X_1^2+...+X_n^2\\
+f_{\chi^2}(x)=\begin{cases}\frac{1}{2^{n/2}\Gamma(n/2)}x^{\frac{n}{2}-1}e^{-x/2}&x>0\\0&x\leq 0\end{cases}</script><p>有$E[\chi^2(n)]=n,D[\chi^n(n)]=2n$。</p>
+<p>$\chi^2(m)+\chi^2(n)=\chi^2(m+n)$。图像：</p>
+<p><img data-src="1.png" alt="1"></p>
+</li>
+<li><p>t分布（学生分布）：</p>
+<p>设随机变量$X,Y$相互独立，且$X\sim N(0,1),Y\sim\chi^2(n)$，则：</p>
+<script type="math/tex; mode=display">
+t=\frac{X}{\sqrt{Y/n}}\\
+f_t(x)=\frac{\Gamma[(n+1)/2]}{\sqrt{n\pi}\Gamma(n/2)}(1+\frac{x^2}{n})^{-\frac{n+1}{2}}</script><p>有$E[t(n)]=0(n&gt;1),D[t(n)]=\frac{n}{n-2}(n&gt;2)$。</p>
+<p>当$n\geq 30$时，已经可以将t分布近似看成标准正态分布。图像：</p>
+<p><img data-src="2.png" alt="2"></p>
+</li>
+<li><p>F分布：</p>
+<p>设随机变量$X$和$Y$相互独立，且$X\sim\chi^2(m),Y\sim\chi^2(n)$，则：</p>
+<script type="math/tex; mode=display">
+F=\frac{X/m}{Y/n}\\</script><p>有$E[F(m,n)]=\frac{n}{n-2},D[F(m,n)]=\frac{2n^2(m+n-2)}{m(n-2)^2(n-4)}$，且$F\sim F(m,n)\Rightarrow\frac{1}{F}\sim F(n,m)$。图图：</p>
+<p><img data-src="3.png" alt="3"></p>
+<p>这些图一个比一个丑</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>上分位数点：$P(X&gt;x_\alpha)=1-F(x_\alpha)=\alpha$，则$x_\alpha$称为X的上$\alpha$分位点。</p>
+</blockquote>
+<ul>
+<li>正态分布的上分位点记为$u_\alpha$。</li>
+<li>$n\geq 40$时，$\chi^2_\alpha(n)\approx\frac{1}{2}(u_\alpha+\sqrt{2n-1})^2$</li>
+<li>由t分布的对称性，有$t_{1-\alpha}(n)=-t_\alpha(n)$</li>
+<li>$F_{1-\alpha}(m,n)=\frac{1}{F_\alpha(n,m)}$</li>
+</ul>
+<hr>
+<p>顺序统计量的分布：设总体X具有分布函数$F(x)$，其密度函数为$f(x)$。则：</p>
+<ul>
+<li>$X_{(1)}=min(X_1,…,X_n),f_{X_{(1)}}(x) = nf(x) [1-F(x)]^{ n-1 }$</li>
+<li>$X_{(n)}=max(X_1,…,X_n),f_{X_{(n)}}(x) = nf(x)[F(x)]^{ n-1 }$</li>
+<li>$f_{X_{(1)},X_{(n)}}(x,y)=n(n-1)f(x)f(y)[F(y)-F(x)]^{n-2}(x\leq y)$。</li>
+<li>$f_{X_{(k)}}(x)=kC_n^kF(x)^{k-1}[1-F(x)]^{n-k}f(x)$</li>
+</ul>
+<h3 id="☆正态总体的抽样分布"><a href="#☆正态总体的抽样分布" class="headerlink" title="☆正态总体的抽样分布"></a>☆正态总体的抽样分布</h3><p>设$X_1,…,X_n$是来自正态总体$X\sim N(\mu,\sigma^2)$的一组样本，则：</p>
+<ul>
+<li>$\bar{X}\sim N(\mu,\frac{\sigma^2}{n})$</li>
+<li>$\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)$</li>
+<li>$\frac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$</li>
+<li>$\bar{X}$与$S^2$相互独立</li>
+</ul>
+<p>设$X_1,…,X_n$是来自正态总体$X\sim N(\mu_1,\sigma_1^2)$的一组样本，设$Y_1,…,Y_n$是来自正态总体$Y\sim N(\mu_2,\sigma_2^2)$的一组样本，且两组样本间独立。则：</p>
+<ul>
+<li>$\frac{S_X^2/\sigma_1^2}{S_Y^2/\sigma_2^2}\sim F(m-1,n-1)$</li>
+<li>剩下两个分布太麻烦了</li>
+</ul>
+<h2 id="参数估计和假设检验"><a href="#参数估计和假设检验" class="headerlink" title="参数估计和假设检验"></a>参数估计和假设检验</h2><h3 id="参数的点估计"><a href="#参数的点估计" class="headerlink" title="参数的点估计"></a>参数的点估计</h3><blockquote>
+<p>参数估计是根据<strong>样本</strong>对总体未知参数（如均值，方差）等进行估计的一种统计推断方法。</p>
+</blockquote>
+<ul>
+<li>参数点估计：构造一个<u>统计量</u>$\hat{\theta}=\hat{\theta}(X_1,…,X_n)$，直接用$\hat{\theta}$作为$\theta$的估计值。</li>
+</ul>
+<h4 id="矩估计"><a href="#矩估计" class="headerlink" title="矩估计"></a>矩估计</h4><ul>
+<li>矩估计法是用<strong>样本的k阶原点矩</strong>作为总体的<strong>k阶原点矩$E[X^k]$</strong>的估计。</li>
+</ul>
+<p>考虑要估计的参数是$\theta_1,…,\theta_m$，于是可以列出方程组：</p>
+<script type="math/tex; mode=display">
+\begin{cases}E[X]=f_1(\theta_1,...,\theta_m)=\frac{1}{n}\sum_{i=1}^n X_i\\
+E[X^2]=f_2(\theta_1,...,\theta_m)=\frac{1}{n}\sum_{i = 1}^n X_i^2\\
+...\\
+E[X^m]=f_m(\theta_1,...,\theta_m)=\frac{1}{n}\sum_{i=1}^n X_i^m
+\end{cases}</script><p>然后可以解方程组得到一组解$(\hat{\theta_1},…,\hat{\theta_m})$，就可以作为参数$(\theta_1,…,\theta_m)$的估计。</p>
+<p>根据大数定律，有：</p>
+<script type="math/tex; mode=display">
+\forall\varepsilon>0,\lim_{n\rightarrow\infin}P(|\frac{1}{n}\sum_{i=1}^nX_i^m-E[X^m]|<\varepsilon)=1</script><p>所以样本的k阶原点矩就是总体的k阶原点矩的一个合理估计。</p>
+<blockquote>
+<p>[例]：已知总体X的一组样本$X_1,X_2,…,X_n$，试估计总体的方差和均值。（假设它们存在）</p>
+</blockquote>
+<ul>
+<li><p>列出方程组：</p>
+<script type="math/tex; mode=display">
+\begin{cases}\mu=E[X]=\frac{1}{n}\sum_{i=1}^n X_i=\bar{X}\\
+\mu^2+\sigma^2=E[X^2]=\frac{1}{n}\sum_{i=1}^n X_i^2
+\end{cases}</script><p>解得：</p>
+<script type="math/tex; mode=display">
+\hat{\mu}=\bar{X}\\
+\hat{\sigma^2}=\frac{1}{n}\sum_{i=1}^nX_i^2-\bar{X}^2=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2=\frac{n-1}{n}S^2</script></li>
+<li><p>从例题中，可以看到，估计实际上就是把总体的参数用以样本为自变量的函数来表示，当我们获得了一组样本值时，我们就可以对总体进行合理猜测，这就是统计，用获得的一部分数据去估计整体。</p>
+</li>
+</ul>
+<h4 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h4><p>考虑我们有一组样本值$x_1,…,x_n$，于是事件$A=\{X_1=x_1,…,X_n=x_n\}$发生的概率是一个关于参数$\theta=(\theta_1,…,\theta_m)$的函数$L(\theta)$。我们希望取得$\theta$的一个最大似然估计$\hat{\theta}$，此时$L(\hat{\theta})$取得最大值。</p>
+<ul>
+<li><p>$L(\theta)$的确定：</p>
+<ul>
+<li>若总体是离散型的，则显然：$P(X_1=x_1,…,X_n=x_n)=\prod_{i=1}^nP(X_i=x_i)$，而$P(X_i=x_i)$是关于$\theta$的函数。</li>
+<li>若总体是连续型的，则要求$L(\theta)=\prod_{i=1}^n \int_{x_i}^{x_i+dx_i}f(t)dt\approx\prod_{i=1}^nf(x_i)dx_i(dx_i\rightarrow 0)$，$f(x)$是概率密度函数。</li>
+</ul>
+</li>
+<li><p>$\hat{\theta}$的确定：</p>
+<ul>
+<li>因为我们不关心$L(\theta)$的最大值，而只关心取得最大值时$\theta$的值。于是我们可以对$L(\theta)$取自然对数再求导（不影响极值点），这也可以证明：<script type="math/tex; mode=display">
+lnL(\theta)=ln(\prod_{i=1}^nf(x_i)dx_i)=\sum_{i=1}^nln(f(x_i))+\sum_{i=1}^nln(dx_i)\\
+\frac{\partial lnL(\theta)}{\partial\theta}=\sum_{i=1}^n\frac{\partial ln(f(x_i))}{\partial\theta}</script>因为$dx_i$与$\theta$无关，因此连续型的最大似然估计也可以直接选为$L(\theta)=\prod_{i=1}^nf(x_i)$。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>设$X\sim N(\mu,\sigma^2)$，已知$X$的一组样本观测值$x_1,…,x_n$，求$\mu,\sigma^2$的最大似然估计。</p>
+</blockquote>
+<script type="math/tex; mode=display">
+L(\mu,\sigma^2)=\prod_{i=1}^nf(x_i)=\prod_{i=1}^n\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}}\\
+lnL(\mu,\sigma^2)=-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln\sigma^2-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\\
+\begin{cases}\frac{\partial lnL(\mu,\sigma^2)}{\partial\mu}=0\\
+\frac{\partial lnL(\mu,\sigma^2)}{\partial\sigma^2}=0
+\end{cases}
+\Rightarrow \hat{\mu}=\bar{x},\hat{\sigma^2}=\frac{n-1}{n}s^2</script><ul>
+<li>注意严格来说，最大似然估计是要知道样本的观测值的，当然也可以设成字母表示$a_1,…,a_n$。但用$X_1,…,X_n$来表示是不合理的。</li>
+</ul>
+<hr>
+<h4 id="估计量优劣的评价标准"><a href="#估计量优劣的评价标准" class="headerlink" title="估计量优劣的评价标准"></a>估计量优劣的评价标准</h4><blockquote>
+<p>通常用<strong>均方误差</strong>$MSE(\hat{\theta})=E[(\theta-\hat{\theta})^2]$来评价估计量的偏离程度。</p>
+</blockquote>
+<ul>
+<li><script type="math/tex; mode=display">
+MSE(\hat{\theta})=E[[(\hat{\theta}-E[\hat{\theta}])+(E[\hat{\theta}]-\theta)]^2]\\
+=E[(\hat{\theta}-E[\hat{\theta}])^2]+2(E[\hat{\theta}]-\theta)E[\hat{\theta}-E[\hat{\theta}]]+E[(E[\hat{\theta}]-\theta)^2]\\
+=E[(\hat{\theta}-E[\hat{\theta}])^2]+(E[\hat{\theta}]-\theta)^2\\
+=D(\hat{\theta})+(E[\hat{\theta}]-\theta)^2</script><p>其中，中间项为0是因为$E[\hat{\theta}-E[\hat{\theta}]]=E[\hat{\theta}]-E[\hat{\theta}]=0$。</p>
+<p>式子中将$\hat{\theta}$作为随机变量，而把$\theta$作为已知常量。我的理解是，先给出一组样本$X_1,…,X_n$，然后这些样本都是和总体同分布的随机变量，此时可以进行点估计：$\hat{\theta}=f(X_1,…,X_n)$，所以可以对$\hat{\theta}$取期望。然后假如已知了参数$\theta$，此时我们可以$\hat{\theta}$成了未知量，因为样本没有被观测。然后我们可以计算出$\hat{\theta}$偏离已知的$\theta$的距离的平方的期望。</p>
+</li>
+<li><p>当$E[\hat{\theta}]-\theta=0$时，即$E[\hat{\theta}]=\theta$时，我们称估计量是<strong>无偏的</strong>。这是好满足的。</p>
+</li>
+<li><p>但$D(\hat{\theta})=0$是不可满足的，因为若$\hat{\theta}$是一个常数而与样本无关了，那显然不太合理。通常我们在无偏的估计中，选择方差最小的，也就是最<strong>有效的</strong>，称为<strong>最小无偏估计</strong>。</p>
+</li>
+</ul>
+<blockquote>
+<p>若$E[\hat{\theta}]=\theta$，则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，若$\lim_{n\rightarrow\infin}E[\hat{\theta}]=\theta$，则称$\hat{\theta}$是$\theta$的<strong>渐进无偏估计</strong>。否则就是有偏估计。</p>
+</blockquote>
+<ul>
+<li><p>这里可以解释下之前留下的问题，为什么样本方差$S^2$中除以的是$n-1$。我们来证明：$E[S^2]=\sigma^2$，即$S^2$是$\sigma^2$的无偏估计。</p>
+<script type="math/tex; mode=display">
+E[S^2]=\frac{1}{n-1}E[\sum_{i=1}^nX_i^2-2\bar{X}\sum_{i=1}^nX_i+\sum_{i=1}^n\bar{X}^2]\\
+=\frac{1}{n-1}E[\sum_{i=1}^nX_i^2-n\bar{X}^2]\\
+=\frac{1}{n-1}(\sum_{i=1}^nE[X_i^2]-nE[\bar{X}^2])\\
+=\frac{n}{n-1}(E[X^2]-E[\bar{X}^2])\\</script><p>而</p>
+<script type="math/tex; mode=display">
+E[\bar{X}]=\mu,D[\bar{X}]=\frac{\sigma^2}{n}\Rightarrow E[\bar{X}^2]=\mu^2+\frac{\sigma^2}{n}\\
+E[X]=\mu,D[X]=\sigma^2\Rightarrow E[X^2]=\mu^2+\sigma^2\\
+\therefore E[S^2]=\frac{n}{n-1}(\mu^2+\sigma^2-\mu^2-\frac{\sigma^2}{n})=\sigma^2</script><p>因此$S^2$是$\sigma^2$的一个无偏估计。</p>
+</li>
+<li><p>事实上，样本均值和样本方差总是总体均值和总体方差的无偏估计。</p>
+</li>
+</ul>
+<blockquote>
+<p>若对任意的$\varepsilon&gt;0$，有$\lim_{n\rightarrow \infin}P(|\theta-\hat{\theta_n}|\geq\varepsilon)=0$，则称$\hat{\theta}(X_1,…,X_n)$是$\theta$的一个<strong>相合（一致）估计</strong>。</p>
+</blockquote>
+<ul>
+<li>若$\lim_{n\rightarrow\infin}E[\hat{\theta_n}]=\theta,\lim_{n\rightarrow\infin}D(\hat{\theta_n})=0$，则$\hat{\theta}_n$是$\theta$的一个相合估计。</li>
+</ul>
+<h3 id="参数的区间估计"><a href="#参数的区间估计" class="headerlink" title="参数的区间估计"></a>参数的区间估计</h3><blockquote>
+<p>设$\hat{\theta}_1,\hat{\theta}_2$是两个统计量，若$P(\hat{\theta}_1\leq \theta\leq\hat{\theta}_2)=1-\alpha$，则称随即区间$[\hat{\theta}_1,\hat{\theta}_2]$是$\theta$的一个区间估计或<strong>置信区间</strong>，$1-\alpha$称为置信水平或<strong>置信度</strong>。</p>
+</blockquote>
+<ul>
+<li>一般来说，置信度越高，精确性（区间长度）越差（越长）。</li>
+</ul>
+<p>求解置信区间的一般方法为：</p>
+<ul>
+<li>找一个与要估计的参数$\theta$有关的统计量$T$，一般是$\theta$的一个良好的点估计$\hat{\theta}$。</li>
+<li>设法找出$T$和$\theta$的某一函数$H(T,\theta)$，要求H的分布已知且与$T,\theta$无关，称为<strong>枢轴变量</strong>。</li>
+<li>寻找合适的常数$c,d$使得$P(c\leq H\leq d)=1-\alpha$。</li>
+<li>将$c\leq H\leq d$等价变形为$\hat{\theta}_1\leq\theta\leq\hat{\theta}_2$。</li>
+</ul>
+<p>正态分布的置信区间：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>评估参数</th>
+<th>条件</th>
+<th>枢轴变量及其分布</th>
+<th>置信区间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mu$</td>
+<td>$\sigma^2$已知</td>
+<td>$\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$</td>
+<td>$[\bar{X}-u_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{X}+u_{\alpha/2}\frac{\sigma}{\sqrt{n}}]$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>$\sigma^2$未知</td>
+<td>$\frac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$</td>
+<td>$[\bar{X}-t_{\alpha/2}(n-1)\frac{S}{\sqrt{n}},\bar{X}+t_{\alpha/2}(n-1)\frac{S}{\sqrt{n}}]$</td>
+</tr>
+<tr>
+<td>$\sigma^2$</td>
+<td>$\mu$已知</td>
+<td>$\sum_{i=1}^n\frac{ X_i-\mu}{\sigma}^2\sim\chi^2(n)$</td>
+<td>$[\frac{\sum(X_i-\mu)^2}{\chi_{\alpha/2}^2(n)},\frac{\sum(X_i-\mu)^2}{\chi_{1-\alpha/2}^2(n)}]$</td>
+</tr>
+<tr>
+<td>$\sigma^2$</td>
+<td>$\mu$未知</td>
+<td>$\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)$</td>
+<td>$[\frac{(n-1)S^2}{\chi_{\alpha/2}^2(n-1)},\frac{(n-1)S^2}{\chi_{1-\alpha/2}^2(n-1)}]$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h3><blockquote>
+<p>只对总体的某些<strong>未知参数</strong>作出假设，通过<strong>抽样</strong>来判断假设是否成立，这种检验称为<strong>参数检验</strong>。</p>
+<p>只对未知分布函数的类型或者它的某些特性提出假设，然后对这种假设进行检验，被称为<strong>非参数检验</strong>。</p>
+</blockquote>
+<p>参数检验的步骤——以对期望假设为例：</p>
+<ul>
+<li><p>建立假设：</p>
+<script type="math/tex; mode=display">
+H_0:\mu=5800,H_1:\mu\neq 5800</script><p>$H_0$称为<strong>原假设</strong>，$H_1$称为<strong>备择假设</strong>。</p>
+</li>
+<li><p>选取检验统计量（不能含未知参数）：</p>
+<p>通过比较原假设成立时统计量的分布和备择假设成立时统计量的分布，得出对原假设<strong>不利的事件</strong>。若总体的方差已知，可以选择统计量：</p>
+<script type="math/tex; mode=display">
+U=\frac{\bar{X}-5800}{\sigma/\sqrt{n}}</script><p>$H_0$成立时，$U\sim N(0,1)$，$H_1$成立时，$U\sim N(\frac{\mu-5800}{\sigma/\sqrt{n}},1)$。所以我们可以选择对$H_0$不利的事件为$\{|U|&gt;C\}$。若事件发生了，我们便拒绝$H_0$。</p>
+</li>
+<li><p>选取检验显著性水平$\alpha$与临界值，进而确定$H_0$的拒绝区域。</p>
+<p>在我们总是倾向于“保护“原假设的。于是我们默认在原假设成立的前提下，若对$H_0$不利的事件还是发生了，就拒绝原假设：</p>
+<script type="math/tex; mode=display">
+P(|U|>C|H_0)=\alpha</script><p>若$\alpha=0.05$，则可以得出$P(|U|&gt;C|H_0)=0.05\Rightarrow C=u_{0.025}$。因为$H_0$成立时，$U$是标准正态分布。</p>
+</li>
+<li><p>做判断：</p>
+<p>根据样本的观测值，计算$U$，和$C$进行比较。若$|U|&gt;C$就拒绝$H_1$。</p>
+</li>
+</ul>
+<p>这里对$P(|U|&gt;C|H_0)=\alpha$我的理解是：<strong>若$H_0$成立的话，发生$|U|&gt;C$的概率很小很小，所以现实中发生了的话我们只好认为$H_0$不成立了。</strong></p>
+<blockquote>
+<p>假设检验不一定原假设一定形如$a=a_0$，其本质是把参数$\theta$分成两个不相交的空间：</p>
+<script type="math/tex; mode=display">
+H_0:\theta\in\Theta_0,H_1:\theta\in\Theta-\Theta_0=\Theta_1</script><p>若$\Theta_1$在$\Theta_0$的两侧（如例子）就叫做<strong>双侧检验</strong>，否则也可以有$\Theta_1$在$\Theta_0$的右侧或左侧的<strong>单侧检验</strong>。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>假设检验可能有两种错误，<strong>弃真</strong>和<strong>存伪</strong></p>
+</blockquote>
+<ul>
+<li><strong>弃真</strong>：$H_0$成立，但拒绝事件$|U|&gt;C$发生了，所以拒绝了$H_0$。弃真的概率就是显著性水平$\alpha$。</li>
+<li><strong>存伪</strong>：$H_1$成立，却接受了$H_0$。它的概率比较难以计算，记为$\beta$。</li>
+</ul>
+<p>事实上，有当样本数$n$固定时，$\alpha$增大$\beta$就会减小，$\alpha$减小$\beta$就会增大。但增大样本数$n$可以使得$\alpha$和$\beta$都减小。（抽样的值多了更准确）</p>
+<blockquote>
+<p>给出一个样本观测值$U$，能做出”拒绝$H_0$“的最小的$\alpha$值称为检验的<strong>p值</strong>。</p>
+</blockquote>
+<ul>
+<li>一般模拟抽样的软件不仅会告诉你模拟抽取的样本观测值，同样也会告诉你该观测值下的p值。这样你就不需要去比较$U$和$u_{\alpha/2}$了，而只用比较$\alpha$和p。</li>
+</ul>
+<h3 id="正态总体参数的假设检验"><a href="#正态总体参数的假设检验" class="headerlink" title="正态总体参数的假设检验"></a>正态总体参数的假设检验</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>原假设$H_0$</th>
+<th>备选假设$H_1$</th>
+<th>检验统计量</th>
+<th>拒绝域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\sigma^2=\sigma_0^2$已知</td>
+<td>$\mu=\mu_0$</td>
+<td>$\mu\neq\mu_0$</td>
+<td>$U=\frac{\bar{X}-\mu_0}{\sigma_0/\sqrt{n}}$</td>
+<td>$</td>
+<td>U</td>
+<td>&gt;u_{\alpha/2}$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\mu\leq\mu_0$</td>
+<td>$\mu&gt;\mu_0$</td>
+<td>服从正态分布</td>
+<td>$U&gt;u_\alpha$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\mu \geq\mu_0$</td>
+<td>$\mu &lt;\mu_0$</td>
+<td></td>
+<td>$U&lt;-u_\alpha$</td>
+</tr>
+<tr>
+<td>$\sigma^2$未知</td>
+<td>$\mu=\mu_0$</td>
+<td>$\mu\neq\mu_0$</td>
+<td>$T=\frac{\bar{X}-\mu_0}{S/\sqrt{n}}$服从t分布</td>
+<td>$</td>
+<td>T</td>
+<td>&gt;t_{\alpha/2}(n-1)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\mu\leq\mu_0$</td>
+<td>$\mu&gt;\mu_0$</td>
+<td></td>
+<td>$T&gt;t_{\alpha}(n-1)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\mu \geq\mu_0$</td>
+<td>$\mu &lt;\mu_0$</td>
+<td></td>
+<td>$T&lt;-t_{\alpha}(n-1)$</td>
+</tr>
+<tr>
+<td>$\mu=\mu_0$已知</td>
+<td>$\sigma^2=\sigma_0^2$</td>
+<td>$\sigma^2\neq\sigma_0^2$</td>
+<td>$\chi^2=\sum_{i=1}^n(\frac{X_i-\mu_0}{\sigma_0})^2$服从卡方分布</td>
+<td>$\chi^2&gt;\chi^2_{\alpha/2}(n)$或$\chi^2&lt;\chi_{1-\alpha/2}^2(n)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\sigma^2\leq\sigma_0^2$</td>
+<td>$\sigma^2&gt;\sigma_0^2$</td>
+<td></td>
+<td>$\chi^2&gt;\chi_{\alpha}^2(n)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\sigma^2\geq\sigma_0^2$</td>
+<td>$\sigma^2&lt;\sigma_0^2$</td>
+<td></td>
+<td>$\chi^2&lt;\chi_{1-\alpha}^2(n)$</td>
+</tr>
+<tr>
+<td>$\mu$未知</td>
+<td>$\sigma^2=\sigma_0^2$</td>
+<td>$\sigma^2\neq\sigma_0^2$</td>
+<td>$\chi^2=\frac{(n-1)S^2}{\sigma_0^2}$服从卡方分布</td>
+<td>$\chi^2&gt;\chi_{\alpha/2}^2(n-1)$或$\chi^2&lt;\chi_{1-\alpha/2}^2(n-1)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\sigma^2\leq\sigma_0^2$</td>
+<td>$\sigma^2&gt;\sigma_0^2$</td>
+<td></td>
+<td>$\chi^2&gt;\chi_{\alpha}^2(n-1)$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\sigma^2\geq\sigma_0^2$</td>
+<td>$\sigma^2&lt;\sigma_0^2$</td>
+<td></td>
+<td>$\chi^2&lt;\chi_{1-\alpha}^2(n-1)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>简单证明下对方差估计的部分，怎么考虑不等号呢？以第八行的情况为例，若$H_0$成立，就有：</p>
+<script type="math/tex; mode=display">
+\chi^2=\sum_{i=1}^n(\frac{X_i-\mu_0}{\sigma_0})^2=\frac{\sigma^2}{\sigma_0^2}\sum_{i=1}^n(\frac{X_i-\mu_0}{\sigma})^2\leq \chi^2(n)</script><p>若$H_1$成立，则有$\chi^2&gt;\chi^2(n)$。（$\sigma^2$是真实的方差，$\sigma_0^2$是假设的方差）所以$\chi^2$的观测值越大，对$H_0$越不利，对$X_1$越有利。</p>
+<script type="math/tex; mode=display">{<}
+P(\chi^2>\chi_{\alpha}^2(n)|H_0)\leq P(\chi^2>\chi_{\alpha}^2(n)|\sigma^2=\sigma_0^2)=\alpha</script><p>所以选择的拒绝域是$\chi^2&gt;\chi_{\alpha}^2(n)$。</p>
+<h2 id="一元线性回归和方差分析"><a href="#一元线性回归和方差分析" class="headerlink" title="一元线性回归和方差分析"></a>一元线性回归和方差分析</h2><h3 id="一元线性回归"><a href="#一元线性回归" class="headerlink" title="一元线性回归"></a>一元线性回归</h3><blockquote>
+<p>已知随机变量$Y$满足以下关系：</p>
+<script type="math/tex; mode=display">
+\begin{cases}Y=\beta_0+\beta_1 X+\varepsilon\\E[\varepsilon]=0,D(\varepsilon)=\sigma^2\end{cases}</script><p>$\sigma^2$未知。那么我们可以通过抽取一堆样本$(x_1,y_1),…,(x_n,y_n)$去估计$\beta_0$和$\beta_1$的值，得到<strong>回归直线</strong>$Y=\hat{\beta_0}+\hat{\beta_1}X$。</p>
+<p>再根据这条直线，可以给出$X$得到Y的估测值$\hat{Y}$。</p>
+<p>注意：一元线性回归中，默认自变量是<strong>非随机变量</strong>。怎么理解呢，可以理解为，给定一个$x_0$，有一个随机变量$Y$，而$x_0$是随机变量$Y$的一个参数，影响着$Y$的分布。而这个影响实际上就是线性影响着。但参数$X$总是会被给出的，而参数$\beta_0,\beta_1$是可以用样本估计的，于是这三个参数都有值了后就可以讨论$Y$的分布。而回归问题，其实就是默认参数$X$的值已知非随机的情况下，分析$Y$和$X$的关系。</p>
+</blockquote>
+<p><strong>最小二乘法</strong>：</p>
+<ul>
+<li><p>定义<strong>偏差平方和</strong>：</p>
+<script type="math/tex; mode=display">
+Q(\beta_0,\beta_1)=\sum_{i=1}^n[y_i-(\beta_0+\beta_1x_i)]^2</script><p>我们要找出$\beta_0$和$\beta_1$的合理取值$\hat{\beta_0},\hat{\beta_1}$，使得$Q(\hat{\beta_0},\hat{\beta_1})$尽量小。于是有：</p>
+<script type="math/tex; mode=display">
+\begin{cases}\frac{\partial Q(\beta_0,\beta_1)}{\partial\beta_0}=0\\\frac{\partial Q(\beta_0,\beta_1)}{\partial\beta_1}=0\end{cases}
+\Rightarrow\begin{cases}\hat{\beta_0}+\bar{x}\hat{\beta_1}=\bar{y}\\n\bar{x}\hat{\beta_0}+\hat{\beta_1}\sum_{i=1}^nx_i^2=\sum_{i=1}^nx_iy_i\end{cases}</script><p>解得：</p>
+<script type="math/tex; mode=display">
+\hat{\beta_1}=\frac{L_{xy}}{L_{xx}},\hat{\beta_0}=\bar{y}-\bar{x}\hat{\beta_1}\\
+L_{xy}=\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})=\sum_{i=1}^nx_iy_i-n\bar{x}\bar{y}\\
+L_{xx}=\sum_{i=1}^n(x_i-\bar{x})^2=\sum_{i=1}^nx_i^2-n\bar{x}^2\\</script><p>这样估计的参数$\beta_0,\beta_1$的值的方法称为最小二乘法（OLS），得到了一元线性回归方程，显然它一定过$(\bar{x},\bar{y})$。</p>
+</li>
+<li><p>最小二乘法估计是无偏的：</p>
+<script type="math/tex; mode=display">
+E[\hat{\beta_0}]=\beta_0,E[\hat{\beta_1}]=\beta_1</script><p>*注意：在一元线性回归中，默认自变量是非随机变量，于是有：</p>
+<script type="math/tex; mode=display">
+\hat{\beta_1}=\frac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{L_{xx}}=\sum_{i=1}^n\frac{x_i-\bar{x}}{L_{xx}}y_i\\
+E[\hat{\beta_1}]=\sum_{i=1}^n\frac{x_i-\bar{x}}{L_{xx}}E[y_i]\\
+\because E[y_i]=\beta_0+\beta_1x_i+E[\varepsilon]=\beta_0+\beta_1x_i\\
+\therefore E[\hat{\beta_1}]=\sum_{i=1}^n\frac{x_i-\bar{x}}{L_{xx}}(\beta_0+\beta_1x_i)=\sum_{i=1}^n\frac{x_i-\bar{x}}{L_{xx}}\beta_1 x_i\\
+=\beta_1\sum_{i=1}^n\frac{(x_i-\bar{x})^2}{L_{xx}}=\beta_1</script><p>注意到$Y=\beta_0+\beta_1X+\varepsilon$中随机变量实际上只有$Y$和$\varepsilon$。而$x_i,\beta_0,\beta_1$都是固定参数。此外上述推导过程反复用到了$C*\sum_{i=1}^n\frac{x_i-\bar{x}}{L_{xx}}=0$。</p>
+</li>
+<li><p>最小二乘法估计是有效的：</p>
+<p>在所有$\hat{\beta_0},\hat{\beta_1}$关于$y_1,..,y_n$是线性的函数估计中，最小二乘法是方差最小的。再强调一遍$x_i$只是给定的固定参数。</p>
+</li>
+<li><p>最小二乘法估计的可靠性：</p>
+<p>最小二乘法做出的估计值可以使得<strong>残差平方和</strong>最小：</p>
+<script type="math/tex; mode=display">
+Q(\hat{\beta_0},\hat{\beta_1})=\sum_{i=1}^n[y_i-\hat{\beta_0}-\hat{\beta_1}x_i]^2</script><p>用正交变换可以证明：</p>
+<script type="math/tex; mode=display">
+\frac{Q(\hat{\beta_0},\hat{\beta_1})}{\sigma^2}\sim\chi^2(n-2)</script><p>因此$E[\frac{Q(\hat{\beta_0},\hat{\beta_1})}{\sigma^2}]=n-2,E[\frac{Q(\hat{\beta_0},\hat{\beta_1})}{n-2}]=\sigma^2$。即$\hat{\sigma^2}=\frac{Q(\hat{\beta_0},\hat{\beta_1})}{n-2}$是一个$\sigma^2$的一个无偏估计，称为<strong>剩余方差</strong>。</p>
+<p>这里是对Y的方差进行估计，而$D(Y)=D(\beta_0)+D(\beta_1X)+D(\varepsilon)=D(\varepsilon)=\sigma^2$。强调X也是非随机变量。</p>
+</li>
+</ul>
+<h4 id="回归方程的显著性检验"><a href="#回归方程的显著性检验" class="headerlink" title="回归方程的显著性检验"></a>回归方程的显著性检验</h4><p>多数情况下是不知道$Y$与$X$是否是线性相关的，于是需要进行假设检验。$|\beta_1|$越大，说明线性性越强。做假设：</p>
+<script type="math/tex; mode=display">
+H_0:\beta_1=0,H_1:\beta_1\neq 0</script><p>可以证明有以下等式：</p>
+<script type="math/tex; mode=display">
+L_{yy}=Q+U\\
+L_{yy}=\sum_{i=1}^n(y_i-\bar{y})^2\\
+Q=\sum_{i=1}^n(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)^2\\
+U=\sum_{i=1}^n(\hat{\beta_0}+\hat{\beta_1}x_i-\bar{y})^2=\hat{\beta_1}^2L_{xx}</script><p>其中，即为<strong>离差平方和</strong>$L_{yy}=$<strong>残差平方和</strong>$Q+$<strong>回归平方和</strong>$U$。它表明：</p>
+<blockquote>
+<p>Y的n个观测值的离散程度$L_{yy}$可分解为两部分：Q表示样本值没有落在回归直线上引起的，U表示由回归系数$\hat{\beta}$本身引起的。因此，若$Q$越大，就表示线性性越差，反之，若$Q=0$，则样本都落在回归直线上，说明线性性很强。</p>
+</blockquote>
+<p>不难证明，$F=\frac{U}{Q/(n-2)}\sim F(1,n-2)$。结论是，若$F&gt;F_\alpha(1,n-2)$，则拒绝$H_0$，认为存在线性性。</p>
+<hr>
+<p>预测：给定一个$x_0$，$Y_0$的点预测值为$\hat{Y_i}=\hat{\beta_0}+\hat{\beta_1}x_0$，同样也可以对它进行置信区间预测。$Y_0$的置信水平为$1-\alpha$的置信区间为：</p>
+<script type="math/tex; mode=display">
+[\hat{Y_0}-\delta(x_0),\hat{Y_0}+\delta(x_0)]\\
+\delta(x_0)=\sqrt{\hat{\sigma^2}}t_{\alpha/2}(n-2)\sqrt{1+\frac{1}{n}+\frac{(x_0-\bar{x})^2}{L_{xx}}}</script><h3 id="单因素方差分析"><a href="#单因素方差分析" class="headerlink" title="单因素方差分析"></a>单因素方差分析</h3><p>设因素A有r个水平$A_1,A_2,…,A_r$，水平$A_i$条件下试验结果的全体记为总体$X_i$，假定$X_i\sim N(\mu_i,\sigma^2)$。在水平$A_i$的条件下进行$n_i$次独立试验，即：</p>
+<script type="math/tex; mode=display">
+\begin{cases}X_{ij}\sim N(\mu_i,\sigma^2)\\
+X_{ij}相互独立,i=1,...,r,j=1,...,n_i\\
+\mu_i,\sigma^2未知
+\end{cases}</script><p>而单因素方差分析，就是分析不同水平下的方差有无明显差异。作假设：</p>
+<script type="math/tex; mode=display">
+H_0:\mu_1=\mu_2=...=\mu_r,H_1=\neg(\mu_1=\mu_2=...=\mu_r)</script><p>记$\varepsilon_{ij}=X_{ij}-\mu_i$表示一些不可估计的随机因素对试验的影响，被称为<strong>随机误差</strong>，$\varepsilon_{ij}\sim N(0,\sigma^2)$。于是模型等价于：</p>
+<script type="math/tex; mode=display">
+\begin{cases}X_{ij}=\mu_i+\varepsilon_{ij}\\
+\varepsilon_{ij}\sim N(0,\sigma^2)且相互独立\\
+\mu_i,\sigma^2未知
+\end{cases}</script><p>为了方便讨论，引入一些量：</p>
+<ul>
+<li>$n=\sum_{i=1}^rn_i$为样本总数。</li>
+<li>$\mu=\frac{1}{n}\sum_{i=1}^r\mu_i$为理论总均值。</li>
+<li>$\alpha_i=\mu_i-\mu$为水平$A_i$的效应。</li>
+</ul>
+<p>易得，$H_0\Leftrightarrow \alpha_1=\alpha_2=…=\alpha_r=0$。于是继续变换模型：</p>
+<script type="math/tex; mode=display">
+\begin{cases}X_{ij}=\mu+\alpha_i+\varepsilon_{ij}\\
+\sum_{i=1}^rn_i\alpha_i=0\\
+\varepsilon_{ij}\sim N(0,\sigma^2)\\
+\mu,\alpha_i,\sigma^2未知
+\end{cases}</script><p>于是可以进行假设检验。设样本总均值$\bar{X}=\frac{1}{n}\sum_{i=1}^r\sum_{j=1}^{n_i}X_{ij}$，$\bar{X_i}=\frac{1}{n_i}\sum_{j=1}^{n_i}X_{ij}$引入<strong>总偏差平方和</strong>：</p>
+<script type="math/tex; mode=display">
+S_T=\sum_{i=1}^r\sum_{j=1}^{n_i}(X_{ij}-\bar{X})^2\\
+=\sum_{i=1}^r\sum_{j=1}^{n_i}[(X_{ij}-\bar{X_i})+(\bar{X_i}-\bar{X})]^2\\
+=\sum_{i=1}^r\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})^2+\sum_{i=1}^r\sum_{j=1}^{n_i}(\bar{X_i}-\bar{X})^2\\
+=S_e+S_A</script><p>其中，交叉项$2\sum_{i=1}^r\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})(\bar{X_i}-\bar{X})=2\sum_{i=1}^r(\bar{X_i}-\bar{X})\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})=0$。</p>
+<p>而$S_e=\sum_{i=1}^r\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})^2=\sum_{i=1}^r(n_i-1)S_i^2$反映了第$i$组样本下内部的差异，而$S_A=\sum_{i=1}^r\sum_{j=1}^{n_i}(\bar{X_i}-\bar{X})^2=\sum_{i=1}^rn_i(\bar{X_i}-\bar{X})^2$反映了组与组之间的差异。</p>
+<p>于是$S_e$被称为<strong>误差平方和</strong>或<strong>组内平方和</strong>，$S_A$被称为<strong>因素平方和</strong>或<strong>组间平方和</strong>。事实上：</p>
+<script type="math/tex; mode=display">
+E[S_e]=(n-r)\sigma^2\\
+E[S_A]=(r-1)\sigma^2+\sum_{i=1}^rn_i\alpha_i^2</script><p>若$H_0$成立，则有$E[\frac{S_e}{n-r}]=E[\frac{S_A}{r-1}]=\sigma^2$，即可以把$\frac{S_e}{n-r},\frac{S_A}{r-1}$都当作$\sigma^2$的一个无偏估计。考虑这样一个统计量：</p>
+<script type="math/tex; mode=display">
+F=\frac{S_A/(r-1)}{S_e/(n-r)}\sim F(r-1,n-r)</script><p>显然$H_0$成立时，$F$应趋近于1，而$H_0$不成立时，$F$会大于1。于是若$F&gt;F_{\alpha}(r-1,n-r)$就拒绝$H_0$。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">編集日</span>
+    <time title="修正日：2021-12-26 09:41:21" itemprop="dateModified" datetime="2021-12-26T09:41:21+08:00">2021-12-26</time>
+  </span>
+  <span id="2021/12/06/概率论与数理统计/" class="item leancloud_visitors" data-flag-title="概率论与数理统计" title="閲覧数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">閲覧数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">回</span>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>著者： </strong>SuBonan <i class="ic i-at"><em>@</em></i>BokkeNasu
+  </li>
+  <li class="link">
+    <strong>記事へのリンク：</strong>
+    <a href="http://sugarsbn.github.io/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" title="概率论与数理统计">http://sugarsbn.github.io/2021/12/06/概率论与数理统计/</a>
+  </li>
+  <li class="license">
+    <strong>著作権表示： </strong>このブログ内のすべての記事は、特別な記載がない限り <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> の下のライセンスで保護されています。
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/11/16/widening-operator-narrowing-operator/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5cf7fb4ej30xc0nlaxb.jpg" title="widening operator &amp; narrowing operator">
+  <span class="type">前の記事</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>widening operator & narrowing operator</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5cf7fb4ej30xc0nlaxb.jpg" title="组合数学杂记">
+  <span class="type">次の記事</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>组合数学杂记</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="見出し">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概率论"><span class="toc-number">1.</span> <span class="toc-text">概率论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#随机事件及其概率"><span class="toc-number">1.1.</span> <span class="toc-text">随机事件及其概率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#随机事件及其运算"><span class="toc-number">1.1.1.</span> <span class="toc-text">随机事件及其运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#古典概型与几何概型"><span class="toc-number">1.1.2.</span> <span class="toc-text">古典概型与几何概型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#概率的公理化定理及其性质"><span class="toc-number">1.1.3.</span> <span class="toc-text">概率的公理化定理及其性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件概率与事件独立性"><span class="toc-number">1.1.4.</span> <span class="toc-text">条件概率与事件独立性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全概率公式与贝叶斯公式"><span class="toc-number">1.1.5.</span> <span class="toc-text">全概率公式与贝叶斯公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伯努利概型"><span class="toc-number">1.1.6.</span> <span class="toc-text">伯努利概型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机变量及其分布"><span class="toc-number">1.2.</span> <span class="toc-text">随机变量及其分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#随机变量与分布函数"><span class="toc-number">1.2.1.</span> <span class="toc-text">随机变量与分布函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#离散型随机变量及其分布"><span class="toc-number">1.2.2.</span> <span class="toc-text">离散型随机变量及其分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连续型随机变量及其分布"><span class="toc-number">1.2.3.</span> <span class="toc-text">连续型随机变量及其分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机变量函数的分布"><span class="toc-number">1.2.4.</span> <span class="toc-text">随机变量函数的分布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多维随机变量及其分布"><span class="toc-number">1.3.</span> <span class="toc-text">多维随机变量及其分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#二维随机变量及其分布"><span class="toc-number">1.3.1.</span> <span class="toc-text">二维随机变量及其分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#边缘分布"><span class="toc-number">1.3.2.</span> <span class="toc-text">边缘分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件分布"><span class="toc-number">1.3.3.</span> <span class="toc-text">条件分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机变量的独立性"><span class="toc-number">1.3.4.</span> <span class="toc-text">随机变量的独立性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二维随机变量函数的分布"><span class="toc-number">1.3.5.</span> <span class="toc-text">二维随机变量函数的分布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机变量的数字特征与极限定理"><span class="toc-number">1.4.</span> <span class="toc-text">随机变量的数字特征与极限定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数学期望"><span class="toc-number">1.4.1.</span> <span class="toc-text">数学期望</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方差"><span class="toc-number">1.4.2.</span> <span class="toc-text">方差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协方差与相关系数"><span class="toc-number">1.4.3.</span> <span class="toc-text">协方差与相关系数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大数定律"><span class="toc-number">1.4.4.</span> <span class="toc-text">大数定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中心极限定理"><span class="toc-number">1.4.5.</span> <span class="toc-text">中心极限定理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数理统计"><span class="toc-number">2.</span> <span class="toc-text">数理统计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数理统计基本知识"><span class="toc-number">2.1.</span> <span class="toc-text">数理统计基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#总体与样本"><span class="toc-number">2.1.1.</span> <span class="toc-text">总体与样本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#统计量与三大分布"><span class="toc-number">2.1.2.</span> <span class="toc-text">统计量与三大分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#☆正态总体的抽样分布"><span class="toc-number">2.1.3.</span> <span class="toc-text">☆正态总体的抽样分布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数估计和假设检验"><span class="toc-number">2.2.</span> <span class="toc-text">参数估计和假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数的点估计"><span class="toc-number">2.2.1.</span> <span class="toc-text">参数的点估计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#矩估计"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">矩估计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#最大似然估计"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">最大似然估计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#估计量优劣的评价标准"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">估计量优劣的评价标准</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数的区间估计"><span class="toc-number">2.2.2.</span> <span class="toc-text">参数的区间估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#假设检验"><span class="toc-number">2.2.3.</span> <span class="toc-text">假设检验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正态总体参数的假设检验"><span class="toc-number">2.2.4.</span> <span class="toc-text">正态总体参数的假设检验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一元线性回归和方差分析"><span class="toc-number">2.3.</span> <span class="toc-text">一元线性回归和方差分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一元线性回归"><span class="toc-number">2.3.1.</span> <span class="toc-text">一元线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#回归方程的显著性检验"><span class="toc-number">2.3.1.1.</span> <span class="toc-text">回归方程的显著性检验</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单因素方差分析"><span class="toc-number">2.3.2.</span> <span class="toc-text">单因素方差分析</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="関連記事">
+      </div>
+      <div class="overview panel" data-title="概要">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="SuBonan"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">SuBonan</p>
+  <div class="description" itemprop="description">やがて、平凡な人になる</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">48</span>
+        <span class="name">ポスト</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">カテゴリ</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">タグ</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1N1Z2FyU0JO" title="https:&#x2F;&#x2F;github.com&#x2F;SugarSBN"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>ホーム</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>プロフィール</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);" target="_blank" rel="noopener"><i class="ic i-feather"></i>投稿</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>アーカイブ</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>カテゴリ</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/11/16/widening-operator-narrowing-operator/" rel="prev" title="前の記事"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" rel="next" title="次の記事"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>ランダムな記事</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/28/%E9%87%8F%E5%AD%90%E5%99%AA%E5%A3%B0%E5%92%8C%E9%87%8F%E5%AD%90%E8%BF%90%E7%AE%97/" title="量子噪声和量子运算">量子噪声和量子运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/22/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%8B%EF%BC%89/" title="数学分析（下）">数学分析（下）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%8B%B1%E8%AF%AD/" title="カテゴリ - 英语">- 英语</a>
+</div>
+
+    <span><a href="/2020/10/14/%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="大英帝国語筆記">大英帝国語筆記</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/01/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" title="离散数学 - 数理逻辑">离散数学 - 数理逻辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/07/MCMC-MH/" title="马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样">马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%AD%E6%96%87-%E9%9A%8F%E7%AC%94/" title="カテゴリ - 语文 - 随笔">- 语文 - 随笔</a>
+</div>
+
+    <span><a href="/2020/03/08/%E6%86%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E5%BA%9F%E8%AF%9D/" title="憋出来的废话">憋出来的废话</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/03/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%BC%95%E8%AE%BA/" title="量子力学引论">量子力学引论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" title="C-C++ 语法">C-C++ 语法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/16/widening-operator-narrowing-operator/" title="widening operator &amp; narrowing operator">widening operator & narrowing operator</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最近のコメント</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">SuBonan @ SuBonan</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/12/06/概率论与数理统计/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "検索…",
+      empty: "「 ${query} 」については何も見つかりませんでした",
+      stats: "${time} ms以内に ${hits} 件の結果が見つかりました"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,copyright: 'コピーは成功しました。 <br> 再印刷については、 ％s 契約に従ってください。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/asuna_04.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

@@ -1,0 +1,806 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="BokkeNasu" href="http://sugarsbn.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="BokkeNasu" href="http://sugarsbn.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="BokkeNasu" href="http://sugarsbn.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://sugarsbn.github.io/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/">
+
+
+
+  <title>
+组合数学杂记 |
+SuBonan = BokkeNasu</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">组合数学杂记
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="作成日：2021-12-26 09:35:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">投稿日</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-26T09:35:58+08:00">2021-12-26</time>
+  </span>
+  <span class="item" title="単語数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">単語数</span>
+    <span>2.3k</span>
+    <span class="text">単語</span>
+  </span>
+  <span class="item" title="読書の時間">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">読書の時間</span>
+    <span>2 分</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="ナビゲーションバーの切り替え">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">SuBonan</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr5cgvp7tsj30jn0rswss.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53ynresqj30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5cgrwdhkj30sg0in7ey.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53x9kntlj31aw0u0qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5ceotb7oj30xc0pyb29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr5cf7fb4ej30xc0nlaxb.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">ホーム</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="http://sugarsbn.github.io/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="SuBonan">
+    <meta itemprop="description" content=", やがて、平凡な人になる">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="BokkeNasu">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>不是很感兴趣。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+<a id="more"></a>
+<h2 id="和积法则"><a href="#和积法则" class="headerlink" title="和积法则"></a>和积法则</h2><h3 id="N取r的可重组合数："><a href="#N取r的可重组合数：" class="headerlink" title="N取r的可重组合数："></a>N取r的可重组合数：</h3><script type="math/tex; mode=display">
+\begin{pmatrix}n+r-1\\r\end{pmatrix}</script><ul>
+<li><p>因为可以把可重结果，例如$1,1,1,2,2$，分别对应位置$+0,+1,+2,+3,+4$，然后映射到$1,2,3,5,6$。</p>
+</li>
+<li><p>于是n取r可重就转换成了n+r-1取r不可重。于是得到了答案。$+0,+1,…,+r-1$，所以从$1,…,n+r-1$中选$r$个后，再$-0,-1,-2,..,-r+1$就得到了一个答案。</p>
+</li>
+<li>注意这个问题转化是一一映射的，不能选择$+1,+2,+3,+4,+5$是因为存在方案$1,2,3,4,5$，他无法转化回去。</li>
+</ul>
+<blockquote>
+<p>[例]：把r个相同的球，放入n个不同的箱子里，方案数是多少？</p>
+<p>解：就是n取r的可重组合数。可以从n中取可重的r个盒子，再把这r个球放到对应的盒子中。</p>
+</blockquote>
+<h3 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h3><blockquote>
+<p>含数字6，能被3整除的5位整数有多少个？</p>
+</blockquote>
+<ul>
+<li>手动数位dp，记$dp[i][j][0/1]$表示到第i位，模3余$j$，是否含6。直接状态转移。</li>
+</ul>
+<h2 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h2><h3 id="prufer序列"><a href="#prufer序列" class="headerlink" title="prufer序列"></a>prufer序列</h3><p>一棵标号树和一个prufer序列是一一对应的。</p>
+<ul>
+<li>树转化为prufer序列：<ul>
+<li>将叶子结点中，最小标号的一个删除，序列中加入它的父亲。</li>
+<li>重复该过程直到树只剩下两个结点。</li>
+</ul>
+</li>
+<li>prufer序列转化为树：<ul>
+<li>构造一个集合$\{1,2,…,n\}$</li>
+<li>找出集合中最小未在prufer序列中出现的数，将该数和prufer序列中第一个数连边</li>
+<li>把该数和prufer序列中第一个数删除。</li>
+<li>重复n-2次，把集合中剩余的两个点连边。</li>
+</ul>
+</li>
+</ul>
+<p>例：<img data-src="1.png" alt="1"></p>
+<p>它的prufer序列为$\{3,5,1,3\}$。由prufer序列构造树时，连边顺序为$(2,3),(4,5),(1,5),(1,3),(3,6)$。</p>
+<h3 id="杂题-1"><a href="#杂题-1" class="headerlink" title="杂题"></a>杂题</h3><blockquote>
+<p>从1~300中取3个不同的数，其和能被3整除，有多少种取法？</p>
+</blockquote>
+<ul>
+<li>分组：<script type="math/tex; mode=display">
+\{1,4,7,...,298\}\\
+\{2,5,8,...,299\}\\
+\{3,6,9,...,300\}</script>只能三个都取同一组，或3=0+1+2每个组各取一个。于是答案是$3C_{100}^3+100^3$。</li>
+</ul>
+<blockquote>
+<p>m个人从n个入口进站，只考虑同一个入口进站人的先后顺序，不考虑不同入口进站的先后顺序。求进站顺序方案数。</p>
+</blockquote>
+<ul>
+<li><p>强行整了个插板法例题……相当于m个人插n-1个板隔开，还要考虑全排列。</p>
+<p>答案是$\frac{(m+n-1)!}{(n-1)!}$，即把m个人和n-1个板都当作元素全排列，然后板是等价的，所以除去$(n-1)!$。</p>
+</li>
+</ul>
+<blockquote>
+<p>$x_1+x_2+…+x_n=r$，其中$x_1,x_2,…,x_n\geq 1$，都是整数。求解的个数。</p>
+</blockquote>
+<ul>
+<li>这种也是插板法，答案为$C_{r-1}^{n-1}$。即把$1,1,…,1$（r个1）插$n-1$个板，分成n份。</li>
+</ul>
+<blockquote>
+<p>$x_1+x_2+…+x_n=r$，其中$x_1,x_2,…,x_n\geq 0$，都是整数。求解的个数。</p>
+</blockquote>
+<ul>
+<li>转化成$(x_1+1)+(x_2+1)+…+(x_n+1)=r+n,(x_1+1),…,(x_n+1)\geq 1$。答案就是$C_{n+r-1}^{n-1}$。</li>
+</ul>
+<blockquote>
+<p>n个0，n个1，组成一个2n位二进制数。要求从左到右扫描，使得1的个数总是不小于0，求方案数。</p>
+</blockquote>
+<ul>
+<li><p>其实就是n对括号合法匹配数。对于一个合法串，可以考虑其最后一个括号的匹配情况，即它一定满足形式：</p>
+<script type="math/tex; mode=display">
+P=A(B)</script><p>而$A,B$都是合法的子串。所以P的方案数就是$P(n)=\sum_{i=0}^{n-1}P(i)P(n-1-i)$。即A和B的子串长度可以是$0..2(n-1)$。</p>
+<p>这其实是卡特兰数的递推数列，即最终方案为$C_{2n}^n/(n+1)$。</p>
+</li>
+</ul>
+<h2 id="排列的生成"><a href="#排列的生成" class="headerlink" title="排列的生成"></a>排列的生成</h2><h3 id="字典序"><a href="#字典序" class="headerlink" title="字典序"></a>字典序</h3><blockquote>
+<p>对于一个排列$P_1P_2P_3…P_n$，求他下一个排列。</p>
+</blockquote>
+<ul>
+<li><p>找到末尾最长降序子列：$P_{i+1}P_{i+2}…P_n$</p>
+</li>
+<li><p>记下$P_i$，找到比$P_i$大的最右面的一个数，记为$P_k$</p>
+</li>
+<li><p>交换$P_i,P_k$</p>
+</li>
+<li>把$P_k$右侧子列倒序排列。</li>
+</ul>
+<p>例：$349687521$，$P_{i+1}…P_n=87521$，$P_i=6$，$P_k=7$</p>
+<p>​        所以下一个字典序为$349712568$。</p>
+<blockquote>
+<p><strong>康托编码</strong>：记$a_i$为$P_i$右侧比$P_i$小的数字个数。则排列$P_1P_2P_3…P_n$可一一映射为其字典序排名：</p>
+<script type="math/tex; mode=display">
+d=a_1(n-1)!+a_2(n-2)!+...+a_{n-1}1!</script><p>注：$d=0,1,…,n!-1$</p>
+</blockquote>
+<p>根据排列计算其字典序数是简单的。同样也可以求第k个排列。以$n=5$，求第$95$个排列为例：</p>
+<ul>
+<li>$95/4!=3……….23$（带余除法）</li>
+<li>$23/3!=3……….5$</li>
+<li>$5/2!=2……….1$</li>
+<li>$1/1!=1………0$</li>
+</ul>
+<p>于是第一位为$4$（右边肯定有3个比他小），第二位为5（右边有三个比他小，其中4在他左侧），第三位为3（右边肯定有两个比他小），第四位为2，第五位为1。</p>
+<p>所以第95个排列为45321。（注意从0开始数）</p>
+<h3 id="序数法"><a href="#序数法" class="headerlink" title="序数法"></a>序数法</h3><p>将一个排列$P_1P_2…P_n$一一映射到一个序列$a_{n-1}a_{n-2}…a_1$。其中，$a_i$表示序列中，$i+1$右侧比$i+1$小的数的个数。</p>
+<p>例如：$349687521$对应的序数为$64332221$。显然，序列的范围是$00…0$到$(n-1)(n-2)…1$，共$n!$个。</p>
+<ul>
+<li><p>求下一个排列：序数加一。序数的$a_1$是2进制，$a_2$是3进制，$a_3$是4进制，以此类推。</p>
+<p>因此，序数$64332221+1=64332300$。</p>
+<p>而序数转化为排列是简单的。从大到小依次找到数应该在的位置就好了。$64332300$对应的排列就是$419687523$。</p>
+</li>
+</ul>
+<h2 id="容斥原理"><a href="#容斥原理" class="headerlink" title="容斥原理"></a>容斥原理</h2><script type="math/tex; mode=display">
+|\bigcup_{i=1}^n A_i|=\sum_{i=1}^n|A_i|-\sum_{i<j}|A_i\cap A_j|+\sum_{i<j<k}|A_i\cap A_j\cap A_k|-....+(-1)^n|A_1\cap A_2\cap A_3\cap....\cap A_n|\\
+|\bigcap_{i=1}^n\bar{A_i}|=|U|-|\bigcup_{i=1}^n A_i|</script><h3 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h3><p>答案是：</p>
+<script type="math/tex; mode=display">
+n!-C_n^1(n-1)!+C_n^2(n-2)!-C_n^3(n-3)!+...+(-1)^kC_n^k(n-k)!+(-1)^nC_n^n0!\\
+=n!-\frac{n!}{1!}+\frac{n!}{2!}-....+(-1)^k\frac{n!}{k!}+...+(-1)^n\frac{n!}{n!}\\
+=n!(1-\frac{1}{1!}+\frac{1}{2!}-...+(-1)^n\frac{1}{n!})</script><ul>
+<li>记$A_i$为数字i在自己位置上。答案就是$|\bigcap_{i=1}^n \bar{A_i}|$。而:<script type="math/tex; mode=display">
+\sum_{i_1 < i_2<...<i_t}|A_{i_1}\cap A_{i_2}\cap...\cap A_{i_t}|=C_n^t(n-t)!</script>左式的理解可以为：“存在（至少）t个数字不在自己位置上的方案数”。</li>
+</ul>
+<h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><p>$n=p_1^{\alpha_1}p_2^{\alpha_2}…p_n^{\alpha_n}$。记$[1,n]$中，$p_i$的倍数集合为$A_i$，则$|A_i|=\frac{n}{p_i},|A_i\cap A_j|=\frac{n}{p_ip_j}$。于是比n小和n互质的数的个数就为$|\bigcap_{i=1}^n\bar{A_i}|$。</p>
+<h3 id="杂题-2"><a href="#杂题-2" class="headerlink" title="杂题"></a>杂题</h3><blockquote>
+<p>m个元素的集合，到n个集合满射的个数为$n^m-C_n^1(n-1)^m+C_n^2(n-2)^m-…+(-1)^{n-1}C_n^{n-1}1^m$</p>
+</blockquote>
+<ul>
+<li>记$A_i$为第i个元素没有原象的方案。答案就是$|\bigcap_{i=1}^n\bar{A_i}|$。而:<script type="math/tex; mode=display">
+\sum_{i_1 < i_2<...<i_t}|A_{i_1}\cap A_{i_2}\cap...\cap A_{i_t}|=C_n^t(n-t)^m</script>左式的理解可以为：“存在（至少）t个元素没有原象的方案数”。</li>
+</ul>
+<h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><h3 id="Ramsey数"><a href="#Ramsey数" class="headerlink" title="Ramsey数"></a>Ramsey数</h3><p>记$r(p,q)$为参数是$p,q$的Ramsey数。它的含义是，对任意$n&gt;r(p,q)$，那么n个点的完全图，用两种颜色去边染色，要么存在$p$个顶点构成的子图的边全是一种颜色，要么存在$q$个顶点构成的子图的边全是另一种颜色。</p>
+<p>即$n\geq r(p,q)$，要么存在p个人相互认识，要么存在q个人相互不认识。</p>
+<h3 id="杂题-3"><a href="#杂题-3" class="headerlink" title="杂题"></a>杂题</h3><blockquote>
+<p>参加一个宴会的人中，至少存在两人，它们认识的宴会上的人数相同。</p>
+</blockquote>
+<ul>
+<li>考虑n个人参加，如果他们认识的人两两不同，则他们认识的人数从小到大排就是$0,1,2,…,n-1$（共n个），那么显然认识最多的人要认识剩下的所有人，而认识最少的人却一个人都不认识，这矛盾。</li>
+</ul>
+<blockquote>
+<p>1到2n的正整数中，任取n+1个，则它们中必有一对数，其中一个是另一个的倍数。</p>
+</blockquote>
+<ul>
+<li>考虑所有的正整数都能写成$A*2^B$的形式，A是奇数，B是正整数。而很显然$[1,2n]$中的奇数只有n个，故取n+1个数肯定会有两个数对应的A相同。则它们之间有倍数关系。</li>
+</ul>
+<blockquote>
+<p>设$a_1,a_2,…,a_m$是一个正整数序列，则存在$1\leq k\leq l\leq m$，使得$a_k+a_{k+1}+…+a_l$是m的倍数。</p>
+</blockquote>
+<ul>
+<li>考虑前缀和模m的结果，记$S_n=\sum_{i=1}^n a_i\quad mod\; m$。若存在n，使得$S_n=0$则直接得证。否则，$S_n$都不为0，则它们为$1,2,…,m-1$，又因为有m个前缀和，所以肯定有两个前缀和相同。将它们相减，就得到了一段连续的模m为0的子序列。</li>
+</ul>
+<blockquote>
+<p>设$a_1,a_2,…,a_n$是一组正整数序列，满足$a_1+a_2+…+a_n\leq r$。求证$\forall m&lt;2n-r$，都存在一个子序列使得$a_h+a_{h+1}+…+a_{k-1}+a_k=m$。</p>
+</blockquote>
+<ul>
+<li>考虑前缀和$S_n$，然后可以构造两组单调的正整数序列为$S_1,S_2,…,S_n$和$S_1+m,S_2+m,…,S_n+m$，共2n个数。显然这2n个数都小于等于$r+m$。如果$2n&gt;r+m$，则必定存在两个数相等。而且一个数在前一个序列，另一个数在后一个序列。则存在$h,k$使得$S_h-S_k=m$。</li>
+</ul>
+<blockquote>
+<p>$n^2+1$个不同实数组成的序列中，一定存在长为n+1的单调子序列。</p>
+</blockquote>
+<ul>
+<li><p>记$f[i]$为从第i位开始最长严格递增的子序列长度。若$\forall 1\leq i\leq n^2+1$，都有$f[i]\leq n$的话，考虑抽屉原理，则至少有$f[i_1]=f[i_2]=…=f[i_n]=f[i_{n+1}]$。</p>
+<p>于是可以考虑$a_{i_1},a_{i_2},…,a_{i_n},a_{i_{n+1}}$。若它们单调减，则构成了一个长为$n+1$的单调减序列。否则，若存在$a_{i_1}<a_{i_2}$，则$f[i_1]> f[i_2]$，矛盾。</a_{i_2}$，则$f[i_1]></p>
+</li>
+</ul>
+<blockquote>
+<p>六个点的完全图中，用红/黑给边染色，必然存在同色三角形。</p>
+</blockquote>
+<ul>
+<li>考虑点A连的五条边，根据抽屉原理，至少有三条边是同色的，不妨设为$AB,AC,AD$。再考虑边$BC,BD,CD$，若它们中有一条是和$AB,AC,AD$同色，则存在了同色三角形。否则，它们都是另一种颜色，则$BCD$就是一个同色三角形。</li>
+</ul>
+<h2 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h2><h3 id="普通生成函数"><a href="#普通生成函数" class="headerlink" title="普通生成函数"></a>普通生成函数</h3><p>求解多重递推可以这样，例如：</p>
+<script type="math/tex; mode=display">
+\begin{cases}a_n=9a_{n-1}+b_{n-1}\\
+b_n=9b_{n-1}+a_{n-1}
+\end{cases}\\
+a_1=8,b_1=1</script><p>不妨设数列的生成函数分别是$A(x),B(x)$：</p>
+<script type="math/tex; mode=display">
+A(x)=a_1+a_2x+a_3x^2+...\\
+B(x)=b_1+b_2x+b_3x^2+...</script><p>然后可以凑出递推式：</p>
+<script type="math/tex; mode=display">
+a_n-9a_{n-1}-b_{n-1}=0\\
+\begin{cases}A(x)=a_1+a_2x+a_3x^2+...\\
+-9xA(x)=-9a_1x-9a_2x^2-...\\
+-xB(x)=-b_1x-b_2x^2-...\\
+\end{cases}\\
+\therefore (1-9x)A(x)-xB(x)=a_1+(a_2-9a_1-b_1)x+(a_3-9a_2-b_2)x^2+....\\
+=a_1+0+0+0+...\\
+=8</script><p>同理，由第二个递推式有$(1-9x)B(x)-xA(x)=b_1=1$。所以可以解方程，得：</p>
+<script type="math/tex; mode=display">
+A(x)=\frac{-71x+8}{(1-8x)(1-10x)}\\
+B(x)=\frac{-x+1}{(1-8x)(1-10x)}</script><h3 id="指数生成函数"><a href="#指数生成函数" class="headerlink" title="指数生成函数"></a>指数生成函数</h3><p>例如错排问题：</p>
+<script type="math/tex; mode=display">
+D_n-nD_{n-1}=(-1)^n\\
+D_0=1,D_1=0,D_2=1</script><p>可以设指数型生成函数：</p>
+<script type="math/tex; mode=display">
+G(x)=D_0+D_1x+\frac{D_2}{2!}x^2+\frac{D_3}{3!}x^3+...\\
+xG(x)=D_0x+D_1x^2+\frac{D_2}{2!}x^3+\frac{D_3}{3!}x^4+...\\
+\therefore (1-x)G(x)=D_0+\sum_{i=1}^{\infin}(\frac{D_i}{i!}-\frac{D_{i-1}}{(i-1)!})\\
+\because \frac{D_n}{n!}-\frac{D_{n-1}}{(n-1)!}=\frac{(-1)^n}{n!}\\
+\therefore (1-x)G(x)=D_0+\sum_{i=1}^{\infin}\frac{(-x)^i}{i!}=1-\frac{x}{1!}+\frac{x^2}{2!}-...=e^{-x}\\
+\therefore G(x)=\frac{e^{-x}}{1-x}=(1-\frac{x}{1!}+\frac{x^2}{2!}-...)(1+x+x^2+x^3+...)\\
+\therefore \frac{D_n}{n!}=1-\frac{1}{1!}+\frac{1}{2!}-....+\frac{(-1)^n}{n!}</script><p>其中，$\frac{D_n}{n!}$就是$x^n$前的系数。考虑多项式乘法。</p>
+<h3 id="整数拆分问题"><a href="#整数拆分问题" class="headerlink" title="整数拆分问题"></a>整数拆分问题</h3><blockquote>
+<p>将n拆成1，2，4，5的和，不允许重复。</p>
+</blockquote>
+<ul>
+<li>$(1+x)(1+x^2)(1+x^4)(1+x^5)$中，$x^n$前的系数</li>
+</ul>
+<blockquote>
+<p>将n拆成1，2，4，5的和，允许重复。</p>
+</blockquote>
+<ul>
+<li>$(1+x+x^2+x^3+…)(1+x^2+x^4+x^6+…)(1+x^4+x^8+x^{12}+…)(1+x^5+x^{10}+…)$</li>
+</ul>
+<h2 id="棋盘多项式"><a href="#棋盘多项式" class="headerlink" title="棋盘多项式"></a>棋盘多项式</h2><blockquote>
+<p>棋盘是由若干格子组成的。格子间不一定相连，但每个格子都有两个属性：行和列。行和列都是整数。格子里可以放棋子。</p>
+<p>记$r_k(C)$表示在棋盘C中放k个棋子的方案数，要求同一行、同一列至多一个棋子。</p>
+<p>那么$R(C)=\sum_{i=1}^nr_i(C)x^i$称为棋盘C的<strong>棋盘多项式</strong>。</p>
+</blockquote>
+<p>例：<img data-src="2.png" alt="2"></p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ul>
+<li>对于一个棋盘C，对于任意一个格子x，记C去掉x这一格子后的剩余棋盘是$C_e$，记C去掉x所在行和列所有的格子后的剩余棋盘为$C_i$，则有：</li>
+</ul>
+<script type="math/tex; mode=display">
+r_k(C)=r_{k-1}(C_i)+r_k(C_e)\\
+R(C)=xR(C_i)+R(C_e)</script><p>​        原理就是，要么格子x里有棋子，即$r_{k-1}C_i$，要么格子x里没棋子，即$r_k(C_e)$。</p>
+<ul>
+<li>若对于一个棋盘C，它是由两部分$C_1,C_2$组成的，且$C_1$和$C_2$中的行列都没有交集。则有：<script type="math/tex; mode=display">
+r_k(C)=\sum_{i=0}^kr_i(C_1)r_{k-i}(C_2)\\
+R(C)=R(C_1)R(C_2)</script>例：<img data-src="3.png" alt="3"></li>
+</ul>
+<h3 id="应用——有禁区的方棋盘放棋子方案数"><a href="#应用——有禁区的方棋盘放棋子方案数" class="headerlink" title="应用——有禁区的方棋盘放棋子方案数"></a>应用——有禁区的方棋盘放棋子方案数</h3><p>一个$n\times n$的方格棋盘，其中有一些禁区。则在其中放n个棋子（不许同一行同一列有多个棋子）的方案数为：</p>
+<script type="math/tex; mode=display">
+n!-r_1(C)(n-1)!+r_2(C)(n-2)!+...+(-1)^nr_n(C)</script><p>其中，$r_k(C)$表示在禁区棋盘放k个棋子的方案数。例：</p>
+<p><img data-src="4.png" alt="4"></p>
+<p>证明：</p>
+<p>设$A_i$为第i行的那个棋子落入禁区的放置方案数。则答案是$|\bigcap_{i=1}^n\bar{A_i}|$。</p>
+<p>而$\sum_{i=1}^n|A_i|=r_1(C)(n-1)!,\sum_{i&lt;j}|A_i\cap A_j|=r_2(C)(n-2)!$。于是由容斥原理可以得出。</p>
+<h3 id="应用——错排"><a href="#应用——错排" class="headerlink" title="应用——错排"></a>应用——错排</h3><ul>
+<li>n的错排数为，$n\times n$的棋盘，禁区为对角线，求方案数。显然，禁区棋盘的多项式为$R(C)=(1+x)^n=1+C_n^1x+…$。</li>
+<li>所以方案数为$n!-C_n^1(n-1)!+C_n^2(n-2)!-…+(-1)^nC_n^n$。</li>
+</ul>
+<h2 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h2><script type="math/tex; mode=display">
+F(n)=\sum_{d|n}f(d)\\
+f(n)=\sum_{d|n}\mu(d)F(\frac{n}{d})\\
+\mu(x)=\begin{cases}1&x=1\\
+(-1)^n&x=p_1\cdot p_2\cdot p_3\cdot....\cdot p_n\\
+0&else
+\end{cases}</script><p>其中，$p_1,p_2,…,p_n$是互不相同的素数。</p>
+<p>莫比乌斯反演的证明就是：</p>
+<script type="math/tex; mode=display">
+\sum_{d|n}\mu(d)=\begin{cases}1&n=1\\0&else\end{cases}\\
+\sum_{d|n}\mu(d)F(\frac{n}{d})=\sum_{d|n}\sum_{d_1|\frac{n}{d}}\mu(d)f(d_1)=\sum_{d_1|n}f(d_1)\sum_{d|\frac{n}{d_1}}\mu(d)=f(n)</script><h2 id="Burnside定理和Polya定理"><a href="#Burnside定理和Polya定理" class="headerlink" title="Burnside定理和Polya定理"></a>Burnside定理和Polya定理</h2><h3 id="Burnside定理"><a href="#Burnside定理" class="headerlink" title="Burnside定理"></a>Burnside定理</h3><p>考虑计数问题。用两种颜色去染$2\times 2$的棋盘，旋转相同算一种。求方案数。</p>
+<p>首先，要画出左右可能的染色方案，即$2^4=16$种。如下图：</p>
+<p><img data-src="5.png" alt="5"></p>
+<p>按行优先，我们把这些方案数记为1，2，….，16。然后我们需要去重。</p>
+<ul>
+<li>旋转$0$°，则考虑这些染色方案间的等价置换关系。置换为$p=(1)(2)(3)…(16)$。意思是，第i个方案在旋转0°后就是第i个方案。</li>
+<li>逆时针旋转90°，则置换为$p=(1)(2)(3456)(78910)(11\;12)(13\;14\;15\;16)$。意思是，第1个方案逆时针转90°后还是第1个，第3个方案逆时针90°后是第4个方案……</li>
+<li>顺时针旋转90°，则置换为$p=(1)(2)(6543)(10\;987)(11\;12)(16\;15\;14\;13)$</li>
+<li>旋转180°，置换为$p=(1)(2)(3\;5)(4\;6)(7\;9)(8\;10)(11)(12)(13\;15)(14\;16)$。</li>
+</ul>
+<p>然后去重方案数就是每个置换中长度为1的置换数的平均。即：</p>
+<script type="math/tex; mode=display">
+\frac{16+2+2+4}{4}=6</script><p>最后答案是6种。</p>
+<h3 id="Polya定理"><a href="#Polya定理" class="headerlink" title="Polya定理"></a>Polya定理</h3><p>显然Burnside定理要画出所有的方案数，这不太好。考虑polya定理。同样一个问题，对棋盘入手：</p>
+<p><img data-src="6.png" alt="6"></p>
+<p>然后显然，棋盘有4个元素。</p>
+<ul>
+<li><p>旋转0°，棋盘元素的置换为$p=(1)(2)(3)(4)$</p>
+</li>
+<li><p>逆时针旋转90°，棋盘元素的置换为$p=(4321)$。4号到3号位置上，3号到2号位置上….</p>
+</li>
+<li>顺时针旋转90°，棋盘元素的置换为$p=(1234)$。</li>
+<li>旋转180°，棋盘元素的置换为$p=(13)(24)$。</li>
+</ul>
+<p>然后统计的方案数就是$\frac{2^4+2^1+2^1+2^2}{4}=6$，即考虑“染色数^置换节数”的平均值。（置换由几个小置换乘积而成）</p>
+<h2 id="有重复元素的圆排列"><a href="#有重复元素的圆排列" class="headerlink" title="有重复元素的圆排列"></a>有重复元素的圆排列</h2><blockquote>
+<p>从1，2，3，4种，取4个数出来（可以重复）。将取出来的数排成一个圆排列（旋转相同算一种），则方案数有多少？</p>
+</blockquote>
+<ul>
+<li><p>首先定义一个圆排列的周期。考虑一个圆排列：(1       2       1     2)，它的周期是2（想象成一个圆）。</p>
+<p>圆排列(1    2     3     1)的周期为4，(1     1       1       1)的周期为1。</p>
+<p>即周期就是最小循环节长度。</p>
+</li>
+<li><p>然后要求的答案就是$\sum_{d|n}M(d)$，其中$M(d)$表示周期为d的圆排列方案数。</p>
+<p>显然有$\sum_{d|n}M(d)\times d=m^n$，所有的方案数就是每个周期为d的方案数再乘上它的周期。</p>
+<p>莫比乌斯反演，有：</p>
+<script type="math/tex; mode=display">
+nM(n)=\sum_{d|n}m^d\mu(\frac{n}{d})=\sum_{d|n}\mu(d)m^{\frac{n}{d}}\\
+\therefore M(d)=\frac{1}{d}\sum_{d_1|d}\mu(d_1)m^{\frac{d}{d_1}}</script><p>所以最后的答案就是：</p>
+<script type="math/tex; mode=display">
+M(1)=4\mu(1)=4\\
+M(2)=\frac{1}{2}(\mu(1)4^2+\mu(2)4^1)=6\\
+M(4)=\frac{1}{4}(\mu(1)4^4+\mu(2)4^2+\mu(4)4^1)=60\\
+\therefore ans=4+6+60=70</script></li>
+</ul>
+<h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><script type="math/tex; mode=display">
+C_n=\frac{C_{2n}^n}{n+1}\\
+C_n=\sum_{i=0}^{n-1}C_iC_{n-i-1}</script><p>应用：</p>
+<ul>
+<li>n边凸多边形，划分成若干三角形的方案数。</li>
+<li>以1，2，….，n的顺序入栈，不同出栈结果的方案数。</li>
+<li>n对括号合法匹配串数。</li>
+<li>n个结点的二叉树的不同形态数。</li>
+</ul>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">編集日</span>
+    <time title="修正日：2021-12-27 20:55:21" itemprop="dateModified" datetime="2021-12-27T20:55:21+08:00">2021-12-27</time>
+  </span>
+  <span id="2021/12/26/组合数学杂记/" class="item leancloud_visitors" data-flag-title="组合数学杂记" title="閲覧数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">閲覧数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">回</span>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>著者： </strong>SuBonan <i class="ic i-at"><em>@</em></i>BokkeNasu
+  </li>
+  <li class="link">
+    <strong>記事へのリンク：</strong>
+    <a href="http://sugarsbn.github.io/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="组合数学杂记">http://sugarsbn.github.io/2021/12/26/组合数学杂记/</a>
+  </li>
+  <li class="license">
+    <strong>著作権表示： </strong>このブログ内のすべての記事は、特別な記載がない限り <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> の下のライセンスで保護されています。
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5ceevli2j30xc0or1hc.jpg" title="概率论与数理统计">
+  <span class="type">前の記事</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>概率论与数理统计</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/02/07/MCMC-MH/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr54au9pi5j30xc0nle81.jpg" title="马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样">
+  <span class="type">次の記事</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="見出し">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#和积法则"><span class="toc-number">1.</span> <span class="toc-text">和积法则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#N取r的可重组合数："><span class="toc-number">1.1.</span> <span class="toc-text">N取r的可重组合数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂题"><span class="toc-number">1.2.</span> <span class="toc-text">杂题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排列组合"><span class="toc-number">2.</span> <span class="toc-text">排列组合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#prufer序列"><span class="toc-number">2.1.</span> <span class="toc-text">prufer序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂题-1"><span class="toc-number">2.2.</span> <span class="toc-text">杂题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排列的生成"><span class="toc-number">3.</span> <span class="toc-text">排列的生成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字典序"><span class="toc-number">3.1.</span> <span class="toc-text">字典序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#序数法"><span class="toc-number">3.2.</span> <span class="toc-text">序数法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容斥原理"><span class="toc-number">4.</span> <span class="toc-text">容斥原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#错排"><span class="toc-number">4.1.</span> <span class="toc-text">错排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#欧拉公式"><span class="toc-number">4.2.</span> <span class="toc-text">欧拉公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂题-2"><span class="toc-number">4.3.</span> <span class="toc-text">杂题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鸽巢原理"><span class="toc-number">5.</span> <span class="toc-text">鸽巢原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ramsey数"><span class="toc-number">5.1.</span> <span class="toc-text">Ramsey数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂题-3"><span class="toc-number">5.2.</span> <span class="toc-text">杂题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成函数"><span class="toc-number">6.</span> <span class="toc-text">生成函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通生成函数"><span class="toc-number">6.1.</span> <span class="toc-text">普通生成函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指数生成函数"><span class="toc-number">6.2.</span> <span class="toc-text">指数生成函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数拆分问题"><span class="toc-number">6.3.</span> <span class="toc-text">整数拆分问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#棋盘多项式"><span class="toc-number">7.</span> <span class="toc-text">棋盘多项式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#性质"><span class="toc-number">7.1.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用——有禁区的方棋盘放棋子方案数"><span class="toc-number">7.2.</span> <span class="toc-text">应用——有禁区的方棋盘放棋子方案数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用——错排"><span class="toc-number">7.3.</span> <span class="toc-text">应用——错排</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#莫比乌斯反演"><span class="toc-number">8.</span> <span class="toc-text">莫比乌斯反演</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Burnside定理和Polya定理"><span class="toc-number">9.</span> <span class="toc-text">Burnside定理和Polya定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Burnside定理"><span class="toc-number">9.1.</span> <span class="toc-text">Burnside定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Polya定理"><span class="toc-number">9.2.</span> <span class="toc-text">Polya定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有重复元素的圆排列"><span class="toc-number">10.</span> <span class="toc-text">有重复元素的圆排列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卡特兰数"><span class="toc-number">11.</span> <span class="toc-text">卡特兰数</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="関連記事">
+      </div>
+      <div class="overview panel" data-title="概要">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="SuBonan"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">SuBonan</p>
+  <div class="description" itemprop="description">やがて、平凡な人になる</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">48</span>
+        <span class="name">ポスト</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">カテゴリ</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">タグ</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1N1Z2FyU0JO" title="https:&#x2F;&#x2F;github.com&#x2F;SugarSBN"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>ホーム</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>プロフィール</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);" target="_blank" rel="noopener"><i class="ic i-feather"></i>投稿</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>アーカイブ</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>カテゴリ</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" rel="prev" title="前の記事"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/02/07/MCMC-MH/" rel="next" title="次の記事"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>ランダムな記事</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/02/04/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%BF%BB%E8%AF%91/" title="日本語翻訳">日本語翻訳</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/06/%E5%85%B3%E4%BA%8Ejava%E5%9F%9F%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%80%81%E5%AF%BC%E8%87%B4%E7%9A%84%E7%BC%BA%E9%99%B7/" title="关于 java 域和静态方法不支持多态导致的缺陷">关于 java 域和静态方法不支持多态导致的缺陷</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/03/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%BC%95%E8%AE%BA/" title="量子力学引论">量子力学引论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/11/02/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%BB%AD/" title="类型和程序设计语言_续">类型和程序设计语言_续</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" title="线性代数翻书">线性代数翻书</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/07/MCMC-MH/" title="马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样">马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/01/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" title="离散数学 - 数理逻辑">离散数学 - 数理逻辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" title="C-C++ 语法">C-C++ 语法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="组合数学杂记">组合数学杂记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/06/03/test/" title="test">test</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最近のコメント</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">SuBonan @ SuBonan</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/12/26/组合数学杂记/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "検索…",
+      empty: "「 ${query} 」については何も見つかりませんでした",
+      stats: "${time} ms以内に ${hits} 件の結果が見つかりました"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,copyright: 'コピーは成功しました。 <br> 再印刷については、 ％s 契約に従ってください。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/asuna_04.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

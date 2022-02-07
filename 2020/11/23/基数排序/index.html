@@ -115,12 +115,12 @@ SuBonan = BokkeNasu</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5ceotb7oj30xc0pyb29.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53x9kntlj31aw0u0qv5.jpg"></li>
           <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53ynresqj30xc0nle81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr54bg7nwkj30xc0nl7wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr5ceevli2j30xc0or1hc.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5cgrwdhkj30sg0in7ey.jpg"></li>
           <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr5cgvp7tsj30jn0rswss.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr5ch5sgedj30xc0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr54bg7nwkj30xc0nl7wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr54c3n70qj30xc0nlb29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -164,7 +164,7 @@ SuBonan = BokkeNasu</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>忘记了 17 年学的东西。。。看来线性排序还是实用性不强嘛</p>
+    <p>忘记了17年学的东西。。。看来线性排序还是实用性不强嘛</p>
 <a id="more"></a>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> BIT = <span class="number">16</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> U = <span class="number">65536</span>;</span><br><span class="line"><span class="keyword">int</span> N, cnt[U], A[MAXN][<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getd</span><span class="params">( <span class="keyword">int</span> x, <span class="keyword">int</span> d )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (x &gt;&gt; (d * BIT)) &amp; (U - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">radix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    For(d, <span class="number">0</span>, <span class="number">2</span>)&#123;</span><br><span class="line">    	<span class="built_in">memset</span>(cnt, <span class="number">0</span>, <span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        For(i, <span class="number">0</span>, N) cnt[getd(A[i][d], d)]++;</span><br><span class="line">        For(i, <span class="number">1</span>, U) cnt[i] += cnt[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = N - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) A[--cnt[getd(A[i][d], d)]][d ^ <span class="number">1</span>] = A[i][d];</span><br><span class="line">    &#125;</span><br><span class="line">    For(i, <span class="number">0</span>, N)	<span class="built_in">printf</span>(<span class="string">"%d%c"</span>, A[i][<span class="number">0</span>], i == N - <span class="number">1</span> ? <span class="string">'\n'</span> : <span class="string">' '</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">    For(i, <span class="number">0</span>, N) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;A[i][<span class="number">0</span>]);</span><br><span class="line">    radix_sort();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -218,7 +218,7 @@ SuBonan = BokkeNasu</title>
     <div class="item left">
       
 
-  <a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr53z18g73j30xc0nlqv5.jpg" title="数学分析（上）">
+  <a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5ceevli2j30xc0or1hc.jpg" title="数学分析（上）">
   <span class="type">前の記事</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>数学分析（上）</h3>
@@ -228,7 +228,7 @@ SuBonan = BokkeNasu</title>
     <div class="item right">
       
 
-  <a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr54bg7nwkj30xc0nl7wh.jpg" title="离散数学 - 集合部分">
+  <a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr54au9pi5j30xc0nle81.jpg" title="离散数学 - 集合部分">
   <span class="type">次の記事</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>离散数学 - 集合部分</h3>
@@ -264,7 +264,7 @@ SuBonan = BokkeNasu</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">45</span>
+        <span class="count">48</span>
         <span class="name">ポスト</span>
       </a>
     </div>
@@ -352,17 +352,16 @@ SuBonan = BokkeNasu</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/02/04/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%BF%BB%E8%AF%91/" title="日本語翻訳">日本語翻訳</a></span>
+    <span><a href="/2021/05/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" title="线性代数及其应用">线性代数及其应用</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%B0%E5%BD%95/" title="カテゴリ - 记录">- 记录</a>
 </div>
 
-    <span><a href="/2019/11/17/blog1/" title="记">记</a></span>
+    <span><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></span>
   </li>
 
       
@@ -380,7 +379,27 @@ SuBonan = BokkeNasu</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/23/%E4%B9%B1%E6%B6%82%E4%B9%B1%E7%94%BB/" title="絵">絵</a></span>
+    <span><a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="类型和程序设计语言">类型和程序设计语言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%AD%E6%96%87-%E9%9A%8F%E7%AC%94/" title="カテゴリ - 语文 - 随笔">- 语文 - 随笔</a>
+</div>
+
+    <span><a href="/2020/03/08/%E6%86%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E5%BA%9F%E8%AF%9D/" title="憋出来的废话">憋出来的废话</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%85%A7%E7%89%87/" title="カテゴリ - 照片">- 照片</a>
+</div>
+
+    <span><a href="/2019/11/24/Pictures/" title="Pictures">Pictures</a></span>
   </li>
 
       
@@ -389,26 +408,7 @@ SuBonan = BokkeNasu</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/10/18/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="日本语笔记">日本语笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/06/%E5%85%B3%E4%BA%8Ejava%E5%9F%9F%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%80%81%E5%AF%BC%E8%87%B4%E7%9A%84%E7%BC%BA%E9%99%B7/" title="关于 java 域和静态方法不支持多态导致的缺陷">关于 java 域和静态方法不支持多态导致的缺陷</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%8B%B1%E8%AF%AD/" title="カテゴリ - 英语">- 英语</a>
-</div>
-
-    <span><a href="/2020/10/14/%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="大英帝国語筆記">大英帝国語筆記</a></span>
+    <span><a href="/2022/02/07/MCMC-MH/" title="马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样">马尔科夫链 - 蒙特卡洛方法及其一个例子 Metropolis-Hastings 抽样</a></span>
   </li>
 
       
@@ -426,17 +426,16 @@ SuBonan = BokkeNasu</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" title="数学分析（上）">数学分析（上）</a></span>
+    <span><a href="/2021/07/28/%E9%87%8F%E5%AD%90%E7%BA%BF%E8%B7%AF/" title="量子线路">量子线路</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%85%A7%E7%89%87/" title="カテゴリ - 照片">- 照片</a>
 </div>
 
-    <span><a href="/2019/11/24/Pictures/" title="Pictures">Pictures</a></span>
+    <span><a href="/2021/11/02/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%BB%AD/" title="类型和程序设计语言_续">类型和程序设计语言_续</a></span>
   </li>
 
   </ul>
@@ -451,7 +450,7 @@ SuBonan = BokkeNasu</title>
   <div class="copyright">
     
     &copy; 2020 – 
-    <span itemprop="copyrightYear">2021</span>
+    <span itemprop="copyrightYear">2022</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
