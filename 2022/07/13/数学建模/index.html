@@ -62,27 +62,27 @@ SuBonan = BokkeNasu</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2022-07-13 08:01:38">
+  <span class="item" title="Created: 2022-07-13 08:01:38">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">发表于</span>
+    <span class="text">Posted on</span>
     <time itemprop="dateCreated datePublished" datetime="2022-07-13T08:01:38+08:00">2022-07-13</time>
   </span>
-  <span class="item" title="本文字数">
+  <span class="item" title="Symbols count in article">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span class="text">本文字数</span>
-    <span>19k</span>
-    <span class="text">字</span>
+    <span class="text">Symbols count in article</span>
+    <span>22k</span>
+    <span class="text">words</span>
   </span>
-  <span class="item" title="阅读时长">
+  <span class="item" title="Reading time">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span class="text">阅读时长</span>
-    <span>17 分钟</span>
+    <span class="text">Reading time</span>
+    <span>20 mins.</span>
   </span>
 </div>
 
@@ -92,7 +92,7 @@ SuBonan = BokkeNasu</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="切换导航栏">
+      <div class="lines" aria-label="Toggle navigation bar">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -115,12 +115,12 @@ SuBonan = BokkeNasu</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr5ch5sgedj30xc0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53z18g73j30xc0nlqv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr54bsztscj30xc0nle81.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53x9kntlj31aw0u0qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr54bg7nwkj30xc0nl7wh.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr54c3n70qj30xc0nlb29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/005v4F2gly8gr54au9pi5j30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/005v4F2gly8gr53ynresqj30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr5ch91bmrj30xc0iqama.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/005v4F2gly8gr54bsztscj30xc0nle81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/005v4F2gly8gr5ceotb7oj30xc0pyb29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -145,7 +145,7 @@ SuBonan = BokkeNasu</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">首页</a></span>
+<span><a href="/">Home</a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
@@ -580,7 +580,186 @@ c_t=\frac{\alpha^2}{2(1-\alpha)^2}[\hat{y_t}^{(1)}-2\hat{y_t}^{(2)}+\hat{y_t}^{(
 <h2 id="关联性聚类"><a class="markdownIt-Anchor" href="#关联性聚类">#</a> 关联性聚类</h2>
 <h2 id="层次聚类"><a class="markdownIt-Anchor" href="#层次聚类">#</a> 层次聚类</h2>
 <h2 id="密度聚类"><a class="markdownIt-Anchor" href="#密度聚类">#</a> 密度聚类</h2>
-<h2 id="贝叶斯判别"><a class="markdownIt-Anchor" href="#贝叶斯判别">#</a> 贝叶斯判别</h2>
+<h2 id="贝叶斯分类器"><a class="markdownIt-Anchor" href="#贝叶斯分类器">#</a> 贝叶斯分类器</h2>
+<p>以一个例子说朴素贝叶斯分类器，数据集：</p>
+<table>
+<thead>
+<tr>
+<th>瓜</th>
+<th>纹理 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)</th>
+<th>色泽 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)</th>
+<th>敲声 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">x_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)</th>
+<th>类别 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>清晰</td>
+<td>清绿</td>
+<td>清脆</td>
+<td>好瓜</td>
+</tr>
+<tr>
+<td>2</td>
+<td>模糊</td>
+<td>乌黑</td>
+<td>浊响</td>
+<td>坏瓜</td>
+</tr>
+<tr>
+<td>3</td>
+<td>模糊</td>
+<td>清绿</td>
+<td>浊响</td>
+<td>坏瓜</td>
+</tr>
+<tr>
+<td>4</td>
+<td>清晰</td>
+<td>乌黑</td>
+<td>沉闷</td>
+<td>好瓜</td>
+</tr>
+<tr>
+<td>5</td>
+<td>清晰</td>
+<td>清绿</td>
+<td>浊响</td>
+<td>好瓜</td>
+</tr>
+<tr>
+<td>6</td>
+<td>模糊</td>
+<td>乌黑</td>
+<td>沉闷</td>
+<td>坏瓜</td>
+</tr>
+<tr>
+<td>7</td>
+<td>清晰</td>
+<td>乌黑</td>
+<td>清脆</td>
+<td>好瓜</td>
+</tr>
+<tr>
+<td>8</td>
+<td>模糊</td>
+<td>清绿</td>
+<td>沉闷</td>
+<td>好瓜</td>
+</tr>
+<tr>
+<td>9</td>
+<td>清晰</td>
+<td>乌黑</td>
+<td>浊响</td>
+<td>坏瓜</td>
+</tr>
+<tr>
+<td>10</td>
+<td>模糊</td>
+<td>清绿</td>
+<td>清脆</td>
+<td>好瓜</td>
+</tr>
+</tbody>
+</table>
+<p>就是有三个特征：<strong>纹理、色泽、敲声</strong>。然后需要判断是不是好瓜，</p>
+<ul>
+<li>其中，纹理有<strong>清晰、模糊</strong>两种水平</li>
+<li>其中，色泽有<strong>清绿、乌黑</strong>两种水平</li>
+<li>其中，敲声有<strong>浊响、沉闷、清脆</strong>三种水平</li>
+</ul>
+<p>现在，我买了各瓜是 “<strong>清晰 + 清绿 + 沉闷</strong>” 的，那它是好瓜的概率是多少？</p>
+<hr>
+<p>做法：</p>
+<p>由贝叶斯公式：</p>
+P(\mbox{好瓜}|\mbox{纹理清晰、色泽清绿、敲声沉闷})=\frac{P(\mbox{纹理清晰、色泽清绿、敲声沉闷}|\mbox{好瓜})P(好瓜)}{P(\mbox{纹理清晰、色泽清绿、敲声沉闷})}
+
+<p>其中，根据全概率公式：</p>
+P(\mbox{纹理清晰、色泽清绿、敲声沉闷})=P(\mbox{纹理清晰、色泽清绿、敲声沉闷}|\mbox{好瓜})P(\mbox{好瓜})\\
++P(\mbox{纹理清晰、色泽清绿、敲声沉闷}|\mbox{坏瓜})P(\mbox{坏瓜})
+
+<p>然后贝叶斯分类有个非常重要的假设：<strong>不同特征间独立</strong>，即：</p>
+P(\mbox{纹理清晰、色泽清绿、敲声沉闷}|\mbox{好瓜})=P(\mbox{纹理清晰}|\mbox{好瓜})P(\mbox{色泽清绿}|\mbox{好瓜})P(\mbox{敲声沉闷}|\mbox{好瓜})
+
+<p>记 “纹理清晰” 为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span>，“色泽清绿” 为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>，敲声沉闷为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">c</span></span></span></span>，好瓜为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，坏瓜为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，则有：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mi>a</mi><mi>b</mi><mi>c</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi>b</mi><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi>b</mi><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi>b</mi><mi>c</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac><mspace linebreak="newline"></mspace><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(x|abc)=\frac{P(abc|x)P(x)}{P(abc|x)P(x)+P(abc|y)P(y)}\\
+=\frac{P(a|x)P(b|x)P(c|x)P(x)}{P(a|x)P(b|x)P(c|x)P(x)+P(a|y)P(b|y)P(c|y)P(y)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>然后我们开始计算其中需要的概率：</p>
+<ol>
+<li>
+<p>先验概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>，只看数据集最后一列，有</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>6</mn><mi mathvariant="normal">/</mi><mn>10</mn><mo>=</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">P(x)=6/10=3/5
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">6</span><span class="mord">/</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord">/</span><span class="mord">5</span></span></span></span></span></p>
+</li>
+<li>
+<p>先验概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mi mathvariant="normal">/</mi><mn>10</mn><mo>=</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">P(y)=4/10=2/5
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mord">/</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">5</span></span></span></span></span></p>
+</li>
+<li>
+<p>条件概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(a|x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>：看数据集中，最后一列是好瓜时，纹理清晰的概率：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mi mathvariant="normal">/</mi><mn>6</mn><mo>=</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">P(a|x)=4/6=2/3
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mord">/</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span></span></span></span></span></p>
+</li>
+<li>
+<p>条件概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(b|x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mi mathvariant="normal">/</mi><mn>6</mn><mo>=</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">P(b|x)=4/6=2/3
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mord">/</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span></span></span></span></span></p>
+</li>
+<li>
+<p>条件概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(c|x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>6</mn><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">P(c|x)=2/6=1/3
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">3</span></span></span></span></span></p>
+</li>
+<li>
+<p>条件概率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(a|y),P(b|y),P(c|y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mspace linebreak="newline"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mspace linebreak="newline"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">P(a|y)=1/4\\
+P(b|y)=1/4\\
+P(c|y)=1/4
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span></span></span></span></span></p>
+</li>
+</ol>
+<p>所以最终要求的值为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mi>a</mi><mi>b</mi><mi>c</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>c</mi><mi mathvariant="normal">∣</mi><mi>y</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac><mspace linebreak="newline"></mspace><mo>=</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>5</mn></mrow><mrow><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>⋅</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>5</mn><mo>+</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>⋅</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>⋅</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>⋅</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>5</mn></mrow></mfrac><mspace linebreak="newline"></mspace><mo>=</mo><mfrac><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>135</mn></mrow><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>135</mn><mo>+</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>320</mn></mrow></mfrac><mo>=</mo><mfrac><mn>128</mn><mn>137</mn></mfrac></mrow><annotation encoding="application/x-tex">P(x|abc)=\frac{P(a|x)P(b|x)P(c|x)P(x)}{P(a|x)P(b|x)P(c|x)P(x)+P(a|y)P(b|y)P(c|y)P(y)}\\
+=\frac{2/3\cdot 2/3\cdot 1/3\cdot 3/5}{2/3\cdot 2/3\cdot 1/3\cdot 3/5+1/4\cdot1/4\cdot1/4\cdot 2/5}\\
+=\frac{12/135}{12/135+2/320}=\frac{128}{137}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mord">/</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">5</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mord">/</span><span class="mord">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">2</span><span class="mord">/</span><span class="mord">1</span><span class="mord">3</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mord">2</span><span class="mord">0</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">2</span><span class="mord">/</span><span class="mord">1</span><span class="mord">3</span><span class="mord">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">3</span><span class="mord">7</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>所以说，纹理清晰、色泽清绿、敲声沉闷的瓜为好瓜的概率为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>128</mn><mn>137</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{128}{137}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">3</span><span class="mord mtight">7</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">8</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，认为极大概率是好瓜。</p>
+<hr>
+<p>说明：</p>
+<ol>
+<li>当特征不是离散的，是连续的怎么办？譬如计算<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo></mrow><annotation encoding="application/x-tex">P(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span></span></span></span>根蒂长度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span></span></span></span> 好瓜<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">?</mo></mrow><annotation encoding="application/x-tex">)=?</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mclose">?</span></span></span></span>。</li>
+</ol>
+<p>​      这时，我们可以假设该特征是<strong>正态分布</strong>的。然后计算好瓜情况下，数据集中根蒂长度的<strong>均值</strong>和<strong>标准差</strong>，记为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo separator="true">,</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu,\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>。然后把数据集样本的均值和标准差，作为正态分布的参数估计。故有：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mi>e</mi><mi>x</mi><mi>p</mi><mo stretchy="false">(</mo><mfrac><mrow><mo>−</mo><mo stretchy="false">(</mo><mi>a</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(a|x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(\frac{-(a-\mu)^2}{2\sigma^2})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.4211080000000003em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.154946em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9550540000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.915054em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.08494599999999997em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">μ</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>​	  其中，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 表示要预测的瓜的根蒂长度，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo separator="true">,</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu,\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> 是根据数据集算出来的。</p>
+<ol start="2">
+<li>
+<p>当<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(a|x)=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 时怎么办？即数据集中没出现 “纹理清晰 + 好瓜” 的情况，这时会对分类器造成很大影响。</p>
+<p>我们引入 Laplace 校准，思想非常简单就是对每个类别（好瓜、坏瓜）的计数都加一。譬如<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>6</mn><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mn>5</mn><mi mathvariant="normal">/</mi><mn>8</mn></mrow><annotation encoding="application/x-tex">P&#x27;(a|x)=(4+1)/(6+2)=5/8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">5</span><span class="mord">/</span><span class="mord">8</span></span></span></span>。分子加一就是因为要平滑地加一个数字，分母加二是因为纹理有两个选择：清晰、模糊。</p>
+<p>Laplace 平滑公式：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>λ</mi></mrow><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>S</mi><mo>⋅</mo><mi>λ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(a|x)=\frac{I(a|x)+\lambda}{I(x)+S\cdot\lambda}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">λ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">λ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>其中，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I(a|x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> 表示类别为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 情况下，特征的选择为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 的个数；<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> 表示类别为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 的个数；<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 为特征有几个选择（譬如纹理特征有清晰、模糊两个选择）；<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span></span></span></span> 为平滑系数，选 1 就好。</p>
+<p>这样做后，当数据集较大时，其实对分类器没有影响。</p>
+</li>
+</ol>
 <h2 id="模糊识别"><a class="markdownIt-Anchor" href="#模糊识别">#</a> 模糊识别</h2>
 <h1 id="关联与因果"><a class="markdownIt-Anchor" href="#关联与因果">#</a> 关联与因果</h1>
 <h2 id="灰色关联分析方法"><a class="markdownIt-Anchor" href="#灰色关联分析方法">#</a> 灰色关联分析方法</h2>
@@ -735,16 +914,16 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">更新于</span>
-    <time title="修改时间：2022-07-15 10:41:16" itemprop="dateModified" datetime="2022-07-15T10:41:16+08:00">2022-07-15</time>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-09-07 11:28:10" itemprop="dateModified" datetime="2022-09-07T11:28:10+08:00">2022-09-07</time>
   </span>
-  <span id="2022/07/13/数学建模/" class="item leancloud_visitors" data-flag-title="数学建模" title="阅读次数">
+  <span id="2022/07/13/数学建模/" class="item leancloud_visitors" data-flag-title="数学建模" title="Views">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
-      <span class="text">阅读次数</span>
+      <span class="text">Views</span>
       <span class="leancloud-visitors-count"></span>
-      <span class="text">次</span>
+      <span class="text">times</span>
   </span>
 </div>
 
@@ -753,14 +932,14 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>本文作者： </strong>SuBonan <i class="ic i-at"><em>@</em></i>BokkeNasu
+    <strong>Post author:  </strong>SuBonan <i class="ic i-at"><em>@</em></i>BokkeNasu
   </li>
   <li class="link">
-    <strong>本文链接：</strong>
+    <strong>Post link: </strong>
     <a href="http://sugarsbn.github.io/2022/07/13/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" title="数学建模">http://sugarsbn.github.io/2022/07/13/数学建模/</a>
   </li>
   <li class="license">
-    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
   </li>
 </ul>
 </div>
@@ -776,14 +955,22 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
     <div class="item left">
       
 
-  <a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5ceevli2j30xc0or1hc.jpg" title="代数拓扑">
-  <span class="type">上一篇</span>
+  <a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr5cgvp7tsj30jn0rswss.jpg" title="代数拓扑">
+  <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>代数拓扑</h3>
   </a>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2022/07/27/MTZ%E7%BA%A6%E6%9D%9F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;005v4F2gly8gr54b4tlqwj30xc0nlb29.jpg" title="TSP 问题中消除子圈的 MTZ 约束">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>TSP 问题中消除子圈的 MTZ 约束</h3>
+  </a>
+
     </div>
 </div>
 
@@ -799,12 +986,12 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预测"><span class="toc-number">1.</span> <span class="toc-text"># 预测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色预测"><span class="toc-number">1.1.</span> <span class="toc-text"># 灰色预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gm11"><span class="toc-number">1.1.1.</span> <span class="toc-text"># GM(1,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gm21"><span class="toc-number">1.1.2.</span> <span class="toc-text"># GM(2,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dgm21"><span class="toc-number">1.1.3.</span> <span class="toc-text"># DGM(2,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#灰色verhulst模型"><span class="toc-number">1.1.4.</span> <span class="toc-text"># 灰色 Verhulst 模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微分方程预测"><span class="toc-number">1.2.</span> <span class="toc-text"># 微分方程预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回归分析预测"><span class="toc-number">1.3.</span> <span class="toc-text"># 回归分析预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#马尔可夫预测"><span class="toc-number">1.4.</span> <span class="toc-text"># 马尔可夫预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间序列预测"><span class="toc-number">1.5.</span> <span class="toc-text"># 时间序列预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#确定性时间序列分析法"><span class="toc-number">1.5.1.</span> <span class="toc-text"># 确定性时间序列分析法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#移动平均法"><span class="toc-number">1.5.1.1.</span> <span class="toc-text"># 移动平均法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一次指数平滑法"><span class="toc-number">1.5.1.2.</span> <span class="toc-text"># 一次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二次指数平滑法"><span class="toc-number">1.5.1.3.</span> <span class="toc-text"># 二次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三次指数平滑法"><span class="toc-number">1.5.1.4.</span> <span class="toc-text"># 三次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一阶差分指数平滑法"><span class="toc-number">1.5.1.5.</span> <span class="toc-text"># 一阶差分指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二阶差分指数平滑法"><span class="toc-number">1.5.1.6.</span> <span class="toc-text"># 二阶差分指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具有季节性特点的时间序列预测"><span class="toc-number">1.5.1.7.</span> <span class="toc-text"># 具有季节性特点的时间序列预测</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平稳时间序列模型"><span class="toc-number">1.5.2.</span> <span class="toc-text"># 平稳时间序列模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ar序列"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"># AR§ 序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#armapq序列"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"># ARMA (p,q) 序列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arima序列与季节性序列"><span class="toc-number">1.5.3.</span> <span class="toc-text"># ARIMA 序列与季节性序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小波分析预测"><span class="toc-number">1.6.</span> <span class="toc-text"># 小波分析预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#混沌序列预测"><span class="toc-number">1.7.</span> <span class="toc-text"># 混沌序列预测</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价与决策"><span class="toc-number">2.</span> <span class="toc-text"># 评价与决策</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊综合评判"><span class="toc-number">2.1.</span> <span class="toc-text"># 模糊综合评判</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主成分分析法"><span class="toc-number">2.2.</span> <span class="toc-text"># 主成分分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层次分析法"><span class="toc-number">2.3.</span> <span class="toc-text"># 层次分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据包络分析法"><span class="toc-number">2.4.</span> <span class="toc-text"># 数据包络分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#秩和比综合评价法"><span class="toc-number">2.5.</span> <span class="toc-text"># 秩和比综合评价法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#投影寻踪综合评价法"><span class="toc-number">2.6.</span> <span class="toc-text"># 投影寻踪综合评价法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方差-协方差分析"><span class="toc-number">2.7.</span> <span class="toc-text"># 方差、协方差分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类与判别"><span class="toc-number">3.</span> <span class="toc-text"># 分类与判别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#距离系统聚类"><span class="toc-number">3.1.</span> <span class="toc-text"># 距离（系统）聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联性聚类"><span class="toc-number">3.2.</span> <span class="toc-text"># 关联性聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层次聚类"><span class="toc-number">3.3.</span> <span class="toc-text"># 层次聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#密度聚类"><span class="toc-number">3.4.</span> <span class="toc-text"># 密度聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贝叶斯判别"><span class="toc-number">3.5.</span> <span class="toc-text"># 贝叶斯判别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊识别"><span class="toc-number">3.6.</span> <span class="toc-text"># 模糊识别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关联与因果"><span class="toc-number">4.</span> <span class="toc-text"># 关联与因果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色关联分析方法"><span class="toc-number">4.1.</span> <span class="toc-text"># 灰色关联分析方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spearman或kendall等级相关分析"><span class="toc-number">4.2.</span> <span class="toc-text"># Spearman 或 Kendall 等级相关分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#person相关"><span class="toc-number">4.3.</span> <span class="toc-text"># Person 相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copula相关"><span class="toc-number">4.4.</span> <span class="toc-text"># Copula 相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#典型相关性分析"><span class="toc-number">4.5.</span> <span class="toc-text"># 典型相关性分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准化回归分析"><span class="toc-number">4.6.</span> <span class="toc-text"># 标准化回归分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生存分析"><span class="toc-number">4.7.</span> <span class="toc-text"># 生存分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格兰杰因果检验"><span class="toc-number">4.8.</span> <span class="toc-text"># 格兰杰因果检验</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#优化"><span class="toc-number">5.</span> <span class="toc-text"># 优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规划"><span class="toc-number">5.1.</span> <span class="toc-text"># 规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排队论"><span class="toc-number">5.2.</span> <span class="toc-text"># 排队论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mm1模型"><span class="toc-number">5.2.1.</span> <span class="toc-text"># M/M/1 模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mms-模型"><span class="toc-number">5.2.2.</span> <span class="toc-text"># M/M/S 模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊约束"><span class="toc-number">5.3.</span> <span class="toc-text"># 模糊约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色规划"><span class="toc-number">5.4.</span> <span class="toc-text"># 灰色规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格优化"><span class="toc-number">5.5.</span> <span class="toc-text"># 网格优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柔性约束"><span class="toc-number">5.6.</span> <span class="toc-text"># 柔性约束</span></a></li></ol></li></ol>
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预测"><span class="toc-number">1.</span> <span class="toc-text"># 预测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色预测"><span class="toc-number">1.1.</span> <span class="toc-text"># 灰色预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gm11"><span class="toc-number">1.1.1.</span> <span class="toc-text"># GM(1,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gm21"><span class="toc-number">1.1.2.</span> <span class="toc-text"># GM(2,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dgm21"><span class="toc-number">1.1.3.</span> <span class="toc-text"># DGM(2,1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#灰色verhulst模型"><span class="toc-number">1.1.4.</span> <span class="toc-text"># 灰色 Verhulst 模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微分方程预测"><span class="toc-number">1.2.</span> <span class="toc-text"># 微分方程预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回归分析预测"><span class="toc-number">1.3.</span> <span class="toc-text"># 回归分析预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#马尔可夫预测"><span class="toc-number">1.4.</span> <span class="toc-text"># 马尔可夫预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间序列预测"><span class="toc-number">1.5.</span> <span class="toc-text"># 时间序列预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#确定性时间序列分析法"><span class="toc-number">1.5.1.</span> <span class="toc-text"># 确定性时间序列分析法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#移动平均法"><span class="toc-number">1.5.1.1.</span> <span class="toc-text"># 移动平均法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一次指数平滑法"><span class="toc-number">1.5.1.2.</span> <span class="toc-text"># 一次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二次指数平滑法"><span class="toc-number">1.5.1.3.</span> <span class="toc-text"># 二次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三次指数平滑法"><span class="toc-number">1.5.1.4.</span> <span class="toc-text"># 三次指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一阶差分指数平滑法"><span class="toc-number">1.5.1.5.</span> <span class="toc-text"># 一阶差分指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二阶差分指数平滑法"><span class="toc-number">1.5.1.6.</span> <span class="toc-text"># 二阶差分指数平滑法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具有季节性特点的时间序列预测"><span class="toc-number">1.5.1.7.</span> <span class="toc-text"># 具有季节性特点的时间序列预测</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平稳时间序列模型"><span class="toc-number">1.5.2.</span> <span class="toc-text"># 平稳时间序列模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ar序列"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"># AR§ 序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#armapq序列"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"># ARMA (p,q) 序列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arima序列与季节性序列"><span class="toc-number">1.5.3.</span> <span class="toc-text"># ARIMA 序列与季节性序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小波分析预测"><span class="toc-number">1.6.</span> <span class="toc-text"># 小波分析预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#混沌序列预测"><span class="toc-number">1.7.</span> <span class="toc-text"># 混沌序列预测</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价与决策"><span class="toc-number">2.</span> <span class="toc-text"># 评价与决策</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊综合评判"><span class="toc-number">2.1.</span> <span class="toc-text"># 模糊综合评判</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主成分分析法"><span class="toc-number">2.2.</span> <span class="toc-text"># 主成分分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层次分析法"><span class="toc-number">2.3.</span> <span class="toc-text"># 层次分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据包络分析法"><span class="toc-number">2.4.</span> <span class="toc-text"># 数据包络分析法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#秩和比综合评价法"><span class="toc-number">2.5.</span> <span class="toc-text"># 秩和比综合评价法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#投影寻踪综合评价法"><span class="toc-number">2.6.</span> <span class="toc-text"># 投影寻踪综合评价法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方差-协方差分析"><span class="toc-number">2.7.</span> <span class="toc-text"># 方差、协方差分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类与判别"><span class="toc-number">3.</span> <span class="toc-text"># 分类与判别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#距离系统聚类"><span class="toc-number">3.1.</span> <span class="toc-text"># 距离（系统）聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联性聚类"><span class="toc-number">3.2.</span> <span class="toc-text"># 关联性聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层次聚类"><span class="toc-number">3.3.</span> <span class="toc-text"># 层次聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#密度聚类"><span class="toc-number">3.4.</span> <span class="toc-text"># 密度聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贝叶斯分类器"><span class="toc-number">3.5.</span> <span class="toc-text"># 贝叶斯分类器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊识别"><span class="toc-number">3.6.</span> <span class="toc-text"># 模糊识别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关联与因果"><span class="toc-number">4.</span> <span class="toc-text"># 关联与因果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色关联分析方法"><span class="toc-number">4.1.</span> <span class="toc-text"># 灰色关联分析方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spearman或kendall等级相关分析"><span class="toc-number">4.2.</span> <span class="toc-text"># Spearman 或 Kendall 等级相关分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#person相关"><span class="toc-number">4.3.</span> <span class="toc-text"># Person 相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copula相关"><span class="toc-number">4.4.</span> <span class="toc-text"># Copula 相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#典型相关性分析"><span class="toc-number">4.5.</span> <span class="toc-text"># 典型相关性分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准化回归分析"><span class="toc-number">4.6.</span> <span class="toc-text"># 标准化回归分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生存分析"><span class="toc-number">4.7.</span> <span class="toc-text"># 生存分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格兰杰因果检验"><span class="toc-number">4.8.</span> <span class="toc-text"># 格兰杰因果检验</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#优化"><span class="toc-number">5.</span> <span class="toc-text"># 优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规划"><span class="toc-number">5.1.</span> <span class="toc-text"># 规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排队论"><span class="toc-number">5.2.</span> <span class="toc-text"># 排队论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mm1模型"><span class="toc-number">5.2.1.</span> <span class="toc-text"># M/M/1 模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mms-模型"><span class="toc-number">5.2.2.</span> <span class="toc-text"># M/M/S 模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊约束"><span class="toc-number">5.3.</span> <span class="toc-text"># 模糊约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#灰色规划"><span class="toc-number">5.4.</span> <span class="toc-text"># 灰色规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格优化"><span class="toc-number">5.5.</span> <span class="toc-text"># 网格优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柔性约束"><span class="toc-number">5.6.</span> <span class="toc-text"># 柔性约束</span></a></li></ol></li></ol>
       </div>
-      <div class="related panel pjax" data-title="系列文章">
+      <div class="related panel pjax" data-title="Related">
       </div>
-      <div class="overview panel" data-title="站点概览">
+      <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="SuBonan"
       data-src="/images/avatar.jpg">
@@ -815,20 +1002,20 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">60</span>
-        <span class="name">文章</span>
+        <span class="count">62</span>
+        <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
         <span class="count">6</span>
-        <span class="name">分类</span>
+        <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">13</span>
-        <span class="name">标签</span>
+        <span class="name">tags</span>
       </a>
     </div>
 </nav>
@@ -841,27 +1028,27 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);" target="_blank" rel="noopener"><i class="ic i-feather"></i>文章</a>
+      <a href="javascript:void(0);" target="_blank" rel="noopener"><i class="ic i-feather"></i>Posts</a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
   </li>
 
         
   <li class="item">
-    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
   </li>
 
   </ul>
@@ -874,10 +1061,12 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2022/07/27/MTZ%E7%BA%A6%E6%9D%9F/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -893,16 +1082,16 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>随机文章</h2>
+  <h2>Random Posts</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AF%AD%E6%96%87/" title="分类于 - 语文">- 语文</a>
+<a href="/categories/%E8%AE%B0%E5%BD%95/" title="In - 记录">- 记录</a>
 </div>
 
-    <span><a href="/2020/02/14/%E6%A0%B8%E5%BF%83%E8%AF%8D/" title="核心词相关">核心词相关</a></span>
+    <span><a href="/2019/11/17/blog1/" title="记">记</a></span>
   </li>
 
       
@@ -911,7 +1100,62 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" title="概率论与数理统计">概率论与数理统计</a></span>
+    <span><a href="/2022/06/27/%E5%9B%9E%E5%BF%86%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E8%AF%BB%E8%BF%87%E7%9A%84%E5%B0%8F%E8%AF%B4/" title="回忆一下最近读过的小说">回忆一下最近读过的小说</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/23/20200924/" title="加藤惠生贺图">加藤惠生贺图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/06/19/DFA-functors/" title="The relation between DFA and Functors">The relation between DFA and Functors</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/28/%E9%87%8F%E5%AD%90%E5%99%AA%E5%A3%B0%E5%92%8C%E9%87%8F%E5%AD%90%E8%BF%90%E7%AE%97/" title="量子噪声和量子运算">量子噪声和量子运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/03/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%BC%95%E8%AE%BA/" title="量子力学引论">量子力学引论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%85%A7%E7%89%87/" title="In - 照片">- 照片</a>
+</div>
+
+    <span><a href="/2019/11/24/Pictures/" title="Pictures">Pictures</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" title="数学分析（上）">数学分析（上）</a></span>
   </li>
 
       
@@ -927,69 +1171,16 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E8%8B%B1%E8%AF%AD/" title="In - 英语">- 英语</a>
 </div>
 
-    <span><a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" title="离散数学 - 集合部分">离散数学 - 集合部分</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/18/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="日本语笔记">日本语笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/06/18/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/" title="Theory of computation">Theory of computation</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/11/11/%E6%91%98%E6%8A%84/" title="时而夕拾">时而夕拾</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/23/%E4%B9%B1%E6%B6%82%E4%B9%B1%E7%94%BB/" title="絵">絵</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/06/26/%E5%8F%A4%E6%80%AA%E7%9A%84%E4%BA%BA/" title="古怪的人">古怪的人</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/06/27/%E5%9B%9E%E5%BF%86%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E8%AF%BB%E8%BF%87%E7%9A%84%E5%B0%8F%E8%AF%B4/" title="回忆一下最近读过的小说">回忆一下最近读过的小说</a></span>
+    <span><a href="/2020/10/14/%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="大英帝国語筆記">大英帝国語筆記</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>最新评论</h2>
+  <h2>Recent Comments</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -1005,7 +1196,7 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
     <span class="author" itemprop="copyrightHolder">SuBonan @ SuBonan</span>
   </div>
   <div class="powered-by">
-    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -1016,16 +1207,16 @@ f(T)=F&#x27;(T)=\lambda e^{-\lambda t}
   var LOCAL = {
     path: '2022/07/13/数学建模/',
     favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
     },
     search : {
-      placeholder: "文章搜索",
-      empty: "关于 「 ${query} 」，什么也没搜到",
-      stats: "${time} ms 内找到 ${hits} 条结果"
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
     },
     valine: true,copy_tex: true,
-    katex: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    katex: true,fancybox: true,copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
     ignores : [
       function(uri) {
         return uri.includes('#');
