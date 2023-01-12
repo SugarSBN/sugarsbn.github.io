@@ -120,7 +120,7 @@ onload = function init(){
         }
     }
 
-    program = initShaders(gl, "./vertex_shader.glsl", "./fragment_shader.glsl");
+    program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
 
     var vBuffer = gl.createBuffer();
