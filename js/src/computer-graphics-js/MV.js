@@ -1,8 +1,8 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-11 11:02:42
- * @LastEditTime: 2023-01-11 11:02:43
- * @FilePath: \chapter2\gasket1\MV.js
+ * @LastEditTime: 2023-01-13 19:16:49
+ * @FilePath: \learnopengl\MV.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
  */
@@ -344,7 +344,6 @@ function MVbuffer(size) {
   
   function add( u, v )
   {
-  
     if ( u.type != v.type ) {
         throw "add(): trying to add different types";
     }
