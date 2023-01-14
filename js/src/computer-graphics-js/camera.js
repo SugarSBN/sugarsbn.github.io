@@ -1,7 +1,7 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-13 19:08:08
- * @LastEditTime: 2023-01-13 21:39:47
+ * @LastEditTime: 2023-01-14 18:56:50
  * @FilePath: \learnopengl\camera.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
@@ -16,21 +16,27 @@ var pitch = 0.0;
 
 window.onkeydown = function(event){
     if (event.shiftKey == 1) firstMouse = false;
-    var key = String.fromCharCode(event.keyCode);
-    var cameraSpeed = 0.05;
-    switch(key){
-        case 'A': // "<-"
+    var cameraSpeed = 0.5;
+    switch(event.keyCode){
+        case 65: // "<-"
             cameraPos = subtract(cameraPos, mult(cameraSpeed, normalize(cross(cameraFront, cameraUp))));
             break;
-        case 'W': // "^"
+        case 87: // "^"
             cameraPos = add(cameraPos, mult(cameraSpeed, cameraFront));
             break;
-        case 'D': // "->"
+        case 68: // "->"
             cameraPos = add(cameraPos, mult(cameraSpeed, normalize(cross(cameraFront, cameraUp))));
             break;
-        case 'S': // "v"
+        case 83: // "v"
             cameraPos = subtract(cameraPos, mult(cameraSpeed, cameraFront));
             break;
+        case 32:
+            cameraPos = add(cameraPos, mult(cameraSpeed, cameraUp));
+            break;
+        case 49:
+            cameraPos = subtract(cameraPos, mult(cameraSpeed, cameraUp));
+            break;
+        
     }
 }
 

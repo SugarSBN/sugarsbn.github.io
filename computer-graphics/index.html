@@ -1,8 +1,8 @@
 <!--
  * @Author: SuBonan
  * @Date: 2023-01-11 10:49:36
- * @LastEditTime: 2023-01-13 19:47:13
- * @FilePath: \learnopengl\index.html
+ * @LastEditTime: 2023-01-14 19:11:09
+ * @FilePath: \learnopenglc:\Users\NaiDeKudasai\OneDrive - mail.sdu.edu.cn\SuBonan\Blog\source\computer-graphics\index.html
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
 -->
@@ -22,53 +22,78 @@
             }
         </script>
         <script id = "vertex-shader" type = "x-shader/x-vertex">
-            #version 300 es
+           #version 300 es
 
-            in vec4 aPosition;
-            in vec4 aNormal;
-            out vec4 vColor;
+          // assume both position and normal are in homogeneous form
 
-            uniform vec4 ambientProduct, diffuseProduct, specularProduct;
-            uniform mat4 modelViewMatrix;
-            uniform mat4 projectionMatrix;
-            uniform vec4 lightPosition;
-            uniform float shininess;
-            uniform mat3 normalMatrix;
+          in vec4 aPosition;
+          in vec4 aNormal;
 
-            void main()
-            {
+          out vec4 vColor;
 
-                vec3 pos = -(modelViewMatrix * aPosition).xyz;
-                vec3 light = lightPosition.xyz;
-                vec3 L = normalize( light - pos );
+          uniform mat4 modelMatrix;
+          uniform vec4 ambientProduct, diffuseProduct, specularProduct;
+          uniform mat4 viewMatrix;
+          uniform mat4 projectionMatrix;
+          uniform vec4 lightPosition;
+          uniform float shininess;
 
 
-                vec3 E = normalize( -pos );
-                vec3 H = normalize( L + E );
+          void
+          main()
+          {
+              // pos is vertex position in eye coordinates
 
-                // Transform vertex normal into eye coordinates
+              vec3 pos = (viewMatrix * modelMatrix * aPosition).xyz;
 
-                vec3 N = normalize( normalMatrix*aNormal.xyz);
+              // vector from vertex position to light source
 
-                // Compute terms in the illumination equation
-                vec4 ambient = ambientProduct;
+              vec3 L;
 
-                float Kd = max( dot(L, N), 0.0 );
-                vec4  diffuse = Kd*diffuseProduct;
+              // check for directional light
 
-                float Ks = pow( max(dot(N, H), 0.0), shininess );
-                vec4  specular = Ks * specularProduct;
+              if(lightPosition.w == 0.0) L = normalize((viewMatrix*lightPosition).xyz);
+              else L = normalize((viewMatrix*lightPosition).xyz - pos);
 
-                if( dot(L, N) < 0.0 ) {
-                    specular = vec4(0.0, 0.0, 0.0, 1.0);
-                }
+              // Because the eye point the is at the orgin
+              // the vector from the vertex position to the eye is
 
-                gl_Position = projectionMatrix * modelViewMatrix * aPosition;
+              vec3 E = -normalize(pos);
 
-                vColor = ambient + diffuse + specular;
-                vColor.a = 1.0;
+              // halfway vector
 
-            }
+              vec3 H = normalize(L + E);
+
+              // Transform vertex normal into eye coordinates
+
+              // vec3 N = normalize( uNormalMatrix*vNormal.xyz);
+
+              // as long as there is no nonuniform scaling
+              // we don't need the normal matrix and can use
+
+              vec3 N = normalize((viewMatrix*modelMatrix*aNormal).xyz);
+
+              // Compute terms in the illumination equation
+              vec4 ambient = ambientProduct;
+
+              float Kd = max(dot(L, N), 0.0);
+              vec4  diffuse = Kd*diffuseProduct;
+
+              float Ks = pow(max(dot(N, H), 0.0), shininess);
+              vec4  specular = Ks * specularProduct;
+
+              if( dot(L, N) < 0.0 ) {
+            specular = vec4(0.0, 0.0, 0.0, 1.0);
+              }
+
+              gl_Position = projectionMatrix * viewMatrix * modelMatrix * aPosition;
+
+              vColor = ambient + diffuse + specular;
+
+              vColor.a = 1.0;
+          }
+
+	
         </script>
         <script src="/js/src/computer-graphics-js/jquery.js"></script>
         <script src = "/js/src/computer-graphics-js/initShader.js"></script>

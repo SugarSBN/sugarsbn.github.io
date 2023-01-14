@@ -1,8 +1,8 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-12 15:56:42
- * @LastEditTime: 2023-01-12 15:56:42
- * @FilePath: \chapter2\draw_a_triangle\patches.js
+ * @LastEditTime: 2023-01-13 16:44:59
+ * @FilePath: \learnopengl\patches.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
  */
