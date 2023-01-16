@@ -1,8 +1,8 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-11 11:02:42
- * @LastEditTime: 2023-01-13 19:16:49
- * @FilePath: \learnopengl\MV.js
+ * @LastEditTime: 2023-01-16 17:30:30
+ * @FilePath: \shadow\MV.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
  */
@@ -95,7 +95,6 @@ function MVbuffer(size) {
   
       var out = new Array(3);
       out.type = 'vec3';
-  
       switch ( arguments.length ) {
       case 0:
         out[0] = 0.0;
@@ -347,6 +346,14 @@ function MVbuffer(size) {
     if ( u.type != v.type ) {
         throw "add(): trying to add different types";
     }
+    if (u.type == "quaternion" && v.type == "quaternion") {
+      var result = new Array(4);
+      result.type = "quaternion";
+      for(var i=0; i<4; i++) {
+        result[i] = u[i] + v[i];
+      }
+      return result;
+    }
     if(isVector(u)){
       var result = new Array(u.length);
       result.type = u.type;
@@ -374,6 +381,14 @@ function MVbuffer(size) {
     if ( u.type != v.type ) {
         throw "add(): trying to add different types";
     }
+    if (u.type == "quaternion" && v.type == "quaternion") {
+      var result = new Array(4);
+      result.type = "quaternion";
+      for(var i=0; i<4; i++) {
+        result[i] = u[i] - v[i];
+      }
+      return result;
+    }
     if(isVector(u)){
       if(u.type == 'vec2')  var result =vec2();
       if(u.type == 'vec3')  var result = vec3();
@@ -399,7 +414,17 @@ function MVbuffer(size) {
   
   function mult( u, v )
   {
-  
+    if (u.type == "quaternion" && v.type == "quaternion") {
+      var result = quaternion();
+      result.type = "quaternion";
+      var dots = u[1] * v[1] + u[2] * v[2] + u[3] * v[3];
+      var cros = cross(vec3(u[1], u[2], u[3]),vec3(v[1], v[2], v[3]));
+      result[0] = u[0] * v[0] - dots;
+      result[1] = u[0] * v[1] + v[0] * u[1] + cros[0];
+      result[2] = u[0] * v[2] + v[0] * u[2] + cros[1];
+      result[3] = u[0] * v[3] + v[0] * u[3] + cros[2];
+      return result;
+    }
     if(typeof(u)=="number" && (isMatrix(v)||isVector(v))) {
   
       if(isVector(v)){
@@ -1182,4 +1207,90 @@ function MVbuffer(size) {
       for(var i=0;i<3;i++) for(var j=0; j<3; j++) b[i][j] = a[i][j];
   
       return b;
+  }
+
+  //-----------------------------------------------------------
+
+  // quaternion
+  function quaternion()
+  {
+  //var result = _argumentsToArray( arguments );
+  
+      var out = new Array(4);
+      out.type = 'quaternion';
+  
+      switch ( arguments.length ) {
+      case 0:
+        out[0] = 1.0;
+        out[1] = 0.0;
+        out[2] = 0.0;
+        out[3] = 0.0;
+        return out;
+      case 1:
+      if(arguments[0].type == "quaternion") {
+        out[0] = arguments[0][0];
+        out[1] = arguments[0][1];
+        out[2] = arguments[0][2];
+        out[3] = arguments[0][3];
+        return out;
+      }
+      case 2:
+      if (typeof(arguments[0]) == "number" && arguments[1].type == "vec3") {
+        out[0] = Math.cos(radians(arguments[0] / 2.0));
+        out[1] = Math.sin(radians(arguments[0] / 2.0)) * arguments[1][0];
+        out[2] = Math.sin(radians(arguments[0] / 2.0)) * arguments[1][1];
+        out[3] = Math.sin(radians(arguments[0] / 2.0)) * arguments[1][2];
+        return out;
+      }
+      case 4:
+        out[0] = arguments[0];
+        out[1] = arguments[1];
+        out[2] = arguments[2];
+        out[3] = arguments[3];
+        return out;
+        default:
+          throw "quaternion: wrong arguments";
+      }
+  
+      return out;
+  }
+
+  function toMatrix(){
+    switch ( arguments.length ) {
+      case 1:
+        if(arguments[0].type == "quaternion") {
+          var theta = 2 * Math.acos(arguments[0][0]) / Math.PI * 180.0;
+          var w = Math.sin(radians(theta / 2.0));
+          if (Math.abs(w) < 0.00001) return mat4();
+          var x = arguments[0][1] / w;
+          var y = arguments[0][2] / w;
+          var z = arguments[0][3] / w;
+          return rotate(theta, [x, y, z]);
+        }
+        return;
+      default:
+        throw "quaternion to matrix: wrong arguments";
+    }
+  }
+
+  function bezier(){
+    switch (arguments.length()){
+      case 5:
+        if  (arguments[0].type == "vec3" && arguments[1].type == "vec3" && arguments[2].type == "vec3" && arguments[3].type == "vec3" && typeof(arguments[4]) == "number"){
+          var p1 = arguments[0];
+          var p2 = arguments[1];
+          var p3 = arguments[2];
+          var p4 = arguments[3];
+          var t = arguments[4];
+          return add(add(
+            mult((1 - t) * (1 - t) * (1 - t), p1)
+            ,
+            mult(3 * t * (1 - t) * (1 - t), p2)), add(
+            mult(3 * t * t * (1 - t), p3)
+              ,
+            mult(t * t * t, p4)));
+        }
+      default:
+        throw "bezier: wrong arguments"
+    }
   }

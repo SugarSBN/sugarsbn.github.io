@@ -1,7 +1,7 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-13 19:08:08
- * @LastEditTime: 2023-01-14 18:56:50
+ * @LastEditTime: 2023-01-15 19:55:24
  * @FilePath: \learnopengl\camera.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
@@ -14,27 +14,80 @@ var cameraUp = vec3(0.0, 1.0, 0.0);
 var yaw = -90.0;
 var pitch = 0.0;
 
-window.onkeydown = function(event){
-    if (event.shiftKey == 1) firstMouse = false;
-    var cameraSpeed = 0.5;
+var leftMoving = false;
+var rightMoving = false;
+var upMoving = false;
+var downMoving = false;
+var spaceMoving = false;
+var oneMoving = false;
+
+window.onkeyup = function (event){
+    modelLeftMoving = false;
+    modelRightMoving = false;
+    modelUpMoving = false;
+    modelDownMoving = false;
+    modelSpaceMoving = false;
+    modelOneMoving = false;
+
     switch(event.keyCode){
         case 65: // "<-"
-            cameraPos = subtract(cameraPos, mult(cameraSpeed, normalize(cross(cameraFront, cameraUp))));
+            leftMoving = false;
             break;
         case 87: // "^"
-            cameraPos = add(cameraPos, mult(cameraSpeed, cameraFront));
+            upMoving = false;
             break;
         case 68: // "->"
-            cameraPos = add(cameraPos, mult(cameraSpeed, normalize(cross(cameraFront, cameraUp))));
+            rightMoving = false;
             break;
         case 83: // "v"
-            cameraPos = subtract(cameraPos, mult(cameraSpeed, cameraFront));
+            downMoving = false;
             break;
         case 32:
-            cameraPos = add(cameraPos, mult(cameraSpeed, cameraUp));
+            spaceMoving = false;
             break;
         case 49:
-            cameraPos = subtract(cameraPos, mult(cameraSpeed, cameraUp));
+            oneMoving = false;
+            break;
+    }
+}
+window.onkeydown = function(event){
+    switch(event.keyCode){
+        case 65: // "<-"
+            if (event.shiftKey == 1) modelLeftMoving = true;
+            else    leftMoving = true;
+            break;
+        case 87: // "^"
+            if (event.shiftKey == 1) modelUpMoving = true;
+            else upMoving = true;
+            break;
+        case 68: // "->"
+            if (event.shiftKey == 1) modelRightMoving = true;
+            else rightMoving = true;
+            break;
+        case 83: // "v"
+            if (event.shiftKey == 1) modelDownMoving = true;    
+            else downMoving = true;
+            break;
+        case 32:
+            if (event.shiftKey == 1) modelSpaceMoving = true;
+            else spaceMoving = true;
+            break;
+        case 49:
+            if (event.shiftKey == 1) modelOneMoving = true;    
+            else oneMoving = true;
+            break;
+        case 82:
+            iTranslate.push(iTranslate[0]);
+            iRotate.push(iRotate[0]);
+            iScale.push(iScale[0]);
+            nInstances++;
+            break;
+        case 84:
+            if (nInstances == 1) break;
+            iTranslate.pop();
+            iRotate.pop();
+            iScale.pop();
+            nInstances--;
             break;
         
     }
