@@ -1,8 +1,8 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-13 19:08:08
- * @LastEditTime: 2023-01-15 19:55:24
- * @FilePath: \learnopengl\camera.js
+ * @LastEditTime: 2023-01-18 17:14:13
+ * @FilePath: \shadow\camera.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
  */
@@ -50,8 +50,17 @@ window.onkeyup = function (event){
             break;
     }
 }
+
+var fms = 180;
 window.onkeydown = function(event){
     switch(event.keyCode){
+        case 79:
+            if (animate) {
+                animate = false;
+                return;
+            }
+            generateAnimation(fms);
+            break;
         case 65: // "<-"
             if (event.shiftKey == 1) modelLeftMoving = true;
             else    leftMoving = true;
@@ -89,7 +98,33 @@ window.onkeydown = function(event){
             iScale.pop();
             nInstances--;
             break;
-        
+        case 38:
+            if (event.shiftKey == 1) {
+                iRotate[0] = mult(quaternion(1, vec3(0.0, 0.0, 1.0)), iRotate[0]);
+            }
+            break;
+        case 40:
+            if (event.shiftKey == 1) {
+                iRotate[0] = mult(quaternion(-1, vec3(0.0, 0.0, 1.0)), iRotate[0]);
+            }
+            break;
+        case 37:
+            if (event.shiftKey == 1) {
+                iRotate[0] = mult(quaternion(1, vec3(1.0, 0.0, 0.0)), iRotate[0]);
+            }
+            break;
+        case 39:
+            if (event.shiftKey == 1) {
+                iRotate[0] = mult(quaternion(-1, vec3(1.0, 0.0, 0.0)), iRotate[0]);
+            }
+            break;
+        case 66:
+            if (event.shiftKey == 1) {
+                iRotate[0] = quaternion(0.0, vec3(0.0, 1.0, 0.0));
+                //iTranslate[0] = vec3(0.0, 0.0, 0.0);
+                iScale[0] = vec3(1.0, 1.0, 1.0);
+            }
+            break;
     }
 }
 
@@ -115,15 +150,36 @@ window.onmousemove = function (event) {
     
     yaw -= xoffset;
     pitch -= yoffset;
+    if (event.shiftKey == 0) {
+        if(pitch > 89.0)
+            pitch = 89.0;
+        if(pitch < -89.0)
+            pitch = -89.0;
 
-    if(pitch > 89.0)
-        pitch = 89.0;
-    if(pitch < -89.0)
-        pitch = -89.0;
+        var f = vec3(
+            Math.cos(radians(yaw)) * Math.cos(radians(pitch)),
+            Math.sin(radians(pitch)),
+            Math.sin(radians(yaw)) * Math.cos(radians(pitch)));
+        cameraFront = normalize(f);
+    }else {
+        iRotate[0] = mult(quaternion(-xoffset, vec3(0.0, 1.0, 0.0)), iRotate[0]);
+        //iRotate[0] = mult(quaternion(-yoffset, vec3(0.0, 0.0, 1.0)), iRotate[0]);
+    }
+    
+}
 
-    var f = vec3(
-        Math.cos(radians(yaw)) * Math.cos(radians(pitch)),
-        Math.sin(radians(pitch)),
-        Math.sin(radians(yaw)) * Math.cos(radians(pitch)));
-    cameraFront = normalize(f);
+window.onwheel = function(event) {
+    if (event.shiftKey == 1){
+        var scal = 1.0 / (1.0 + event.deltaY * 0.001);
+        iScale[0] = mult(vec3(scal, scal, scal), iScale[0]);
+    } else 
+    if (animate) {
+        if (event.deltaY > 0) {
+            if (fms < 1000) fms += 10;
+            generateAnimation(fms);
+        } else {
+            if (fms > 10) fms -= 10;
+            generateAnimation(fms);
+        }
+    }
 }

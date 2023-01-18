@@ -1,7 +1,7 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-11 10:52:37
- * @LastEditTime: 2023-01-16 20:48:23
+ * @LastEditTime: 2023-01-18 17:29:08
  * @FilePath: \shadow\main.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
@@ -36,21 +36,19 @@ var modelSpaceMoving = false;
 var modelOneMoving = false;
 var lightPosition = vec4(0.0, 10.0, 0.0, 1.0);
 
+var animate = false;
+var animateT = [];
+var animateR = [];
+var animateS = [];
+var animateFrame = 0;
+var nFrames = 0;
 
 onload = function init(){
     canvas = document.getElementById("gl-canvas");
     gl = canvas.getContext("webgl2");
     if (!gl) { this.alert("WebGL 2.0 isn't available"); }
     
-    
-    this.alert("Press W,A,S,D,space,1 to move the camera");
-    this.alert("Press shift+W,A,S,D,space,1 to move the model");
-    this.alert("Hold the mouse button and move the mouse to change viewing");
-    this.alert("Press R to leave a copy of the model");
-    this.alert("Press T to remove a copy of the model");
-    this.alert("Console prints the current FPS");
-    this.alert("Let meow~ full of your sight!");
-    
+    this.alert("Instruction:\n1. Use W, A, S, D, 1, Space to move the camera.\n2. Use Shift + W, A, S, D, 1, Space to move the model.\n3. Use Shift + Mouse move (button hold), arrow keys, scroll to change model's pose.\n4. Move the mouse with button hold to change the viewing.\n5. Press R to leave an instance of the model.\n6. Press T to delete an instance of the model.\n7. When the number of instances is greater than 3, then press O to see the animation based on Slerp and 3-times Bezier.\n8. Press O to stop the animation.\n9. When the animation is on, use scroll to control the speed of animation.\n10. The console is logging the current FPS.\n Let meow~ be full of your screen!!!");
 
     gl.clearColor(0.1, 0.15, 0.15, 1.0);
 
@@ -221,6 +219,16 @@ var drawOBJonce = function(){
     gl.drawArrays(gl.TRIANGLES, index, 12);
     gl.drawArrays(gl.TRIANGLES, index + 12, 60);
     //gl.drawArrays(gl.LINE_LOOP, 0, index);
+    if (animate) {
+        animateFrame += 1;
+        if (animateFrame >= nFrames) animateFrame = 0;
+        var modelMatrix = scale(animateS[animateFrame][0], animateS[animateFrame][1], animateS[animateFrame][2]);
+        modelMatrix = mult(toMatrix(animateR[animateFrame]), modelMatrix);
+        modelMatrix = mult(translate(animateT[animateFrame][0], animateT[animateFrame][1], animateT[animateFrame][2]), modelMatrix);
+        gl.uniformMatrix4fv(gl.getUniformLocation(program, "modelMatrix"), false, flatten(modelMatrix));
+        gl.uniform1i(gl.getUniformLocation(program, "is_shadowed"), 0);
+        gl.drawArrays(gl.TRIANGLES, 0, index);
+    }
 }
 
 var drawShadowOnce = function(){
@@ -238,8 +246,14 @@ var drawShadowOnce = function(){
 
         gl.drawArrays(gl.TRIANGLES, 0, index);
     }
-    gl.uniformMatrix4fv(gl.getUniformLocation(shadowProgram, "u_MvpMatrix"), false, flatten(mult(projectionLight, viewMatrix)));
-
+    if (animate) {
+        var modelMatrix = scale(animateS[animateFrame][0], animateS[animateFrame][1], animateS[animateFrame][2]);
+        modelMatrix = mult(toMatrix(animateR[animateFrame]), modelMatrix);
+        modelMatrix = mult(translate(animateT[animateFrame][0], animateT[animateFrame][1], animateT[animateFrame][2]), modelMatrix);
+        gl.uniformMatrix4fv(gl.getUniformLocation(program, "modelMatrix"), false, flatten(modelMatrix));
+        gl.uniformMatrix4fv(gl.getUniformLocation(shadowProgram, "u_MvpMatrix"), false, flatten(mult(projectionLight, mult(viewMatrix, modelMatrix))));
+        gl.drawArrays(gl.TRIANGLES, 0, index);
+    }
     //gl.drawArrays(gl.TRIANGLES, index, 12);
     //gl.drawArrays(gl.TRIANGLES, index + 12, 60);
     //gl.drawArrays(gl.LINE_LOOP, 0, index);
@@ -252,7 +266,6 @@ var renderOBJ = function(now){
     then = now;
     console.log(1 / deltaTime);
 
-    iRotate[0] = mult(iRotate[0], quaternion(0.5, vec3(0.0, 1.0, 0.0)));
     if (modelLeftMoving)  iTranslate[0] = add(mult(modelSpeed, normalize(cross(cameraUp, cameraFront))), iTranslate[0]);
     if (modelRightMoving) iTranslate[0] = subtract(iTranslate[0], mult(modelSpeed, normalize(cross(cameraUp, cameraFront))));
     if (modelUpMoving)    iTranslate[0] = add(mult(modelSpeed, normalize(cameraFront)), iTranslate[0]);
@@ -308,7 +321,6 @@ function initFramebufferObject(gl) {
        return error();
     }
     gl.bindTexture(gl.TEXTURE_2D, texture);
-    console.log(window.innerWidth, window.innerHeight);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, window.innerWidth, window.innerHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     framebuffer.texture = texture;//将纹理对象存入framebuffer

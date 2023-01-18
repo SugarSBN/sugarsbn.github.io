@@ -1,7 +1,7 @@
 /*
  * @Author: SuBonan
  * @Date: 2023-01-11 11:02:42
- * @LastEditTime: 2023-01-16 17:30:30
+ * @LastEditTime: 2023-01-18 17:24:31
  * @FilePath: \shadow\MV.js
  * @Github: https://github.com/SugarSBN
  * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
@@ -425,6 +425,15 @@ function MVbuffer(size) {
       result[3] = u[0] * v[3] + v[0] * u[3] + cros[2];
       return result;
     }
+    if (typeof(u) == "number" && v.type == "quaternion") {
+      var result = quaternion();
+      result.type = "quaternion";
+      result[0] = u * v[0];
+      result[1] = u * v[1];
+      result[2] = u * v[2];
+      result[3] = u * v[3];
+      return result;
+    }
     if(typeof(u)=="number" && (isMatrix(v)||isVector(v))) {
   
       if(isVector(v)){
@@ -759,7 +768,7 @@ function MVbuffer(size) {
       if ( u.type != v.type ) {
         throw "dot(): types are not the same ";
       }
-      if (u.type != 'vec2' && u.type != 'vec3' && u.type != 'vec4') {
+      if (u.type != 'vec2' && u.type != 'vec3' && u.type != 'vec4' && u.type != 'quaternion') {
         throw "dot(): not a vector ";
       }
   
@@ -1274,7 +1283,7 @@ function MVbuffer(size) {
   }
 
   function bezier(){
-    switch (arguments.length()){
+    switch (arguments.length){
       case 5:
         if  (arguments[0].type == "vec3" && arguments[1].type == "vec3" && arguments[2].type == "vec3" && arguments[3].type == "vec3" && typeof(arguments[4]) == "number"){
           var p1 = arguments[0];
@@ -1283,14 +1292,31 @@ function MVbuffer(size) {
           var p4 = arguments[3];
           var t = arguments[4];
           return add(add(
-            mult((1 - t) * (1 - t) * (1 - t), p1)
+            mult((1.0 - t) * (1.0 - t) * (1.0 - t), p1)
             ,
-            mult(3 * t * (1 - t) * (1 - t), p2)), add(
-            mult(3 * t * t * (1 - t), p3)
+            mult(3.0 * t * (1.0 - t) * (1.0 - t), p2)), add(
+            mult(3.0 * t * t * (1.0 - t), p3)
               ,
             mult(t * t * t, p4)));
         }
       default:
         throw "bezier: wrong arguments"
+    }
+  }
+
+  function slerp(){
+    switch (arguments.length){
+      case 3:
+        if  (arguments[0].type == "quaternion" && arguments[1].type == "quaternion" && typeof(arguments[2]) == "number"){
+          var q1 = arguments[0];
+          var q2 = arguments[1];
+          var t = arguments[2];
+          var omega = Math.acos(dot(q1, q2) / length(q1) / length(q2));
+          if (Math.abs(omega) < 0.00001) return q1;
+          var so = Math.sin(omega);
+          return add(mult(Math.sin((1.0 - t) * omega) / so, q1), mult(Math.sin(t * omega) / so, q2));
+        }
+      default:
+        throw "slerp: wrong arguments"
     }
   }
