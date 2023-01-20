@@ -48,7 +48,7 @@ onload = function init(){
     gl = canvas.getContext("webgl2");
     if (!gl) { this.alert("WebGL 2.0 isn't available"); }
     
-    this.alert("Instruction:\n1. Use W, A, S, D, 1, Space to move the camera.\n2. Use Shift + W, A, S, D, 1, Space to move the model.\n3. Use Shift + Mouse move (button hold), arrow keys, scroll to change model's pose.\n4. Move the mouse with button hold to change the viewing.\n5. Press R to leave an instance of the model.\n6. Press T to delete an instance of the model.\n7. When the number of instances is greater than 3, then press O to see the animation based on Slerp and 3-times Bezier.\n8. Press O to stop the animation.\n9. When the animation is on, use scroll to control the speed of animation.\n10. The console is logging the current FPS.\n Let meow~ be full of your screen!!!");
+    this.alert("Instruction:\n1. Use W, A, S, D, 1, Space to move the camera.\n2. Use Shift + W, A, S, D, 1, Space to move the model.\n3. Use Shift + Mouse move (button held), arrow keys, scroll to change model's pose.\n4. Move the mouse with button held to change the viewing.\n5. Press R to leave an instance of the model.\n6. Press T to delete an instance of the model.\n7. When the number of instances is greater than 3, then press O to see the animation based on Slerp and 3-times Bezier.\n8. Press O to stop the animation.\n9. When the animation is on, use scroll to control the speed of animation.\n10. The console is logging the current FPS.\n Let meow~ be full of your screen!!!");
 
     gl.clearColor(0.1, 0.15, 0.15, 1.0);
 
