@@ -30,9 +30,9 @@
 
 
   <title>
-C++ 中数组和内存分布 - - 计算机 |
+C++ 中数组和内存分布 - - 计算机基础 |
 SuBonan = やがて、平凡な人になる</title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
     <div class="cat">
@@ -115,12 +115,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5pjG.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5E3b.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5He6.png"></li>
           <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Qhl.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Stg.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUBUG.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5RyI.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5LGP.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5lrN.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5foS.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5PW1.jpg"></li>
         </ul>
       </div>
     </header>
@@ -146,7 +146,7 @@ SuBonan = やがて、平凡な人になる</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="item" rel="index" title="In - 计算机"><span itemprop="name">- 计算机</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="item" rel="index" title="In - 计算机基础"><span itemprop="name">- 计算机基础</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
@@ -156,7 +156,7 @@ SuBonan = やがて、平凡な人になる</title>
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
     <meta itemprop="name" content="SuBonan">
-    <meta itemprop="description" content=", やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a>">
+    <meta itemprop="description" content=", やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a>">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -168,24 +168,24 @@ SuBonan = やがて、平凡な人になる</title>
 
     <p>太棒了，我在逐渐理解这一切。</p>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
-<a id="more"></a>
+<span id="more"></span>
 <p>事情是这样子的，给 <code>あの方</code> 做题时，她竟然习惯性用 <code>new</code>  去申请数组。<br>
 我觉得很好譬如一维数组就可以：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>* a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]();</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span>* a = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">10</span>]();</span><br></pre></td></tr></table></figure>
 <p>没有问题，很安全。但是二维数组怎么办呢？可以这样嘛:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>** a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>][<span class="number">10</span>]();</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span>** a = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">10</span>][<span class="number">10</span>]();</span><br></pre></td></tr></table></figure>
 <p>不可以！会报错误：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">error: cannot convert ‘int (*)[10]’ to ‘int**’ <span class="keyword">in</span> initialization</span><br></pre></td></tr></table></figure>
 <p>然后我折腾了很久，都没有发现如何用 &quot; <code>new int[a][b]()</code> &quot; 这样来初始化二维数组。<br>
 首先给出一些合法的二维数组声明，<span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvZHluYW1pY2FsbHktYWxsb2NhdGUtMmQtYXJyYXktYy8=">https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/</span> 这里介绍了多种方法如何动态开辟一个二维数组，其中第四种方法 &quot;4) Using double pointer and one malloc call&quot; 比较值得关注。<br>
 我这里给出两种比较有代表性的：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>** arr;</span><br><span class="line">arr = <span class="keyword">new</span> <span class="keyword">int</span>*[N]();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N;i++)</span><br><span class="line">    arr[i] = <span class="keyword">new</span> <span class="keyword">int</span>[M]();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="keyword">int</span> (*arr)[M] = (<span class="keyword">int</span>*[M]) <span class="built_in">malloc</span>(N * M * <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span>** arr;</span><br><span class="line">arr = <span class="keyword">new</span> <span class="type">int</span>*[N]();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; N;i++)</span><br><span class="line">    arr[i] = <span class="keyword">new</span> <span class="type">int</span>[M]();</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="built_in">int</span> (*arr)[M] = (<span class="type">int</span>*[M]) <span class="built_in">malloc</span>(N * M * <span class="built_in">sizeof</span>(<span class="type">int</span>)); </span><br></pre></td></tr></table></figure>
 <p>第一类我称之为 &quot;使用了一个循环&quot;，第二类我称之为 &quot; 使用了 <code>T arr[N]</code>  语法 &quot;。<br>
 最后我发现一个实验性的事实：<br>
 <strong>我们无法只使用一个 malloc 或一个 new 来动态开辟二维数组，我们至少需要使用一个循环，或者使用 <code>T arr[N]</code>  语法。</strong><br>
 <strong>而且不要尝试在 <code>int**</code>  和 <code>int[][]</code> （二维数组）间作转换，会有一大堆问题。</strong><br>
 譬如我做了如下尝试：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>** F = (<span class="keyword">int</span>**)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="number">3</span> * <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">2</span>;i++)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">3</span>;j++)</span><br><span class="line">        F[i][j] = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span>** F = (<span class="type">int</span>**)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="number">3</span> * <span class="built_in">sizeof</span>(<span class="type">int</span>));</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">2</span>;i++)</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; <span class="number">3</span>;j++)</span><br><span class="line">        F[i][j] = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p>这样手动分配内存。直接 runtime error，寻址不知道寻到哪里去了。<br>
 这很好解释，这段代码完全没法得知 F 的行数列数，故逻辑上也无法完成寻址行为。<br>
 <strong>动态开辟数组时，总得想办法让计算机在 runtime 时知道数组的大小才能完成寻址。</strong><br>
@@ -194,7 +194,7 @@ SuBonan = やがて、平凡な人になる</title>
 <li>那么对于第一类方法，实际上我们开辟了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∗</mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mi>o</mi><mi>f</mi><mo stretchy="false">(</mo><mi>i</mi><mi>n</mi><mi>t</mi><mo>∗</mo><mo stretchy="false">)</mo><mo>+</mo><mi>r</mi><mo>∗</mo><mi>c</mi><mo>∗</mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mi>o</mi><mi>f</mi><mo stretchy="false">(</mo><mi>i</mi><mi>n</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">r*sizeof(int*)+r*c*sizeof(int)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal">e</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord">∗</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal">e</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> 大小的空间将二维数组转换成了两层一维数组来寻址。先寻第一层，也就是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> 个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>n</mi><mi>t</mi><mo>∗</mo></mrow><annotation encoding="application/x-tex">int*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord">∗</span></span></span></span> 这一层，然后寻到后再寻第二层。这样就转换成了两次一维数组寻址。</li>
 <li>对于第二类方法是讨论的重点，我们考虑下 <code>int arr[N][M];</code>  是怎么实现的：</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line"><span class="keyword">int</span> arr[N][M];</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span> N;</span><br><span class="line">cin &gt;&gt; N;</span><br><span class="line"><span class="type">int</span> arr[N][M];</span><br></pre></td></tr></table></figure>
 <p>上面这段代码完全合法，所有变量都声明在 main 函数中，故存储在栈区。<br>
 首先这个动态数组是 C++11 以后的一个 optional feature，gcc 是可以编译的，不知道其他编译器。</p>
 <hr>
@@ -219,9 +219,9 @@ SuBonan = やがて、平凡な人になる</title>
 这充分说明了：<strong>栈区上存储了动态开辟数组的大小信息</strong>。当需要访问数组，需要寻址时，就会从栈区和通用寄存器中读取数组的大小信息，故就可以完成动态数组寻址了。√</p>
 <hr>
 <p>最后，如果非要开高维的动态数组，还是推荐上面的两种方法。要么就一层一层来：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> **a = <span class="keyword">new</span> <span class="keyword">int</span>*[N]();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">    a[i] = <span class="keyword">new</span> <span class="keyword">int</span>[M]();</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span> **a = <span class="keyword">new</span> <span class="type">int</span>*[N]();</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">    a[i] = <span class="keyword">new</span> <span class="type">int</span>[M]();</span><br></pre></td></tr></table></figure>
 <p>要么就直接用编译器帮忙实现的语法糖：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N][N];</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span> a[N][N];</span><br></pre></td></tr></table></figure>
 <p>但是注意第二种方法效率会低若干倍，在声明和访问时都会需要更多的访存操作。</p>
 
   </div>
@@ -234,7 +234,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-03-09 10:05:54" itemprop="dateModified" datetime="2023-03-09T10:05:54+08:00">2023-03-09</time>
+    <time title="Modified: 2025-03-30 09:11:44" itemprop="dateModified" datetime="2025-03-30T09:11:44+08:00">2025-03-30</time>
   </span>
   <span id="2023/01/05/C-数组/" class="item leancloud_visitors" data-flag-title="C++ 中数组和内存分布" title="Views">
       <span class="icon">
@@ -274,9 +274,9 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item left">
       
 
-  <a href="/2022/12/27/Cryptography/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5He6.png" title="Cryptography">
+  <a href="/2022/12/27/Cryptography/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5mtM.png" title="Cryptography">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> - 密码学</span>
+  <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
   <h3>Cryptography</h3>
   </a>
 
@@ -284,9 +284,9 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item right">
       
 
-  <a href="/2023/01/11/Machine-Learning/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5PW1.jpg" title="Machine Learning 机器学习">
+  <a href="/2023/01/11/Machine-Learning/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5E3b.png" title="Machine Learning 机器学习">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> - 计算机</span>
+  <span class="category"><i class="ic i-flag"></i> - 计算机基础</span>
   <h3>Machine Learning 机器学习</h3>
   </a>
 
@@ -309,7 +309,7 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
-          <li><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" rel="bookmark" title="C-C++ 语法">C-C++ 语法</a></li><li><a href="/2022/04/21/linker-symtable/" rel="bookmark" title="链接（基于 x86-64 下标准 ELF 格式）">链接（基于 x86-64 下标准 ELF 格式）</a></li><li class="active"><a href="/2023/01/05/C-%E6%95%B0%E7%BB%84/" rel="bookmark" title="C++ 中数组和内存分布">C++ 中数组和内存分布</a></li><li><a href="/2023/01/11/Machine-Learning/" rel="bookmark" title="Machine Learning 机器学习">Machine Learning 机器学习</a></li>
+          <li><a href="/2020/10/06/%E5%85%B3%E4%BA%8Ejava%E5%9F%9F%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%80%81%E5%AF%BC%E8%87%B4%E7%9A%84%E7%BC%BA%E9%99%B7/" rel="bookmark" title="关于java域和静态方法不支持多态导致的缺陷">关于java域和静态方法不支持多态导致的缺陷</a></li><li><a href="/2020/11/23/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" rel="bookmark" title="基数排序">基数排序</a></li><li><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" rel="bookmark" title="C-C++语法">C-C++语法</a></li><li><a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" rel="bookmark" title="类型和程序设计语言">类型和程序设计语言</a></li><li><a href="/2021/11/02/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%BB%AD/" rel="bookmark" title="类型和程序设计语言_续">类型和程序设计语言_续</a></li><li><a href="/2022/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="操作系统">操作系统</a></li><li><a href="/2022/04/21/linker-symtable/" rel="bookmark" title="链接（基于x86-64下标准ELF格式）">链接（基于x86-64下标准ELF格式）</a></li><li><a href="/2022/08/28/%E5%85%B3%E4%BA%8EHaskell%E5%AF%B9Kmeans%E7%AE%97%E6%B3%95parallel%E5%B9%B6%E8%A1%8C%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B3%A8%E9%87%8A/" rel="bookmark" title="关于Haskell对Kmeans算法parallel并行实现的注释">关于Haskell对Kmeans算法parallel并行实现的注释</a></li><li class="active"><a href="/2023/01/05/C-%E6%95%B0%E7%BB%84/" rel="bookmark" title="C++中数组和内存分布">C++中数组和内存分布</a></li><li><a href="/2023/01/11/Machine-Learning/" rel="bookmark" title="Machine Learning 机器学习">Machine Learning 机器学习</a></li><li><a href="/2023/01/14/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%90%AB%E4%B9%89/" rel="bookmark" title="图形学中的矩阵含义">图形学中的矩阵含义</a></li><li><a href="/2023/02/01/%E7%82%B9%E7%BA%BF%E9%9D%A2%E7%9A%84%E6%8F%92%E5%80%BC/" rel="bookmark" title="点线面的插值">点线面的插值</a></li><li><a href="/2023/02/11/%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B/" rel="bookmark" title="光照模型">光照模型</a></li><li><a href="/2023/02/11/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%BC%98%E5%8C%96/" rel="bookmark" title="汇编语言乱七八糟的优化">汇编语言乱七八糟的优化</a></li><li><a href="/2023/02/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="bookmark" title="计算机网络">计算机网络</a></li><li><a href="/2023/06/14/Database/" rel="bookmark" title="Introduction to Database">Introduction to Database</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="Overview">
@@ -317,25 +317,25 @@ SuBonan = やがて、平凡な人になる</title>
   <img class="image" itemprop="image" alt="SuBonan"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">SuBonan</p>
-  <div class="description" itemprop="description">やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a></div>
+  <div class="description" itemprop="description">やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">113</span>
+        <span class="count">114</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">20</span>
+        <span class="count">10</span>
         <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">13</span>
+        <span class="count">2</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -412,7 +412,57 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2023/11/07/quantum-random-walk/" title="Quantum Random Walk">Quantum Random Walk</a></span>
+    <span><a href="/2021/07/28/%E9%87%8F%E5%AD%90%E7%BA%BF%E8%B7%AF/" title="量子线路">量子线路</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/05/01/basic-lwe/" title="Basic LWE Problem">Basic LWE Problem</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/06/21/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E9%94%99%E9%A2%98%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/" title="计算理论错题补全计划">计算理论错题补全计划</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2020/12/05/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" title="离散数学-代数系统">离散数学-代数系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
+</div>
+
+    <span><a href="/2022/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">操作系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/06/10/JL-theorem/" title="Johnson-Lindenstrauss Lemma">Johnson-Lindenstrauss Lemma</a></span>
   </li>
 
       
@@ -422,80 +472,37 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2023/03/13/Kraus-theorem/" title="Kraus Theorem">Kraus Theorem</a></span>
+    <span><a href="/2023/05/06/quantum-complexity/" title="Quantum Complexity Theory">Quantum Complexity Theory</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/01/14/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%90%AB%E4%B9%89/" title="图形学中的矩阵含义">图形学中的矩阵含义</a></span>
+    <span><a href="/2023/10/19/Fourier/" title="傅里叶变换 (绕过群表示论，单位根)">傅里叶变换 (绕过群表示论，单位根)</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
 </div>
 
-    <span><a href="/2022/08/28/%E5%85%B3%E4%BA%8EHaskell%E5%AF%B9Kmeans%E7%AE%97%E6%B3%95parallel%E5%B9%B6%E8%A1%8C%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B3%A8%E9%87%8A/" title="关于 Haskell 对 Kmeans 算法 parallel 并行实现的注释">关于 Haskell 对 Kmeans 算法 parallel 并行实现的注释</a></span>
+    <span><a href="/2023/06/14/Database/" title="Introduction to Database">Introduction to Database</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" title="概率论与数理统计">概率论与数理统计</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/02/11/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%BC%98%E5%8C%96/" title="汇编语言乱七八糟的优化">汇编语言乱七八糟的优化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
     <span><a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" title="数学分析（上）">数学分析（上）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/" title="In - 程序逻辑">- 程序逻辑</a>
-</div>
-
-    <span><a href="/2023/07/27/logics/" title="Logic categories">Logic categories</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/11/01/%E8%BF%90%E7%AD%B9%E5%AD%A6/" title="运筹学">运筹学</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/18/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="日本语笔记">日本语笔记</a></span>
   </li>
 
   </ul>

@@ -30,9 +30,9 @@
 
 
   <title>
-程序设计语言的形式语义（续） |
+程序设计语言的形式语义（续） - - 程序语言理论 |
 SuBonan = やがて、平凡な人になる</title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
     <div class="cat">
@@ -115,12 +115,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5dWs.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5RyI.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5ghr.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5LGP.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5PW1.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5mtM.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUTy1.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5tsD.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUkeF.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Stg.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Qhl.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5foS.jpg"></li>
         </ul>
       </div>
     </header>
@@ -145,7 +145,9 @@ SuBonan = やがて、平凡な人になる</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E7%90%86%E8%AE%BA/" itemprop="item" rel="index" title="In - 程序语言理论"><span itemprop="name">- 程序语言理论</span></a>
+<meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
@@ -154,7 +156,7 @@ SuBonan = やがて、平凡な人になる</title>
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
     <meta itemprop="name" content="SuBonan">
-    <meta itemprop="description" content=", やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a>">
+    <meta itemprop="description" content=", やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a>">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -166,7 +168,7 @@ SuBonan = やがて、平凡な人になる</title>
 
     <p>日月如百代过客，去而复返，返而复去。艄公穷生涯于船头；马夫引缰辔迎来老年，日日羁旅，随处栖身。</p>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="imp的指称语义"><a class="markdownIt-Anchor" href="#imp的指称语义">#</a> IMP 的指称语义</h1>
 <h2 id="目的"><a class="markdownIt-Anchor" href="#目的">#</a> 目的</h2>
 <div class="note info">
@@ -650,7 +652,7 @@ j[a/i]\equiv j\quad i[a/i]\equiv a\\
 
 此时终止状态显然是满足$A\wedge\neg b$的。
 
-若在某个解释某个状态下$A$成立，$b=false$，则$\{A\}while\;b\;do\;c\{A\wedge \neg b\}$退化成$\{A\}skip\{A\}$，不需要前提就是有效的。
+若在某个解释某个状态下$A$成立，$b=false$，则$\&#123;A\&#125;while\;b\;do\;c\&#123;A\wedge \neg b\&#125;$退化成$\&#123;A\&#125;skip\&#123;A\&#125;$，不需要前提就是有效的。
 </code></pre>
 <ul>
 <li>推论规则：<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mo>⊨</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><msup><mi>A</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">)</mo><mspace width="1em"><mo stretchy="false">{</mo><msup><mi>A</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">}</mo><mi>c</mi><mo stretchy="false">{</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">}</mo><mspace width="1em"><mo>⊨</mo><mo stretchy="false">(</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>⇒</mo><mi>B</mi><mo stretchy="false">)</mo></mspace></mspace></mrow><mrow><mo stretchy="false">{</mo><mi>A</mi><mo stretchy="false">}</mo><mi>c</mi><mo stretchy="false">{</mo><mi>B</mi><mo stretchy="false">}</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\models(A\Rightarrow A&#x27;)\quad\{A&#x27;\}c\{B&#x27;\}\quad\models(B&#x27;\Rightarrow B)}{\{A\}c\{B\}}
@@ -944,7 +946,7 @@ iff\quad \sigma\models^I w[c_0;c_1,B]
 <p>第一行是根据最弱前置条件的定义。</p>
 <p>第二行是根据顺序命令的指称语义。</p>
 <p>第三行是因为归纳假设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo stretchy="false">[</mo><msub><mi>c</mi><mn>1</mn></msub><mo separator="true">,</mo><mi>B</mi><msup><mo stretchy="false">]</mo><mi>I</mi></msup><mo>=</mo><mi>w</mi><msup><mi>p</mi><mi>I</mi></msup><mo stretchy="false">[</mo><msub><mi>c</mi><mn>1</mn></msub><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">w[c_1,B]^I=wp^I[c_1,B]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span></span></span></span>，以及最弱前置条件的定义。</p>
-<pre><code>$\mathscr{C}[c_1]\sigma\models^I B\Leftrightarrow\sigma\in wp^I[c_1,B]=w[c_1,B]^I$
+<pre><code>$\mathscr&#123;C&#125;[c_1]\sigma\models^I B\Leftrightarrow\sigma\in wp^I[c_1,B]=w[c_1,B]^I$
 </code></pre>
 <p>第四行也是因为归纳假设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo stretchy="false">[</mo><msub><mi>c</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>B</mi><msup><mo stretchy="false">]</mo><mi>I</mi></msup><mo>=</mo><mi>w</mi><msup><mi>p</mi><mi>I</mi></msup><mo stretchy="false">[</mo><msub><mi>c</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">w[c_0,B]^I=wp^I[c_0,B]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span></span></span></span>，以及最弱前置条件的定义。</p>
 <p>最后一行是因为取得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo stretchy="false">[</mo><mi>c</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">]</mo><mo>=</mo><mi>w</mi><mo stretchy="false">[</mo><msub><mi>c</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>w</mi><mo stretchy="false">[</mo><msub><mi>c</mi><mn>1</mn></msub><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">]</mo><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">w[c,B]=w[c_0,w[c_1,B]]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord mathnormal">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span><span class="mclose">]</span></span></span></span>。</p>
@@ -1180,15 +1182,15 @@ X:=right(Y)
 <p>证明：反设存在一个命令 C 来检查<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>H</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar{H}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">ˉ</span></span></span></span></span></span></span></span></span></span>，有</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>c</mi><mo>∈</mo><mover accent="true"><mi>H</mi><mo>ˉ</mo></mover><mspace width="1em"><mi>i</mi><mi>f</mi><mi>f</mi><mspace width="1em"><mo stretchy="false">{</mo><mi>C</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi mathvariant="normal">#</mi><mi>c</mi><mo stretchy="false">)</mo><mo>↓</mo></mspace></mspace></mrow><annotation encoding="application/x-tex">c\in\bar{H}\quad iff\quad \{C\}(\# c)\downarrow
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">ˉ</span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">}</span><span class="mopen">(</span><span class="mord">#</span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↓</span></span></span></span></span></p>
-<pre><code>又因为C子集也是一个命令，我们来检测C是否在$\bar{H}$里。
+<pre><code>又因为C子集也是一个命令，我们来检测C是否在$\bar&#123;H&#125;$里。
 </code></pre>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mo>∈</mo><mover accent="true"><mi>H</mi><mo>ˉ</mo></mover><mspace width="1em"><mi>i</mi><mi>f</mi><mi>f</mi><mspace width="1em"><mo stretchy="false">{</mo><mi>C</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi mathvariant="normal">#</mi><mi>C</mi><mo stretchy="false">)</mo><mo>↓</mo></mspace></mspace></mrow><annotation encoding="application/x-tex">C\in\bar{H}\quad iff\quad\{C\}(\#C)\downarrow
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">ˉ</span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">}</span><span class="mopen">(</span><span class="mord">#</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↓</span></span></span></span></span></p>
-<pre><code>而$\bar{H}$的定义又要求
+<pre><code>而$\bar&#123;H&#125;$的定义又要求
 </code></pre>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mo>∈</mo><mover accent="true"><mi>H</mi><mo>ˉ</mo></mover><mo>⇒</mo><mo stretchy="false">{</mo><mi>C</mi><mo stretchy="false">}</mo><mo stretchy="false">{</mo><mi mathvariant="normal">#</mi><mi>C</mi><mo stretchy="false">}</mo><mo>↓̸</mo></mrow><annotation encoding="application/x-tex">C\in\bar{H}\Rightarrow \{C\}\{\#C\}\not\downarrow
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">ˉ</span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">}</span><span class="mopen">{</span><span class="mord">#</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">}</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">↓</span></span></span></span></span></p>
-<pre><code>于是矛盾，故任何一个可能检查$\bar{H}$的命令都无法检查它自己。
+<pre><code>于是矛盾，故任何一个可能检查$\bar&#123;H&#125;$的命令都无法检查它自己。
 </code></pre>
 <p><strong>推论</strong>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span> 不是 IMP 可判定的。因为定理：集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 是可判定的当且仅当<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>M</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar{M}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.16666em;"><span class="mord">ˉ</span></span></span></span></span></span></span></span></span></span> 都是可检查的。</p>
 </li>
@@ -1286,7 +1288,7 @@ iff\quad \{W;C\}(\# c)\downarrow
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2022-10-17 17:51:36" itemprop="dateModified" datetime="2022-10-17T17:51:36+08:00">2022-10-17</time>
+    <time title="Modified: 2025-03-30 09:04:46" itemprop="dateModified" datetime="2025-03-30T09:04:46+08:00">2025-03-30</time>
   </span>
   <span id="2021/09/27/程序设计语言的形式语义（续）/" class="item leancloud_visitors" data-flag-title="程序设计语言的形式语义（续）" title="Views">
       <span class="icon">
@@ -1326,9 +1328,9 @@ iff\quad \{W;C\}(\# c)\downarrow
     <div class="item left">
       
 
-  <a href="/2021/09/22/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;QUBUG.jpg" title="程序设计语言的形式语义">
+  <a href="/2021/09/22/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5ghr.jpg" title="程序设计语言的形式语义">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
+  <span class="category"><i class="ic i-flag"></i> - 程序语言理论</span>
   <h3>程序设计语言的形式语义</h3>
   </a>
 
@@ -1336,9 +1338,9 @@ iff\quad \{W;C\}(\# c)\downarrow
     <div class="item right">
       
 
-  <a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;QUbaD.png" title="类型和程序设计语言">
+  <a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5mtM.png" title="类型和程序设计语言">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
+  <span class="category"><i class="ic i-flag"></i> - 计算机基础</span>
   <h3>类型和程序设计语言</h3>
   </a>
 
@@ -1358,34 +1360,37 @@ iff\quad \{W;C\}(\# c)\downarrow
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#imp的指称语义"><span class="toc-number">1.</span> <span class="toc-text"> IMP 的指称语义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.1.</span> <span class="toc-text"> 目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指称语义"><span class="toc-number">1.2.</span> <span class="toc-text"> 指称语义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算术表达式的指称"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 算术表达式的指称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔表达式的指称"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 布尔表达式的指称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令的指称"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 命令的指称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语义的等价性"><span class="toc-number">1.3.</span> <span class="toc-text"> 语义的等价性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完全偏序与连续函数"><span class="toc-number">1.4.</span> <span class="toc-text"> 完全偏序与连续函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#knaster-tarski-定理"><span class="toc-number">1.5.</span> <span class="toc-text"> Knaster-Tarski 定理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#imp的公理语义"><span class="toc-number">2.</span> <span class="toc-text"> IMP 的公理语义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#断言语言assn"><span class="toc-number">2.1.</span> <span class="toc-text"> 断言语言 Assn</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自由变量与约束变量"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 自由变量与约束变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代入"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 代入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断言的语义"><span class="toc-number">2.2.</span> <span class="toc-text"> 断言的语义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部分正确性的证明规则霍尔规则"><span class="toc-number">2.3.</span> <span class="toc-text"> 部分正确性的证明规则 —— 霍尔规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#霍尔规则的完备性和可靠性"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 霍尔规则的完备性和可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用霍尔规则的一个示例"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 应用霍尔规则的一个示例：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#霍尔规则的完备性"><span class="toc-number">3.</span> <span class="toc-text"> 霍尔规则的完备性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#哥德尔不完备性定理"><span class="toc-number">3.1.</span> <span class="toc-text"> 哥德尔不完备性定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最弱前置条件与可表达性"><span class="toc-number">3.2.</span> <span class="toc-text"> 最弱前置条件与可表达性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#证明assn是可表达的"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 证明 Assn 是可表达的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证条件"><span class="toc-number">3.3.</span> <span class="toc-text"> 验证条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#谓词转换器"><span class="toc-number">3.4.</span> <span class="toc-text"> 谓词转换器 *</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#不完备性和不可判定性"><span class="toc-number">4.</span> <span class="toc-text"> 不完备性和不可判定性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#可计算性"><span class="toc-number">4.1.</span> <span class="toc-text"> 可计算性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不可判定性"><span class="toc-number">4.2.</span> <span class="toc-text"> 不可判定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#哥德尔不完备性定理-2"><span class="toc-number">4.3.</span> <span class="toc-text"> 哥德尔不完备性定理</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#imp%E7%9A%84%E6%8C%87%E7%A7%B0%E8%AF%AD%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text"> IMP 的指称语义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E7%A7%B0%E8%AF%AD%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 指称语义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%8C%87%E7%A7%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 算术表达式的指称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%8C%87%E7%A7%B0"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 布尔表达式的指称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E6%8C%87%E7%A7%B0"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 命令的指称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text"> 语义的等价性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E5%81%8F%E5%BA%8F%E4%B8%8E%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text"> 完全偏序与连续函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#knaster-tarski-%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text"> Knaster-Tarski 定理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#imp%E7%9A%84%E5%85%AC%E7%90%86%E8%AF%AD%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text"> IMP 的公理语义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%AD%E8%A8%80%E8%AF%AD%E8%A8%80assn"><span class="toc-number">2.1.</span> <span class="toc-text"> 断言语言 Assn</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F%E4%B8%8E%E7%BA%A6%E6%9D%9F%E5%8F%98%E9%87%8F"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 自由变量与约束变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E5%85%A5"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 代入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E4%B9%89"><span class="toc-number">2.2.</span> <span class="toc-text"> 断言的语义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E6%AD%A3%E7%A1%AE%E6%80%A7%E7%9A%84%E8%AF%81%E6%98%8E%E8%A7%84%E5%88%99%E9%9C%8D%E5%B0%94%E8%A7%84%E5%88%99"><span class="toc-number">2.3.</span> <span class="toc-text"> 部分正确性的证明规则 —— 霍尔规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%8D%E5%B0%94%E8%A7%84%E5%88%99%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7%E5%92%8C%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 霍尔规则的完备性和可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E9%9C%8D%E5%B0%94%E8%A7%84%E5%88%99%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 应用霍尔规则的一个示例：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9C%8D%E5%B0%94%E8%A7%84%E5%88%99%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text"> 霍尔规则的完备性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E6%80%A7%E5%AE%9A%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text"> 哥德尔不完备性定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%BC%B1%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%8F%AF%E8%A1%A8%E8%BE%BE%E6%80%A7"><span class="toc-number">3.2.</span> <span class="toc-text"> 最弱前置条件与可表达性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E6%98%8Eassn%E6%98%AF%E5%8F%AF%E8%A1%A8%E8%BE%BE%E7%9A%84"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 证明 Assn 是可表达的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E6%9D%A1%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text"> 验证条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%93%E8%AF%8D%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text"> 谓词转换器 *</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8D%E5%AE%8C%E5%A4%87%E6%80%A7%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%88%A4%E5%AE%9A%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text"> 不完备性和不可判定性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%AE%A1%E7%AE%97%E6%80%A7"><span class="toc-number">4.1.</span> <span class="toc-text"> 可计算性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E5%88%A4%E5%AE%9A%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text"> 不可判定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E6%80%A7%E5%AE%9A%E7%90%86-2"><span class="toc-number">4.3.</span> <span class="toc-text"> 哥德尔不完备性定理</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2021/09/22/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89/" rel="bookmark" title="程序设计语言的形式语义">程序设计语言的形式语义</a></li><li class="active"><a href="/2021/09/27/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89%EF%BC%88%E7%BB%AD%EF%BC%89/" rel="bookmark" title="程序设计语言的形式语义（续）">程序设计语言的形式语义（续）</a></li><li><a href="/2021/11/11/%E5%85%B3%E4%BA%8E%E6%8A%BD%E8%B1%A1%E8%A7%A3%E9%87%8A%E7%9A%84%E4%B8%80%E7%82%B9%E7%90%86%E8%A7%A3/" rel="bookmark" title="关于抽象解释的一点理解">关于抽象解释的一点理解</a></li><li><a href="/2021/11/16/widening-operator-narrowing-operator/" rel="bookmark" title="Widening Operator & Narrowing Operator">Widening Operator & Narrowing Operator</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="SuBonan"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">SuBonan</p>
-  <div class="description" itemprop="description">やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a></div>
+  <div class="description" itemprop="description">やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">113</span>
+        <span class="count">114</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">20</span>
+        <span class="count">10</span>
         <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">13</span>
+        <span class="count">2</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -1459,37 +1464,27 @@ iff\quad \{W;C\}(\# c)\downarrow
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E6%95%B0%E5%AD%A6/" title="In - 计算机与数学">- 计算机与数学</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2022/06/10/lambda-cube/" title="Lambda Cube">Lambda Cube</a></span>
+    <span><a href="/2023/04/30/Savitch-theorem/" title="Savitch&#39;s Theorem">Savitch's Theorem</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2023/06/03/quantum-programs-and-verification/" title="Quantum Loop Programs and Verification of Quantum Programs">Quantum Loop Programs and Verification of Quantum Programs</a></span>
+    <span><a href="/2023/03/13/Kraus-theorem/" title="Kraus Theorem">Kraus Theorem</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E6%80%A7/" title="In 计算复杂性">计算复杂性</a>
-</div>
-
-    <span><a href="/2023/04/29/Mahaney-Theorem/" title="Mahaney&#39;s Theorem">Mahaney's Theorem</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="In - 数学基础">- 数学基础</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
     <span><a href="/2023/05/08/Galois-Theory/" title="Galois Theory">Galois Theory</a></span>
@@ -1499,56 +1494,70 @@ iff\quad \{W;C\}(\# c)\downarrow
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/06/03/Satisfiability-Modulo/" title="Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification">Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification</a></span>
+    <span><a href="/2022/12/27/Cryptography/" title="Cryptography">Cryptography</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2021/06/26/%E5%8F%A4%E6%80%AA%E7%9A%84%E4%BA%BA/" title="古怪的人">古怪的人</a></span>
+    <span><a href="/2021/07/28/%E9%87%8F%E5%AD%90%E7%BA%BF%E8%B7%AF/" title="量子线路">量子线路</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/11/11/%E5%85%B3%E4%BA%8E%E6%8A%BD%E8%B1%A1%E8%A7%A3%E9%87%8A%E7%9A%84%E4%B8%80%E7%82%B9%E7%90%86%E8%A7%A3/" title="关于抽象解释的一点理解">关于抽象解释的一点理解</a></span>
+    <span><a href="/2023/05/01/basic-lwe/" title="Basic LWE Problem">Basic LWE Problem</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" title="In - 计算机">- 计算机</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" title="C-C++ 语法">C-C++ 语法</a></span>
+    <span><a href="/2023/06/18/Sketching-Algorithms-for-Big-Data/" title="Sketching Algorithms for Big Data">Sketching Algorithms for Big Data</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2020/10/06/%E5%85%B3%E4%BA%8Ejava%E5%9F%9F%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%80%81%E5%AF%BC%E8%87%B4%E7%9A%84%E7%BC%BA%E9%99%B7/" title="关于 java 域和静态方法不支持多态导致的缺陷">关于 java 域和静态方法不支持多态导致的缺陷</a></span>
+    <span><a href="/2023/08/10/%E5%85%B3%E4%BA%8EMonad/" title="关于Monad">关于Monad</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2022/06/21/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E9%94%99%E9%A2%98%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/" title="计算理论错题补全计划">计算理论错题补全计划</a></span>
+    <span><a href="/2021/08/05/%E9%87%8F%E5%AD%90Fourier%E5%8F%98%E6%8D%A2/" title="量子Fourier变换">量子Fourier变换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/07/27/logics/" title="Logic categories">Logic categories</a></span>
   </li>
 
   </ul>

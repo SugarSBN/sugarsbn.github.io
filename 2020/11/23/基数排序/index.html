@@ -30,9 +30,9 @@
 
 
   <title>
-基数排序 |
+基数排序 - - 计算机基础 |
 SuBonan = やがて、平凡な人になる</title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
     <div class="cat">
@@ -74,7 +74,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>535</span>
+    <span>585</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -115,12 +115,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5E3b.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Stg.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5foS.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5RyI.jpg"></li>
           <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5dWs.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUUdI.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5lrN.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5PW1.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5mtM.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q59GC.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5E3b.png"></li>
         </ul>
       </div>
     </header>
@@ -145,7 +145,9 @@ SuBonan = やがて、平凡な人になる</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="item" rel="index" title="In - 计算机基础"><span itemprop="name">- 计算机基础</span></a>
+<meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
@@ -154,7 +156,7 @@ SuBonan = やがて、平凡な人になる</title>
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
     <meta itemprop="name" content="SuBonan">
-    <meta itemprop="description" content=", やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a>">
+    <meta itemprop="description" content=", やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a>">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -165,8 +167,8 @@ SuBonan = やがて、平凡な人になる</title>
     
 
     <p>忘记了 17 年学的东西。。。看来线性排序还是实用性不强嘛</p>
-<a id="more"></a>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> BIT = <span class="number">16</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> U = <span class="number">65536</span>;</span><br><span class="line"><span class="keyword">int</span> N, cnt[U], A[MAXN][<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getd</span><span class="params">( <span class="keyword">int</span> x, <span class="keyword">int</span> d )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (x &gt;&gt; (d * BIT)) &amp; (U - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">radix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    For(d, <span class="number">0</span>, <span class="number">2</span>)&#123;</span><br><span class="line">    	<span class="built_in">memset</span>(cnt, <span class="number">0</span>, <span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        For(i, <span class="number">0</span>, N) cnt[getd(A[i][d], d)]++;</span><br><span class="line">        For(i, <span class="number">1</span>, U) cnt[i] += cnt[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = N - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) A[--cnt[getd(A[i][d], d)]][d ^ <span class="number">1</span>] = A[i][d];</span><br><span class="line">    &#125;</span><br><span class="line">    For(i, <span class="number">0</span>, N)	<span class="built_in">printf</span>(<span class="string">"%d%c"</span>, A[i][<span class="number">0</span>], i == N - <span class="number">1</span> ? <span class="string">'\n'</span> : <span class="string">' '</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">    For(i, <span class="number">0</span>, N) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;A[i][<span class="number">0</span>]);</span><br><span class="line">    radix_sort();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> BIT = <span class="number">16</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> U = <span class="number">65536</span>;</span><br><span class="line"><span class="type">int</span> N, cnt[U], A[MAXN][<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">getd</span><span class="params">( <span class="type">int</span> x, <span class="type">int</span> d )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (x &gt;&gt; (d * BIT)) &amp; (U - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">radix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">For</span>(d, <span class="number">0</span>, <span class="number">2</span>)&#123;</span><br><span class="line">    	<span class="built_in">memset</span>(cnt, <span class="number">0</span>, <span class="built_in">sizeof</span>(cnt));</span><br><span class="line">        <span class="built_in">For</span>(i, <span class="number">0</span>, N) cnt[<span class="built_in">getd</span>(A[i][d], d)]++;</span><br><span class="line">        <span class="built_in">For</span>(i, <span class="number">1</span>, U) cnt[i] += cnt[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = N - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) A[--cnt[<span class="built_in">getd</span>(A[i][d], d)]][d ^ <span class="number">1</span>] = A[i][d];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">For</span>(i, <span class="number">0</span>, N)	<span class="built_in">printf</span>(<span class="string">&quot;%d%c&quot;</span>, A[i][<span class="number">0</span>], i == N - <span class="number">1</span> ? <span class="string">&#x27;\n&#x27;</span> : <span class="string">&#x27; &#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">    <span class="built_in">For</span>(i, <span class="number">0</span>, N) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;A[i][<span class="number">0</span>]);</span><br><span class="line">    <span class="built_in">radix_sort</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
 
@@ -178,7 +180,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2020-11-23 08:32:50" itemprop="dateModified" datetime="2020-11-23T08:32:50+08:00">2020-11-23</time>
+    <time title="Modified: 2025-03-30 09:07:03" itemprop="dateModified" datetime="2025-03-30T09:07:03+08:00">2025-03-30</time>
   </span>
   <span id="2020/11/23/基数排序/" class="item leancloud_visitors" data-flag-title="基数排序" title="Views">
       <span class="icon">
@@ -218,9 +220,9 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item left">
       
 
-  <a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5foS.jpg" title="数学分析（上）">
+  <a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;QUkeF.png" title="数学分析（上）">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
+  <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
   <h3>数学分析（上）</h3>
   </a>
 
@@ -228,10 +230,10 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item right">
       
 
-  <a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5PW1.jpg" title="离散数学 - 集合部分">
+  <a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5ghr.jpg" title="离散数学-集合部分">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>离散数学 - 集合部分</h3>
+  <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
+  <h3>离散数学-集合部分</h3>
   </a>
 
     </div>
@@ -252,31 +254,34 @@ SuBonan = やがて、平凡な人になる</title>
       <div class="contents panel pjax" data-title="Contents">
       </div>
       <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2020/10/06/%E5%85%B3%E4%BA%8Ejava%E5%9F%9F%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%80%81%E5%AF%BC%E8%87%B4%E7%9A%84%E7%BC%BA%E9%99%B7/" rel="bookmark" title="关于java域和静态方法不支持多态导致的缺陷">关于java域和静态方法不支持多态导致的缺陷</a></li><li class="active"><a href="/2020/11/23/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" rel="bookmark" title="基数排序">基数排序</a></li><li><a href="/2021/06/09/C%20C++%20%E8%AF%AD%E6%B3%95/" rel="bookmark" title="C-C++语法">C-C++语法</a></li><li><a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" rel="bookmark" title="类型和程序设计语言">类型和程序设计语言</a></li><li><a href="/2021/11/02/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%BB%AD/" rel="bookmark" title="类型和程序设计语言_续">类型和程序设计语言_续</a></li><li><a href="/2022/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="操作系统">操作系统</a></li><li><a href="/2022/04/21/linker-symtable/" rel="bookmark" title="链接（基于x86-64下标准ELF格式）">链接（基于x86-64下标准ELF格式）</a></li><li><a href="/2022/08/28/%E5%85%B3%E4%BA%8EHaskell%E5%AF%B9Kmeans%E7%AE%97%E6%B3%95parallel%E5%B9%B6%E8%A1%8C%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B3%A8%E9%87%8A/" rel="bookmark" title="关于Haskell对Kmeans算法parallel并行实现的注释">关于Haskell对Kmeans算法parallel并行实现的注释</a></li><li><a href="/2023/01/05/C-%E6%95%B0%E7%BB%84/" rel="bookmark" title="C++中数组和内存分布">C++中数组和内存分布</a></li><li><a href="/2023/01/11/Machine-Learning/" rel="bookmark" title="Machine Learning 机器学习">Machine Learning 机器学习</a></li><li><a href="/2023/01/14/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%90%AB%E4%B9%89/" rel="bookmark" title="图形学中的矩阵含义">图形学中的矩阵含义</a></li><li><a href="/2023/02/01/%E7%82%B9%E7%BA%BF%E9%9D%A2%E7%9A%84%E6%8F%92%E5%80%BC/" rel="bookmark" title="点线面的插值">点线面的插值</a></li><li><a href="/2023/02/11/%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B/" rel="bookmark" title="光照模型">光照模型</a></li><li><a href="/2023/02/11/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%BC%98%E5%8C%96/" rel="bookmark" title="汇编语言乱七八糟的优化">汇编语言乱七八糟的优化</a></li><li><a href="/2023/02/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="bookmark" title="计算机网络">计算机网络</a></li><li><a href="/2023/06/14/Database/" rel="bookmark" title="Introduction to Database">Introduction to Database</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="SuBonan"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">SuBonan</p>
-  <div class="description" itemprop="description">やがて、平凡な人になる <br><a href="http://www.subonan.com/computer-graphics" target="_blank" rel="noopener"> 图形学作业请点这里 </a></div>
+  <div class="description" itemprop="description">やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">113</span>
+        <span class="count">114</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">20</span>
+        <span class="count">10</span>
         <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">13</span>
+        <span class="count">2</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -350,10 +355,10 @@ SuBonan = やがて、平凡な人になる</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/09/09/A-correctness-and-incorrectness-program-logic/" title="A Correctness and Incorrectness Program Logic">A Correctness and Incorrectness Program Logic</a></span>
+    <span><a href="/2023/09/16/Galois-connection-and-Galois-embedding/" title="Galois Connection &amp; Galois Embedding">Galois Connection & Galois Embedding</a></span>
   </li>
 
       
@@ -370,59 +375,10 @@ SuBonan = やがて、平凡な人になる</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2023/06/03/quantum-programs-and-verification/" title="Quantum Loop Programs and Verification of Quantum Programs">Quantum Loop Programs and Verification of Quantum Programs</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="In - 数学基础">- 数学基础</a>
-</div>
-
-    <span><a href="/2023/12/29/differentiable-manifold/" title="Differentiable Manifolds 微分流形">Differentiable Manifolds 微分流形</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="In - 数学基础">- 数学基础</a>
-</div>
-
-    <span><a href="/2022/06/15/category-theory/" title="Category theory">Category theory</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/01/14/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E5%90%AB%E4%B9%89/" title="图形学中的矩阵含义">图形学中的矩阵含义</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/" title="In - 程序逻辑">- 程序逻辑</a>
-</div>
-
-    <span><a href="/2023/07/27/logics/" title="Logic categories">Logic categories</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
-</div>
-
-    <span><a href="/2023/10/09/an-abstract-view-of-programming-language/" title="Computation &amp; Programs">Computation & Programs</a></span>
+    <span><a href="/2023/03/13/Kraus-theorem/" title="Kraus Theorem">Kraus Theorem</a></span>
   </li>
 
       
@@ -432,17 +388,67 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
 </div>
 
-    <span><a href="/2019/11/17/blog1/" title="记">记</a></span>
+    <span><a href="/2020/03/08/%E6%86%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E5%BA%9F%E8%AF%9D/" title="憋出来的废话">憋出来的废话</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
+<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
 </div>
 
-    <span><a href="/2021/08/05/%E9%87%8F%E5%AD%90Fourier%E5%8F%98%E6%8D%A2/" title="量子 Fourier 变换">量子 Fourier 变换</a></span>
+    <span><a href="/2023/07/19/QIBLQSL/" title="A Quantum Interpretation of Bunched Logic And Quantum Separation Logic">A Quantum Interpretation of Bunched Logic And Quantum Separation Logic</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/11/08/ABFEx/" title="Analysis of Boolean Function （Course Exercise Solutions)">Analysis of Boolean Function （Course Exercise Solutions)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" title="代数拓扑">代数拓扑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+</div>
+
+    <span><a href="/2023/06/03/Satisfiability-Modulo/" title="Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification">Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2021/04/24/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86/" title="离散数学-图论部分">离散数学-图论部分</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BB%98%E7%94%BB/" title="In - 绘画">- 绘画</a>
+</div>
+
+    <span><a href="/2021/01/23/%E4%B9%B1%E6%B6%82%E4%B9%B1%E7%94%BB/" title="絵">絵</a></span>
   </li>
 
   </ul>
