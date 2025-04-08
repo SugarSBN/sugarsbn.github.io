@@ -78,7 +78,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>1.2k</span>
+    <span>2.7k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -86,7 +86,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>1 mins.</span>
+    <span>2 mins.</span>
   </span>
 </div>
 
@@ -119,12 +119,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5foS.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5pjG.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5tsD.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Stg.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUkeF.png"></li>
           <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0neEa.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q502B.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5mtM.png"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUUdI.png"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nNNK.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUTy1.png"></li>
         </ul>
       </div>
     </header>
@@ -194,7 +194,7 @@ SuBonan = やがて、平凡な人になる</title>
 <p>第一步，我们根据后缀起始位置对 3 的余数，进行分组</p>
 <pre><code>S0 = 0 : GACCCACCACC
      3 : CCACCACC
-     6 : CACCACC
+     6 : CCACC
      9 : CC
 S1 = 1 : ACCACCACC
      4 : CACCACC
@@ -213,10 +213,70 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
 S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
        0     2     2     1     3     0     0
 </code></pre>
-<p>这一步需要注意，我们允许重复的排序。然后我们把原来的 S12 替换成一个新的字符串，也就是排序结果作为字符：</p>
+<p>这一步需要注意，我们允许重复的排序。</p>
+<p>然后我们把原来的 S12 替换成一个新的字符串，也就是排序结果作为字符：</p>
 <pre><code>S12 = 0 2 2 1 3 0 0
 </code></pre>
-<p>注意到这个 S12 字符串的长度显然<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mfrac><mrow><mn>2</mn><mi>n</mi></mrow><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\approx\frac{2n}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.48312em;vertical-align:0em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，我们递归调用 Skew Sort 算法来求出一个 S12 的后缀数组：</p>
+<p>注意到这个 S12 字符串的长度显然<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>7</mn><mo>≈</mo><mfrac><mrow><mn>2</mn><mi>n</mi></mrow><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">=7\approx\frac{2n}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，我们递归调用 Skew Sort 算法来求出一个 S12 的后缀数组，以及对应的原字符串：</p>
+<pre><code> SA'[0] = 6   |   S12[6] = 0        |   ACC
+ SA'[1] = 5   |   S12[5] = 00       |   ACCACC
+ SA'[2] = 0   |   S12[0] = 0221300  |   ACCCACCACC$$...
+ SA'[3] = 3   |   S12[3] = 1300     |   C$$...
+ SA'[4] = 2   |   S12[2] = 21300    |   CACC$$...
+ SA'[5] = 1   |   S12[1] = 221300   |   CACCACC$$...
+ SA'[6] = 4   |   S12[4] = 300      |   CCCACCACC
+</code></pre>
+<p>然后，我们把 SA’映射到一个新的数组 A，利用之前的表：</p>
+<pre><code>       1     4     7    10     2     5     8
+S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
+       0     2     2     1     3     0     0
+</code></pre>
+<p>可以映射为：</p>
+<pre><code> SA'[0] = 6 -&gt; A[0] = 8
+ SA'[1] = 5 -&gt; A[1] = 5
+ SA'[2] = 0 -&gt; A[2] = 1
+ SA'[3] = 3 -&gt; A[3] = 10
+ SA'[4] = 2 -&gt; A[4] = 7
+ SA'[5] = 1 -&gt; A[5] = 4
+ SA'[6] = 4 -&gt; A[6] = 2
+</code></pre>
+<p>也就是考虑 S12 = 0221300 这个字符串中，每一个后缀在原来字符串中的位置。譬如 SA’[0]=6，那么在 S12 中，第 6 位对应了原始字符串 s8 后缀。</p>
+<p>这个 A 数组，其实包含了所有<ins>原字符串所有模 3 余 1、模 3 余 2 的后缀的排序信息</ins>。</p>
+<p>因为 0221300 这个字符串，其实 encode 了原先后缀<ins>前三个字符间的大小关系</ins>。</p>
+<p>接下来，我们考虑排序 S0 中的后缀。这时候的排序有点技巧！</p>
+<p>我们只需要按照 S0 中，每个后缀的第一个字符排序！如果第一个字符相同时，我们就把它们加一，然后在 A 数组里查询！因为 A 数组包含了模 3 余 1、模 3 余 2 的后缀排序信息，所以模 3 余 0 的后缀去掉第一个字符后，一定会落在这里面。</p>
+<p>延续之前的例子，我们考虑 s0, s3, s6, s9 这四个后缀。首先我们把它们下标都加一，考虑 s1, s4, s7, s10。根据 A 数组，我们知道 s1, s4, s7, s10 的相对顺序是：</p>
+<pre><code> s1 &lt; s10 &lt; s7 &lt; s4
+</code></pre>
+<p>因此我们先确定顺序： s0, s9, s6, s3。</p>
+<p>然后我们根据它们的首字符进行基数排序，在首字符相同时，不改变相对顺序。因为去掉首字符后的部分已经按照 s1 &lt; s10 &lt; s7 &lt; s4 的顺序排好了！</p>
+<p>我们把模 3 余 0 的后缀排序结果放在 B 数组中：</p>
+<pre><code> B[0] = 9 = CC
+ B[1] = 6 = CCACC
+ B[2] = 3 = CCACCACC
+ B[3] = 0 = GACCCACCACC 
+</code></pre>
+<p>最后，我们考虑合并 A、B 数组，获得原数组的一个后缀排序。  这时候可以考虑归并排序。</p>
+<p>对于一个模 3 余 1 或 2 的后缀，和一个模 3 余 0 的后缀，我们首先比较它们的首字符，如果不相同那么直接确定了顺序。</p>
+<p>否则的话，我们可以考虑把它们同时后移一位，就变成了比较一个模 3 余 2 或 0 的后缀，和一个模 3 余 1 的后缀。</p>
+<p>如果此时是 模 3 余 2 和 模 3 余 1 的后缀比较，因为它们都在 A 数组中，A 已经是有序的了，所以可以直接出结果。</p>
+<p>否则就是 模 3 余 0 和 模 3 余 1 的后缀比较，我们再次比较首字符，如果不同的话再后移一次。</p>
+<p>这样就变成 模 3 余 1 和 模 3 余 2 的后缀比较了，这一定能在 A 数组里查询出来。</p>
+<p>因此归并时，比较的时间是常数的！最多后移两次，就可以一定利用已有的排序信息 A 了。这也是模 3 的妙处。</p>
+<p>最后我们得到的后缀数组就是：</p>
+<pre><code> SA[0] = 8
+ SA[1] = 5
+ SA[2] = 1
+ SA[3] = 10
+ SA[4] = 7
+ SA[5] = 4
+ SA[7] = 9
+ SA[8] = 6
+ SA[9] = 3
+ SA[6] = 2
+ SA[10]= 0
+</code></pre>
+<p>因此总的时间复杂度其实满足<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false">(</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(n)=T(2/3n)+O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，根据主定理<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(n)=O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
 
   </div>
 
@@ -228,7 +288,7 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-04-08 12:03:21" itemprop="dateModified" datetime="2025-04-08T12:03:21+08:00">2025-04-08</time>
+    <time title="Modified: 2025-04-08 19:16:28" itemprop="dateModified" datetime="2025-04-08T19:16:28+08:00">2025-04-08</time>
   </span>
   <span id="2025/04/08/2025-4-8-skew-sort/" class="item leancloud_visitors" data-flag-title="Skew Sort" title="Views">
       <span class="icon">
@@ -268,7 +328,7 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
     <div class="item left">
       
 
-  <a href="/2025/04/03/2025-4-3-modern-algebra/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;QUBUG.jpg" title="应用近世代数 课堂记录">
+  <a href="/2025/04/03/2025-4-3-modern-algebra/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5foS.jpg" title="应用近世代数 课堂记录">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
   <h3>应用近世代数 课堂记录</h3>
@@ -390,7 +450,17 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
 <a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/04/23/Time-Hierarchy-Theorem/" title="Time Hierarchy Theorem">Time Hierarchy Theorem</a></span>
+    <span><a href="/2023/04/27/%E5%A4%8D%E6%9D%82%E6%80%A7%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%93%E8%AE%BA%E6%97%A0%E8%AF%81%E6%98%8E/" title="复杂性中的一些结论(无证明)">复杂性中的一些结论(无证明)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
+</div>
+
+    <span><a href="/2019/08/21/%E7%BA%AA%E5%BF%B5%E5%BE%90%E5%AD%90%E7%84%93/" title="纪念徐子焓">纪念徐子焓</a></span>
   </li>
 
       
@@ -400,7 +470,17 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
 <a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/08/10/%E5%85%B3%E4%BA%8EMonad/" title="关于Monad">关于Monad</a></span>
+    <span><a href="/2023/03/16/%E7%BE%A4%E8%A1%A8%E7%A4%BA%E8%AE%BA%E5%92%8C%E7%89%B9%E5%BE%81%E6%A0%87/" title="群表示论和特征标">群表示论和特征标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
+</div>
+
+    <span><a href="/2023/06/03/Satisfiability-Modulo/" title="Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification">Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification</a></span>
   </li>
 
       
@@ -410,17 +490,47 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
 <a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="组合数学杂记">组合数学杂记</a></span>
+    <span><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E7%90%86%E8%AE%BA/" title="In - 程序语言理论">- 程序语言理论</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/09/22/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89/" title="程序设计语言的形式语义">程序设计语言的形式语义</a></span>
+    <span><a href="/2023/05/31/sketching-streaming-and-sub-linear-space-algorithms/" title="Sketching, streaming and sub-linear space algorithms">Sketching, streaming and sub-linear space algorithms</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%A4%96%E8%AF%AD/" title="In - 外语">- 外语</a>
+</div>
+
+    <span><a href="/2020/10/18/%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%94%E8%AE%B0/" title="日本语笔记">日本语笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
+</div>
+
+    <span><a href="/2022/05/18/%E7%9D%A1%E7%BE%8E%E4%BA%BA/" title="睡美人">睡美人</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/11/14/Fiberation/" title="Fibration">Fibration</a></span>
   </li>
 
       
@@ -431,56 +541,6 @@ S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
 </div>
 
     <span><a href="/2021/06/03/test/" title="test">test</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2024/01/20/compact-symplectic-group/" title="紧致辛群和四元代数">紧致辛群和四元代数</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
-</div>
-
-    <span><a href="/2021/10/20/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="类型和程序设计语言">类型和程序设计语言</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2023/09/16/Galois-connection-and-Galois-embedding/" title="Galois Connection &amp; Galois Embedding">Galois Connection & Galois Embedding</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2022/07/13/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" title="数学建模">数学建模</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
-</div>
-
-    <span><a href="/2023/07/27/sl-review/" title="Separation Logic Review">Separation Logic Review</a></span>
   </li>
 
   </ul>
