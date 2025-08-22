@@ -1,0 +1,617 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="やがて、平凡な人になる" href="http://sugarsbn.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="やがて、平凡な人になる" href="http://sugarsbn.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="やがて、平凡な人になる" href="http://sugarsbn.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://sugarsbn.github.io/2025/04/08/2025-4-8-skew-sort/">
+
+
+
+  <title>
+Skew Sort - - 数学杂记 |
+SuBonan = やがて、平凡な人になる</title>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Skew Sort
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2025-04-08 11:20:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-04-08T11:20:29+08:00">2025-04-08</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>2.7k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>2 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">SuBonan</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5E3b.png"></li>
+          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nruS.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUUdI.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q502B.png"></li>
+          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nKFN.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUkeF.png"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" itemprop="item" rel="index" title="In - 数学杂记"><span itemprop="name">- 数学杂记</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="http://sugarsbn.github.io/2025/04/08/2025-4-8-skew-sort/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="SuBonan">
+    <meta itemprop="description" content=", やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a>">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="やがて、平凡な人になる">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>“伟大的事业使根源于坚持不断地工作，以全副精神去从事，不避艰苦”<br>
+—— 罗素</p>
+<span id="more"></span>
+<p>我们回忆一下后缀数组 (Suffix Array) 的定义。给定一个字符串，譬如<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>G</mi><mi>A</mi><mi>C</mi><mi>C</mi><mi>C</mi><mi>A</mi><mi>C</mi><mi>C</mi><mi>A</mi><mi>C</mi><mi>C</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">s=&quot;GACCCACCACC&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span><span class="mord mathnormal">G</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord">&quot;</span></span></span></span>，那么他有 11 个后缀。我们对它们进行排序，然后构建后缀数组 SA 如下：</p>
+\begin{align*}
+& s_0=GACCCACCACC && s_8=ACC && SA[0]=8 \\
+& s_1=ACCCACCACC  && s_5=ACCACC && SA[1]=5 \\
+& s_2=CCCACCACC   && s_1=ACCCACCACC && SA[2]=1 \\
+& s_3=CCACCACC    && s_10=CC && SA[3]=10 \\
+& s_4=CACCACC     && s_7=CACC && SA[4]=7 \\
+& s_5=ACCACC     && s_4=CACCACC && SA[5]=4 \\
+& s_6=CCACC      && s_9=CC && SA[6]=9 \\
+& s_7=CACC && s_6=CCACC && SA[7]=6 \\
+& s_8=ACC && s_3=CCACCACC && SA[8]=3 \\
+& s_9=CC && s_2=CCCACCACC && SA[9]=2 \\
+& s_{10}=C && s_0=GACCCACCACC && SA[10]=0
+\end{align*}
+
+<p>实际上，我们有办法让这个排序做到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的复杂度。<br>
+这不违反直觉，因为后缀之间的比较包含了大量重复的信息。<br>
+下面介绍 Skew Sort 算法，在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的时间内完成对所有后缀的排序。</p>
+<p>第一步，我们根据后缀起始位置对 3 的余数，进行分组</p>
+<pre><code>S0 = 0 : GACCCACCACC
+     3 : CCACCACC
+     6 : CCACC
+     9 : CC
+S1 = 1 : ACCACCACC
+     4 : CACCACC
+     7 : CACC
+     10: C
+S2 = 2 : CCCACCACC
+     5 : ACCACC
+     8 : ACC
+</code></pre>
+<p>然后呢，我们把<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mn>1</mn><mo separator="true">,</mo><mi>S</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">S1,S2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">2</span></span></span></span> 组内的后缀拿出来，并且每个后缀只取前三个字符，这样构建出了一个新的字符串<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mn>12</mn></mrow><annotation encoding="application/x-tex">S12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">1</span><span class="mord">2</span></span></span></span>:</p>
+<pre><code>       1     4     7    10     2     5     8
+S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
+</code></pre>
+<p>因为这个字符串每一位只有 3 个字符，我们可以考虑用基数排序在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的时间内完成对他们的排序。排序结果如下：</p>
+<pre><code>       1     4     7    10     2     5     8
+S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
+       0     2     2     1     3     0     0
+</code></pre>
+<p>这一步需要注意，我们允许重复的排序。</p>
+<p>然后我们把原来的 S12 替换成一个新的字符串，也就是排序结果作为字符：</p>
+<pre><code>S12 = 0 2 2 1 3 0 0
+</code></pre>
+<p>注意到这个 S12 字符串的长度显然<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>7</mn><mo>≈</mo><mfrac><mrow><mn>2</mn><mi>n</mi></mrow><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">=7\approx\frac{2n}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，我们递归调用 Skew Sort 算法来求出一个 S12 的后缀数组，以及对应的原字符串：</p>
+<pre><code> SA'[0] = 6   |   S12[6] = 0        |   ACC
+ SA'[1] = 5   |   S12[5] = 00       |   ACCACC
+ SA'[2] = 0   |   S12[0] = 0221300  |   ACCCACCACC$$...
+ SA'[3] = 3   |   S12[3] = 1300     |   C$$...
+ SA'[4] = 2   |   S12[2] = 21300    |   CACC$$...
+ SA'[5] = 1   |   S12[1] = 221300   |   CACCACC$$...
+ SA'[6] = 4   |   S12[4] = 300      |   CCCACCACC
+</code></pre>
+<p>然后，我们把 SA’映射到一个新的数组 A，利用之前的表：</p>
+<pre><code>       1     4     7    10     2     5     8
+S12 = ACC | CAC | CAC | C$$ | CCC | ACC | ACC
+       0     2     2     1     3     0     0
+</code></pre>
+<p>可以映射为：</p>
+<pre><code> SA'[0] = 6 -&gt; A[0] = 8
+ SA'[1] = 5 -&gt; A[1] = 5
+ SA'[2] = 0 -&gt; A[2] = 1
+ SA'[3] = 3 -&gt; A[3] = 10
+ SA'[4] = 2 -&gt; A[4] = 7
+ SA'[5] = 1 -&gt; A[5] = 4
+ SA'[6] = 4 -&gt; A[6] = 2
+</code></pre>
+<p>也就是考虑 S12 = 0221300 这个字符串中，每一个后缀在原来字符串中的位置。譬如 SA’[0]=6，那么在 S12 中，第 6 位对应了原始字符串 s8 后缀。</p>
+<p>这个 A 数组，其实包含了所有<ins>原字符串所有模 3 余 1、模 3 余 2 的后缀的排序信息</ins>。</p>
+<p>因为 0221300 这个字符串，其实 encode 了原先后缀<ins>前三个字符间的大小关系</ins>。</p>
+<p>接下来，我们考虑排序 S0 中的后缀。这时候的排序有点技巧！</p>
+<p>我们只需要按照 S0 中，每个后缀的第一个字符排序！如果第一个字符相同时，我们就把它们加一，然后在 A 数组里查询！因为 A 数组包含了模 3 余 1、模 3 余 2 的后缀排序信息，所以模 3 余 0 的后缀去掉第一个字符后，一定会落在这里面。</p>
+<p>延续之前的例子，我们考虑 s0, s3, s6, s9 这四个后缀。首先我们把它们下标都加一，考虑 s1, s4, s7, s10。根据 A 数组，我们知道 s1, s4, s7, s10 的相对顺序是：</p>
+<pre><code> s1 &lt; s10 &lt; s7 &lt; s4
+</code></pre>
+<p>因此我们先确定顺序： s0, s9, s6, s3。</p>
+<p>然后我们根据它们的首字符进行基数排序，在首字符相同时，不改变相对顺序。因为去掉首字符后的部分已经按照 s1 &lt; s10 &lt; s7 &lt; s4 的顺序排好了！</p>
+<p>我们把模 3 余 0 的后缀排序结果放在 B 数组中：</p>
+<pre><code> B[0] = 9 = CC
+ B[1] = 6 = CCACC
+ B[2] = 3 = CCACCACC
+ B[3] = 0 = GACCCACCACC 
+</code></pre>
+<p>最后，我们考虑合并 A、B 数组，获得原数组的一个后缀排序。  这时候可以考虑归并排序。</p>
+<p>对于一个模 3 余 1 或 2 的后缀，和一个模 3 余 0 的后缀，我们首先比较它们的首字符，如果不相同那么直接确定了顺序。</p>
+<p>否则的话，我们可以考虑把它们同时后移一位，就变成了比较一个模 3 余 2 或 0 的后缀，和一个模 3 余 1 的后缀。</p>
+<p>如果此时是 模 3 余 2 和 模 3 余 1 的后缀比较，因为它们都在 A 数组中，A 已经是有序的了，所以可以直接出结果。</p>
+<p>否则就是 模 3 余 0 和 模 3 余 1 的后缀比较，我们再次比较首字符，如果不同的话再后移一次。</p>
+<p>这样就变成 模 3 余 1 和 模 3 余 2 的后缀比较了，这一定能在 A 数组里查询出来。</p>
+<p>因此归并时，比较的时间是常数的！最多后移两次，就可以一定利用已有的排序信息 A 了。这也是模 3 的妙处。</p>
+<p>最后我们得到的后缀数组就是：</p>
+<pre><code> SA[0] = 8
+ SA[1] = 5
+ SA[2] = 1
+ SA[3] = 10
+ SA[4] = 7
+ SA[5] = 4
+ SA[7] = 9
+ SA[8] = 6
+ SA[9] = 3
+ SA[6] = 2
+ SA[10]= 0
+</code></pre>
+<p>因此总的时间复杂度其实满足<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false">(</mo><mn>2</mn><mi mathvariant="normal">/</mi><mn>3</mn><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(n)=T(2/3n)+O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord">2</span><span class="mord">/</span><span class="mord">3</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，根据主定理<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(n)=O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2025-04-08 19:16:28" itemprop="dateModified" datetime="2025-04-08T19:16:28+08:00">2025-04-08</time>
+  </span>
+  <span id="2025/04/08/2025-4-8-skew-sort/" class="item leancloud_visitors" data-flag-title="Skew Sort" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>SuBonan <i class="ic i-at"><em>@</em></i>やがて、平凡な人になる
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://sugarsbn.github.io/2025/04/08/2025-4-8-skew-sort/" title="Skew Sort">http://sugarsbn.github.io/2025/04/08/2025-4-8-skew-sort/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/04/03/2025-4-3-modern-algebra/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;ooo.0x0.ooo&#x2F;2025&#x2F;04&#x2F;02&#x2F;O0nruS.jpg" title="应用近世代数 课堂记录">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
+  <h3>应用近世代数 课堂记录</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2025/04/14/2025-4-14-vertex-cover-approximation/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5Stg.png" title="一点关于Set Cover的近似算法">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
+  <h3>一点关于Set Cover的近似算法</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2020/10/07/%E5%85%B3%E4%BA%8E%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%9A%84%E8%BF%90%E7%AE%97%E6%B3%95%E5%88%99/" rel="bookmark" title="关于复合函数极限的运算法则">关于复合函数极限的运算法则</a></li><li><a href="/2020/11/07/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="bookmark" title="数学分析（上）">数学分析（上）</a></li><li><a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" rel="bookmark" title="离散数学-集合部分">离散数学-集合部分</a></li><li><a href="/2020/12/05/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="离散数学-代数系统">离散数学-代数系统</a></li><li><a href="/2021/04/24/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86/" rel="bookmark" title="离散数学-图论部分">离散数学-图论部分</a></li><li><a href="/2021/05/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="bookmark" title="线性代数翻书">线性代数翻书</a></li><li><a href="/2021/05/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" rel="bookmark" title="线性代数及其应用">线性代数及其应用</a></li><li><a href="/2021/06/01/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" rel="bookmark" title="离散数学-数理逻辑">离散数学-数理逻辑</a></li><li><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" rel="bookmark" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></li><li><a href="/2021/06/22/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%8B%EF%BC%89/" rel="bookmark" title="数学分析（下）">数学分析（下）</a></li><li><a href="/2021/11/06/%E5%85%B3%E4%BA%8E%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%81%E6%98%8E%E5%92%8C%E5%AE%8C%E5%85%A8%E6%A0%BC%E4%B8%8A%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%8A%A8%E7%82%B9%E5%AE%9A%E7%90%86/" rel="bookmark" title="关于循环的证明和完全格上单调函数的不动点定理">关于循环的证明和完全格上单调函数的不动点定理</a></li><li><a href="/2021/11/07/%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%8C%83%E7%95%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%80%E7%82%B9%E7%82%B9%E5%85%B3%E7%B3%BB/" rel="bookmark" title="算术表达式和类型范畴之间的一点点关系">算术表达式和类型范畴之间的一点点关系</a></li><li><a href="/2021/12/06/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" rel="bookmark" title="概率论与数理统计">概率论与数理统计</a></li><li><a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" rel="bookmark" title="组合数学杂记">组合数学杂记</a></li><li><a href="/2022/02/07/MCMC-MH/" rel="bookmark" title="马尔科夫链-蒙特卡洛方法及其一个例子Metropolis-Hastings抽样">马尔科夫链-蒙特卡洛方法及其一个例子Metropolis-Hastings抽样</a></li><li><a href="/2022/04/22/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/" rel="bookmark" title="Numerical Analysis">Numerical Analysis</a></li><li><a href="/2022/06/10/lambda-cube/" rel="bookmark" title="Lambda Cube">Lambda Cube</a></li><li><a href="/2022/06/15/category-theory/" rel="bookmark" title="Category theory">Category theory</a></li><li><a href="/2022/06/18/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/" rel="bookmark" title="Theory of computation">Theory of computation</a></li><li><a href="/2022/06/19/DFA-functors/" rel="bookmark" title="The relation between DFA and Functors">The relation between DFA and Functors</a></li><li><a href="/2022/06/21/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E9%94%99%E9%A2%98%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/" rel="bookmark" title="计算理论错题补全计划">计算理论错题补全计划</a></li><li><a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" rel="bookmark" title="代数拓扑">代数拓扑</a></li><li><a href="/2022/07/13/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" rel="bookmark" title="数学建模">数学建模</a></li><li><a href="/2022/07/27/MTZ%E7%BA%A6%E6%9D%9F/" rel="bookmark" title="TSP问题中消除子圈的MTZ约束">TSP问题中消除子圈的MTZ约束</a></li><li><a href="/2022/10/25/HoTT/" rel="bookmark" title="Homotopy Type Theory">Homotopy Type Theory</a></li><li><a href="/2022/11/01/%E8%BF%90%E7%AD%B9%E5%AD%A6/" rel="bookmark" title="运筹学">运筹学</a></li><li><a href="/2022/11/14/Fiberation/" rel="bookmark" title="Fibration">Fibration</a></li><li><a href="/2022/12/27/Cryptography/" rel="bookmark" title="Cryptography">Cryptography</a></li><li><a href="/2023/03/16/%E7%BE%A4%E8%A1%A8%E7%A4%BA%E8%AE%BA%E5%92%8C%E7%89%B9%E5%BE%81%E6%A0%87/" rel="bookmark" title="群表示论和特征标">群表示论和特征标</a></li><li><a href="/2023/04/23/Time-Hierarchy-Theorem/" rel="bookmark" title="Time Hierarchy Theorem">Time Hierarchy Theorem</a></li><li><a href="/2023/04/27/%E5%A4%8D%E6%9D%82%E6%80%A7%E8%AF%81%E6%98%8E%E6%8A%80%E5%B7%A7/" rel="bookmark" title="Complexity Theory中一些基础定理的证明">Complexity Theory中一些基础定理的证明</a></li><li><a href="/2023/04/27/%E5%A4%8D%E6%9D%82%E6%80%A7%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%93%E8%AE%BA%E6%97%A0%E8%AF%81%E6%98%8E/" rel="bookmark" title="复杂性中的一些结论(无证明)">复杂性中的一些结论(无证明)</a></li><li><a href="/2023/04/28/Ladner-Theorem/" rel="bookmark" title="Ladner's Theorem">Ladner's Theorem</a></li><li><a href="/2023/04/29/Mahaney-Theorem/" rel="bookmark" title="Mahaney's Theorem">Mahaney's Theorem</a></li><li><a href="/2023/04/30/Savitch-theorem/" rel="bookmark" title="Savitch's Theorem">Savitch's Theorem</a></li><li><a href="/2023/05/01/basic-lwe/" rel="bookmark" title="Basic LWE Problem">Basic LWE Problem</a></li><li><a href="/2023/05/02/Immerman-Szelepcsenyi-Theorem/" rel="bookmark" title="Immerman-Szelepcsényi Theorem">Immerman-Szelepcsényi Theorem</a></li><li><a href="/2023/05/03/Interactive-proof/" rel="bookmark" title="Interactive Proof System">Interactive Proof System</a></li><li><a href="/2023/05/08/Galois-Theory/" rel="bookmark" title="Galois Theory">Galois Theory</a></li><li><a href="/2023/05/31/sketching-streaming-and-sub-linear-space-algorithms/" rel="bookmark" title="Sketching, streaming and sub-linear space algorithms">Sketching, streaming and sub-linear space algorithms</a></li><li><a href="/2023/06/01/sublinear-algorithms/" rel="bookmark" title="Sublinear Algorithms">Sublinear Algorithms</a></li><li><a href="/2023/06/10/JL-theorem/" rel="bookmark" title="Johnson-Lindenstrauss Lemma">Johnson-Lindenstrauss Lemma</a></li><li><a href="/2023/06/18/Sketching-Algorithms-for-Big-Data/" rel="bookmark" title="Sketching Algorithms for Big Data">Sketching Algorithms for Big Data</a></li><li><a href="/2023/07/27/logics/" rel="bookmark" title="Logic categories">Logic categories</a></li><li><a href="/2023/08/10/%E5%85%B3%E4%BA%8EMonad/" rel="bookmark" title="关于Monad">关于Monad</a></li><li><a href="/2023/09/16/Galois-connection-and-Galois-embedding/" rel="bookmark" title="Galois Connection & Galois Embedding">Galois Connection & Galois Embedding</a></li><li><a href="/2023/10/06/category-theory-cambridge-answers/" rel="bookmark" title="Category Theory (Course Exercise Solutions)">Category Theory (Course Exercise Solutions)</a></li><li><a href="/2023/10/06/Yoneda-lemma/" rel="bookmark" title="Yoneda Lemma 米田引理">Yoneda Lemma 米田引理</a></li><li><a href="/2023/10/19/Fourier/" rel="bookmark" title="傅里叶变换 (绕过群表示论，单位根)">傅里叶变换 (绕过群表示论，单位根)</a></li><li><a href="/2023/11/08/ABFEx/" rel="bookmark" title="Analysis of Boolean Function （Course Exercise Solutions)">Analysis of Boolean Function （Course Exercise Solutions)</a></li><li><a href="/2023/12/03/linear-logic-and-algebra/" rel="bookmark" title="Something About Linear Logic">Something About Linear Logic</a></li><li><a href="/2023/12/29/differentiable-manifold/" rel="bookmark" title="Differentiable Manifolds 微分流形">Differentiable Manifolds 微分流形</a></li><li><a href="/2024/01/20/compact-symplectic-group/" rel="bookmark" title="紧致辛群和四元代数">紧致辛群和四元代数</a></li><li><a href="/2025/03/30/2025-3-30-group-action/" rel="bookmark" title="Group Action, Orbits and Stabilizer">Group Action, Orbits and Stabilizer</a></li><li><a href="/2025/03/31/2025-3-31-sylow-theorem/" rel="bookmark" title="Sylow Theorem">Sylow Theorem</a></li><li><a href="/2025/04/03/2025-4-3-modern-algebra/" rel="bookmark" title="应用近世代数 课堂记录">应用近世代数 课堂记录</a></li><li class="active"><a href="/2025/04/08/2025-4-8-skew-sort/" rel="bookmark" title="Skew Sort">Skew Sort</a></li><li><a href="/2025/04/14/2025-4-14-vertex-cover-approximation/" rel="bookmark" title="一点关于Set Cover的近似算法">一点关于Set Cover的近似算法</a></li><li><a href="/2025/06/07/2025-6-7-symmetric-group-rep/" rel="bookmark" title="对称群的表示">对称群的表示</a></li><li><a href="/2025/06/08/2025-6-8-SO2-SO3/" rel="bookmark" title="SU(2),SO(3)的表示">SU(2),SO(3)的表示</a></li><li><a href="/2025/06/23/2025-6-23-Fourier/" rel="bookmark" title="一点关于Fourier transformation的东西">一点关于Fourier transformation的东西</a></li><li><a href="/2025/06/30/2025-6-30-Haar/" rel="bookmark" title="一点关于Haar Measure">一点关于Haar Measure</a></li><li><a href="/2025/07/01/2025-7-1-dihedral-rep/" rel="bookmark" title="Dihedral Group的表示">Dihedral Group的表示</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="SuBonan"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">SuBonan</p>
+  <div class="description" itemprop="description">やがて、平凡な人になる <br><a target="_blank" rel="noopener" href="http://www.subonan.com/computer-graphics"> 图形学作业请点这里 </a></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">126</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">10</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1N1Z2FyU0JO" title="https:&#x2F;&#x2F;github.com&#x2F;SugarSBN"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2025/04/03/2025-4-3-modern-algebra/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2025/04/14/2025-4-14-vertex-cover-approximation/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2020/11/27/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86/" title="离散数学-集合部分">离散数学-集合部分</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
+</div>
+
+    <span><a href="/2022/08/28/%E5%85%B3%E4%BA%8EHaskell%E5%AF%B9Kmeans%E7%AE%97%E6%B3%95parallel%E5%B9%B6%E8%A1%8C%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B3%A8%E9%87%8A/" title="关于Haskell对Kmeans算法parallel并行实现的注释">关于Haskell对Kmeans算法parallel并行实现的注释</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
+</div>
+
+    <span><a href="/2020/03/08/%E6%86%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E5%BA%9F%E8%AF%9D/" title="憋出来的废话">憋出来的废话</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
+</div>
+
+    <span><a href="/2025/08/22/2025-8-22-pretty-good-measurements/" title="Pretty Good Measurements">Pretty Good Measurements</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
+</div>
+
+    <span><a href="/2022/06/27/%E5%9B%9E%E5%BF%86%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E8%AF%BB%E8%BF%87%E7%9A%84%E5%B0%8F%E8%AF%B4/" title="回忆一下最近读过的小说">回忆一下最近读过的小说</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/07/06/%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91/" title="代数拓扑">代数拓扑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/12/03/linear-logic-and-algebra/" title="Something About Linear Logic">Something About Linear Logic</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2025/04/08/2025-4-8-skew-sort/" title="Skew Sort">Skew Sort</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2021/11/07/%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%8C%83%E7%95%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%80%E7%82%B9%E7%82%B9%E5%85%B3%E7%B3%BB/" title="算术表达式和类型范畴之间的一点点关系">算术表达式和类型范畴之间的一点点关系</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">SuBonan @ SuBonan</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/04/08/2025-4-8-skew-sort/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
