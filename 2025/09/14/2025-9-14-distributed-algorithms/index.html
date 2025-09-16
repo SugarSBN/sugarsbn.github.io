@@ -78,7 +78,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>7.9k</span>
+    <span>11k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -86,7 +86,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>7 mins.</span>
+    <span>10 mins.</span>
   </span>
 </div>
 
@@ -119,12 +119,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2023/01/06/GAEOL.jpg"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2023/01/06/GAAZ6.jpg"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nruS.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Qhl.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Stg.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUTy1.png"></li>
+          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0neEa.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5dWs.jpg"></li>
           <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUBUG.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUkeF.png"></li>
+          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nNNK.jpg"></li>
         </ul>
       </div>
     </header>
@@ -301,6 +301,68 @@ SuBonan = やがて、平凡な人になる</title>
 <p>这个算法的实行其实仍然可以采用类似先前的 Dijkstra BFS 算法的方式设置一个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span> 来分阶段实现。</p>
 </blockquote>
 <p>至多合并多少次呢？可以验证是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 次！所以 time complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，message complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的。</p>
+<h2 id="chapter-3-leader-election"><a class="markdownIt-Anchor" href="#chapter-3-leader-election">#</a> Chapter 3: Leader Election</h2>
+<p>我们考虑这样一个情景：每个 node 都有 3 个状态：undecided，leader，non-leader。初始时，每个 node 都是 undecided，最终需要通过某种方式选出一个 leader。特别地，认为 leader 只有一个。</p>
+<p>一个系统被称为是 <strong>匿名 (anonymous)</strong> 的，如果 nodes 没有确定唯一的 ID；一个算法被称为是<strong> uniform</strong> 的，如果 the number of nodes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> is unknown to the nodes。</p>
+<h2 id="实际上在一个环型图上的匿名leader-election是无法实现的-因为图高度对称导致任何一个确定性算法进行若干轮后必然导致所有node的状态都一样"><a class="markdownIt-Anchor" href="#实际上在一个环型图上的匿名leader-election是无法实现的-因为图高度对称导致任何一个确定性算法进行若干轮后必然导致所有node的状态都一样">#</a> 实际上，在一个环型图上的匿名 leader election 是无法实现的。因为图高度对称，导致任何一个确定性算法进行若干轮后，必然导致所有 node 的状态都一样。</h2>
+<p>接下来，我们考虑一个非常简单的算法：在一个有向的环型图上，uniform 但非匿名情况下，找出 ID 最大的作为 election。</p>
+<p>我们给出一个异步算法：</p>
+<ol>
+<li>每个 node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 设置一个数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 记录自己见过的最大 ID，初始时为自己的 ID <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>:</mo><mo>=</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">m:=v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>；</li>
+<li>每个 node 向它的 out-neighbour 发送自己的 ID；</li>
+<li>当一个 node 接收到一个 ID <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 时，如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">x&gt;m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>，那么更新<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>:</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">m:=x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，并把自己设为 non-leader，把<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 发给它的 out-neighbour；如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">x=m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>，那么把自己设为 leader；如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">x&lt;m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>，那么忽略这个消息。</li>
+</ol>
+<blockquote>
+<p>这个算法相较之下简单了许多，但仿佛也没有那么容易想到。</p>
+</blockquote>
+<p>上述算法是正确的，time complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，message complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
+<p>时间复杂度是简单的，因为 ID 最大的那个 node 传一圈到自己，而且最大的那个 node 不会发任何新的消息。<br>
+消息复杂度的话，可以想像，最大的 ID 那个 node 的消息被传递了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 次，第二大的 ID 至多被传递了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 次，依此类推，因此总共是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
+<blockquote>
+<p>实际上这个算法并不需要有向环，因为每个 node 可以往两边 neighbor 都发消息。然后接收到消息后，只往非消息来源那边传递消息即可。</p>
+</blockquote>
+<blockquote>
+<p>此外，在平均情况下，message complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的，即使在最坏情况下是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的。</p>
+</blockquote>
+<p>接下来我们给一个倍增算法让 message complexity 降到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+<ol>
+<li>每个 node 初始都设置自己是 active 的，意思是自己可能会是 leader。</li>
+<li>每个 node 一旦接收到一个 ID 比自己的大，那么立刻把自己设置成 passive 并且设置自己为 non-leader。</li>
+<li>每个 active node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 都采用倍增地方式去 probe。具体做法如下：它往它的 out-neighbour 发送一个 probe 消息，包含 <code>sender ID=$v$</code> ， <code>TTL=1</code>  (time-to-live）， <code>flag=1</code> 。每个 node 接收到消息后都会把 TTL 减 1，把 sender ID 和自己的 ID 进行比较。
+<ul>
+<li>如果自己的 ID 比较大，那么把 <code>flag:=0</code> ，否则不动；</li>
+<li>如果 <code>TTL$\neq$0</code> ，那么继续向 out-neighbour 发送 probe 消息，TTL 减 1；</li>
+<li>如果 <code>TTL=0</code> ，那么反向发送一个 reply 消息，包含 <code>destination ID=sender ID</code>  和 <code>flag</code> 。</li>
+</ul>
+</li>
+<li>一个 node 收到 reply 消息后，如果 <code>flag=0</code>  那么把自己设制成 passive 并且 non-leader（即使在收到 reply 前它就可能因为其他 node 的 probe 消息而变成 passive）。</li>
+<li>如果收到 reply 后一个 node 还是 active 的，那么它把 TTL 翻倍，然后重复上述过程。</li>
+</ol>
+<p>上述算法的 time complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，message complexity 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+<hr>
+<p>下面我们证明上述算法的 message complexity 是最优的。</p>
+<p>特别地，我们定义一个<strong> schedule</strong> of distributed system 为一个按时间排序的 events 的序列，每个 event 都包含了：时间、node、message、send/receive（这个 event 描述了一个 send 事件还是 receive 事件）。</p>
+<blockquote>
+<p>注意：schedule 并不一定意味着算法终止，也可能描述了算法的前若干轮（截至某个时间戳的 events）。</p>
+</blockquote>
+<p>显然，可以有非确定性地多个 schedule（只需要遵从算法限制），我们称一个 schedule 是<strong> open</strong> 的，如果在这个 schedule 中所有 events 后，环型图中还存在一条边是 open 的：它上面所有的 message 都未被 receive。即 events 里只描述了消息被 send 出去，但还没有被 receive。</p>
+<p>譬如：一个 schedule 可能是</p>
+<ol>
+<li><code>time</code> =1， <code>node</code> =1， <code>send</code> ， <code>message</code> =“destination=2”;</li>
+<li><code>time</code> =2,  <code>node</code> =2， <code>receive</code> ， <code>message</code> =“destination=2”;</li>
+<li><code>time</code> =3,  <code>node</code> =2,  <code>send</code> ， <code>message</code> =“destination=3”;</li>
+</ol>
+<p>它的意思是：在第一个时间戳，node 1 向 2 发送了一条消息，然后在第二个时间戳，node 2 接收到这条消息并进行处理，最后在第三个时间戳，node 2 向 3 发送了一条消息。这个 schedule 是 open 的，因为存在一条边 (2,3) 上面所有的消息还没有被 receive。</p>
+<p>然后我们给非常 intuitive 的证明思路。</p>
+<p>首先考虑两个 nodes 的环型图，即 1-&gt;2 和 2-&gt;1 两条边。假设只发送了一条消息从 1 到 2（即边 2-&gt;1 是 open 的），那么这两个 nodes 无法区分这个图只有 2 个 nodes，还是 2-&gt;…-&gt;1 之间有特别多的 nodes！如下图所示<br>
+<img data-src="1.png" alt="1"></p>
+<p>那么下面我们可以证明了。考虑两个大小为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">n/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord">2</span></span></span></span> 的子环，它们直接有一条 open 的边相连，如下图：<br>
+<img data-src="2.png" alt="2"></p>
+<p>那么，为了让左侧环（大小为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">n/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord">2</span></span></span></span>）中，最<strong>中间那个 node</strong> 能得到有关 open edge 的确是条边而不是更大的一个环（这是必要的，否则该 node 无法确定自己是否为 leader），至少需要有 1 条消息从 open edge 发送到左侧环正中间的那个 node（即传播了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">n/4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord">4</span></span></span></span> 条 edge）。</p>
+<blockquote>
+<p>这里仔细思考一下。</p>
+</blockquote>
+<p>因此，所需的 message 数量其实递推 lower bound 是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>≥</mo><mn>2</mn><mi>M</mi><mo stretchy="false">(</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">M(n)\geq 2M(n/2)+n/4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord">4</span></span></span></span>，也就是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">M(n)=\Omega(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Ω</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。这个证明相当不严谨，里面忽略了特别多细节。</p>
 
   </div>
 
@@ -312,7 +374,7 @@ SuBonan = やがて、平凡な人になる</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-09-15 19:16:44" itemprop="dateModified" datetime="2025-09-15T19:16:44+08:00">2025-09-15</time>
+    <time title="Modified: 2025-09-16 11:10:13" itemprop="dateModified" datetime="2025-09-16T11:10:13+08:00">2025-09-16</time>
   </span>
   <span id="2025/09/14/2025-9-14-distributed-algorithms/" class="item leancloud_visitors" data-flag-title="Distributed Algorithms" title="Views">
       <span class="icon">
@@ -352,7 +414,7 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item left">
       
 
-  <a href="/2025/08/22/2025-8-22-pretty-good-measurements/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;ooo.0x0.ooo&#x2F;2025&#x2F;04&#x2F;02&#x2F;O0nruS.jpg" title="Pretty Good Measurements and HSP">
+  <a href="/2025/08/22/2025-8-22-pretty-good-measurements/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;ooo.0x0.ooo&#x2F;2023&#x2F;01&#x2F;06&#x2F;GAEOL.jpg" title="Pretty Good Measurements and HSP">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> - 量子计算</span>
   <h3>Pretty Good Measurements and HSP</h3>
@@ -376,7 +438,7 @@ SuBonan = やがて、平凡な人になる</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-1-tree-coloring-problem"><span class="toc-number">1.</span> <span class="toc-text"> Chapter 1: Tree Coloring Problem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-tree-algorithms"><span class="toc-number">2.</span> <span class="toc-text"> Chapter 2: Tree Algorithms</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-1-tree-coloring-problem"><span class="toc-number">1.</span> <span class="toc-text"> Chapter 1: Tree Coloring Problem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-tree-algorithms"><span class="toc-number">2.</span> <span class="toc-text"> Chapter 2: Tree Algorithms</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#chapter-3-leader-election"><span class="toc-number">2.1.</span> <span class="toc-text"> Chapter 3: Leader Election</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E4%B8%8A%E5%9C%A8%E4%B8%80%E4%B8%AA%E7%8E%AF%E5%9E%8B%E5%9B%BE%E4%B8%8A%E7%9A%84%E5%8C%BF%E5%90%8Dleader-election%E6%98%AF%E6%97%A0%E6%B3%95%E5%AE%9E%E7%8E%B0%E7%9A%84-%E5%9B%A0%E4%B8%BA%E5%9B%BE%E9%AB%98%E5%BA%A6%E5%AF%B9%E7%A7%B0%E5%AF%BC%E8%87%B4%E4%BB%BB%E4%BD%95%E4%B8%80%E4%B8%AA%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%AE%97%E6%B3%95%E8%BF%9B%E8%A1%8C%E8%8B%A5%E5%B9%B2%E8%BD%AE%E5%90%8E%E5%BF%85%E7%84%B6%E5%AF%BC%E8%87%B4%E6%89%80%E6%9C%89node%E7%9A%84%E7%8A%B6%E6%80%81%E9%83%BD%E4%B8%80%E6%A0%B7"><span class="toc-number">2.2.</span> <span class="toc-text"> 实际上，在一个环型图上的匿名 leader election 是无法实现的。因为图高度对称，导致任何一个确定性算法进行若干轮后，必然导致所有 node 的状态都一样。</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -472,10 +534,20 @@ SuBonan = やがて、平凡な人になる</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2020/12/05/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" title="离散数学-代数系统">离散数学-代数系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
 </div>
 
-    <span><a href="/2021/11/02/%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%BB%AD/" title="类型和程序设计语言_续">类型和程序设计语言_续</a></span>
+    <span><a href="/2020/11/23/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" title="基数排序">基数排序</a></span>
   </li>
 
       
@@ -485,7 +557,7 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2022/11/14/Fiberation/" title="Fibration">Fibration</a></span>
+    <span><a href="/2021/11/06/%E5%85%B3%E4%BA%8E%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%81%E6%98%8E%E5%92%8C%E5%AE%8C%E5%85%A8%E6%A0%BC%E4%B8%8A%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%8A%A8%E7%82%B9%E5%AE%9A%E7%90%86/" title="关于循环的证明和完全格上单调函数的不动点定理">关于循环的证明和完全格上单调函数的不动点定理</a></span>
   </li>
 
       
@@ -495,17 +567,47 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
 </div>
 
-    <span><a href="/2021/07/28/%E9%87%8F%E5%AD%90%E7%BA%BF%E8%B7%AF/" title="量子线路">量子线路</a></span>
+    <span><a href="/2025/06/30/2025-6-30-dihedral/" title="Kuperberg’s algorithm for the dihedral Hidden Subgroup Problem">Kuperberg’s algorithm for the dihedral Hidden Subgroup Problem</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/08/28/%E9%87%8F%E5%AD%90%E5%99%AA%E5%A3%B0%E5%92%8C%E9%87%8F%E5%AD%90%E8%BF%90%E7%AE%97/" title="量子噪声和量子运算">量子噪声和量子运算</a></span>
+    <span><a href="/2021/12/26/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="组合数学杂记">组合数学杂记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E7%90%86%E8%AE%BA/" title="In - 程序语言理论">- 程序语言理论</a>
+</div>
+
+    <span><a href="/2021/09/27/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AF%AD%E4%B9%89%EF%BC%88%E7%BB%AD%EF%BC%89/" title="程序设计语言的形式语义（续）">程序设计语言的形式语义（续）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
+</div>
+
+    <span><a href="/2023/01/11/Machine-Learning/" title="Machine Learning 机器学习">Machine Learning 机器学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/06/15/category-theory/" title="Category theory">Category theory</a></span>
   </li>
 
       
@@ -525,47 +627,7 @@ SuBonan = やがて、平凡な人になる</title>
 <a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2023/05/02/Immerman-Szelepcsenyi-Theorem/" title="Immerman-Szelepcsényi Theorem">Immerman-Szelepcsényi Theorem</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2025/04/08/2025-4-8-skew-sort/" title="Skew Sort">Skew Sort</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" title="In - 文献阅读">- 文献阅读</a>
-</div>
-
-    <span><a href="/2023/09/09/A-correctness-and-incorrectness-program-logic/" title="A Correctness and Incorrectness Program Logic">A Correctness and Incorrectness Program Logic</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" title="In - 量子计算">- 量子计算</a>
-</div>
-
-    <span><a href="/2025/04/01/2025-4-1-quantum-simulation/" title="Quantum Simulation">Quantum Simulation</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
-</div>
-
-    <span><a href="/2023/01/11/Machine-Learning/" title="Machine Learning 机器学习">Machine Learning 机器学习</a></span>
+    <span><a href="/2023/04/28/Ladner-Theorem/" title="Ladner&#39;s Theorem">Ladner's Theorem</a></span>
   </li>
 
   </ul>
