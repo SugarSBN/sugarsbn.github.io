@@ -66,27 +66,27 @@ SuBonan = やがて、平凡な人になる</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2025-09-16 15:18:12">
+  <span class="item" title="作成日：2025-09-16 15:18:12">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text">投稿日</span>
     <time itemprop="dateCreated datePublished" datetime="2025-09-16T15:18:12+08:00">2025-09-16</time>
   </span>
-  <span class="item" title="Symbols count in article">
+  <span class="item" title="単語数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span class="text">Symbols count in article</span>
-    <span>2.2k</span>
-    <span class="text">words</span>
+    <span class="text">単語数</span>
+    <span>4.3k</span>
+    <span class="text">単語</span>
   </span>
-  <span class="item" title="Reading time">
+  <span class="item" title="読書の時間">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span class="text">Reading time</span>
-    <span>2 mins.</span>
+    <span class="text">読書の時間</span>
+    <span>4 分</span>
   </span>
 </div>
 
@@ -96,7 +96,7 @@ SuBonan = やがて、平凡な人になる</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="Toggle navigation bar">
+      <div class="lines" aria-label="ナビゲーションバーの切り替え">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -119,12 +119,12 @@ SuBonan = やがて、平凡な人になる</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5PW1.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/QUTy1.png"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nNNK.jpg"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2023/01/06/GAHcC.jpg"></li>
-          <li class="item" data-background-image="https://ooo.0x0.ooo/2025/04/02/O0nruS.jpg"></li>
-          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5E3b.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5RyI.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5tsD.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5foS.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5He6.png"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5pjG.jpg"></li>
+          <li class="item" data-background-image="https://i.imgtg.com/2023/01/12/Q5Qhl.png"></li>
         </ul>
       </div>
     </header>
@@ -149,8 +149,8 @@ SuBonan = やがて、平凡な人になる</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" itemprop="item" rel="index" title="In - 量子计算"><span itemprop="name">- 量子计算</span></a>
+<span><a href="/">ホーム</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/" itemprop="item" rel="index" title="カテゴリ - 量子计算"><span itemprop="name">- 量子计算</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
@@ -172,6 +172,38 @@ SuBonan = やがて、平凡な人になる</title>
 
     <p>参考：[STOC 2025] Distributed Quantum Advantage for Local Problems</p>
 <span id="more"></span>
+<h1 id="iterated-ghz-game"><a class="markdownIt-Anchor" href="#iterated-ghz-game">#</a> Iterated GHZ Game</h1>
+<p>我们考虑这样一个场景。</p>
+<p>给定一个图，图中有一些<strong> white node</strong>，代表了一些<strong> players</strong>。<br>
+图中还有一些<strong> black node</strong>，每个 black node 都代表了一场 GHZ game。<br>
+每个 white node 都<ins>连接且仅连接</ins>了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span> 个<strong> black node</strong>，意为这些 players 参加了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span> 场 GHZ game；而每个 black node 都<ins>连接且仅连接</ins>了 3 个 white node，意为每场 GHZ game 都有 3 个 players 参加。</p>
+<p>然后我们现在假设已经给定了一个染色：对每个 black node 染色为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">1,2,...,\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">Δ</span></span></span></span>，使得每个 white node 连接的 black node 颜色各不相同。<br>
+black node 染色的意思是：该 black node 代表的 GHZ game 在第几轮进行。</p>
+<p>现在游戏开始了。既然叫 iterated GHZ game，游戏总共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span> 轮，每个 white node 在每一轮都需要输出 1 个 bit。<br>
+我们一轮一轮地进行：</p>
+<ul>
+<li>第一轮时，只考虑那些染色<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的 black node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>。和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 相连的 3 个 white node 需要分别输出 1 个 bit <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>t</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">s_1,t_1,u_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，满足<strong> exactly one of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>t</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">s_1,t_1,u_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is 1</strong>。注意，这 3 个 white node 在这一轮没有任何 input，因为这是第一轮。</li>
+<li>第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n&gt;1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 轮时，只考虑那些染色<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">=n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的 black node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>。和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 相连的 3 个 white node 需要分别输出 1 个 bit <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>t</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>u</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">s_n,t_n,u_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，满足<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.24999999999999992em" columnalign="right left right left" columnspacing="0em 1em 0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><msub><mi>s</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>t</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>u</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>if </mtext><msub><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>u</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><msub><mi>s</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>t</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>u</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>if </mtext><msub><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>u</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><msub><mi>s</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>t</mi><mi>n</mi></msub><mo>⊕</mo><msub><mi>u</mi><mi>n</mi></msub><mtext> 无所谓</mtext></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>if </mtext><msub><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>u</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>∈</mo><mo stretchy="false">{</mo><mn>1</mn><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">}</mo><mi mathvariant="normal">.</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">  \begin{aligned}
+  &amp; s_n\oplus t_n\oplus u_n=0 &amp;&amp; \text{if }s_{n-1}+t_{n-1}+u_{n-1}=0, \\
+  &amp; s_n\oplus t_n\oplus u_n=1 &amp;&amp; \text{if }s_{n-1}+t_{n-1}+u_{n-1}=2, \\
+  &amp; s_n\oplus t_n\oplus u_n\text{ 无所谓} &amp;&amp; \text{if }s_{n-1}+t_{n-1}+u_{n-1}\in\{1,3\}. \\
+  \end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.500000000000002em;vertical-align:-2.000000000000001em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-1.4999999999999991em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">无所谓</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-1.4999999999999991em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord text"><span class="mord">if </span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span class="mpunct">,</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord text"><span class="mord">if </span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mpunct">,</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord text"><span class="mord">if </span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">}</span><span class="mord">.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+换句话说，这三个 white node 上一轮的 ouput 就是这一轮 GHZ game 的 input。注意，我们只考虑了上一轮的 output 是一个 valid 的 GHZ game input 的情况。</li>
+</ul>
+<p>可以注意到，第一轮是比较特殊的，它不是一个 GHZ game。<br>
+为什么这样做？因为第一轮没有输入。如果我们非常简单地让所有 white node 第一轮输出都是 1，那么整个 iterated GHZ game 就变成 trivial 的了：<ins>不需要进行任何通讯</ins>，所有 white node 在每一轮都输出 1 即可。</p>
+<p>同样，如果所有 white node 第一轮都输出 0，那么所有 white node 在每一轮都输出 0 也是一个 trivial 的解。</p>
+<p>而现在的方案首先保证了必须要有通讯（这样才可能 exact one of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>t</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">s_1,t_1,u_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is 1），然后后续的 GHZ game 的输入又无法确定输出是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>011</mn><mo separator="true">,</mo><mn>000</mn><mo separator="true">,</mo><mn>001</mn><mo separator="true">,</mo><mn>010</mn></mrow><annotation encoding="application/x-tex">011,000,001,010</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span></span></span></span> 之类的哪一个（因为染色 = 2 的 black node 可能连接不同的 white node），所以整个 iterated GHZ game 就不是 trivial 的了。</p>
+<hr>
+<p>上述的 iterated GHZ game 在 quantum 下是 1-round 就可以解决的。这很简单，我们并行地进行如下操作：</p>
+<ul>
+<li>对于染色<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的 black node，向它的 3 个 neighbor 分别发送信息，让 ID 最小的 node 设为 1，其他两个设为 0；</li>
+<li>对于染色为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n&gt;1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的 black node，制备一个 3-qubits GHZ 态，然后把 3 个 qubits 分别给它的三个 neighbor。同时要告诉它的 neighbors 这个态用于处理第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 轮的 GHZ game；</li>
+</ul>
+<p>在这样 1 轮通讯后，剩下的就只需要 local 地进行计算就行了，每个 white node 分别根据上一轮的 ouput 进行测量</p>
+<p>上述的 iterated GHZ game 在经典下是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\varTheta(\Delta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathit">Θ</span></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mclose">)</span></span></span></span>-round 可以解决的。这也很简单，只需要每一轮让参与者进行通讯并求解。</p>
+<p>所以核心点在于：要证明，iterated GHZ game 在经典情况下至少要<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\varOmega(\Delta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathit">Ω</span></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mclose">)</span></span></span></span>-round 才能解决。</p>
 <h1 id="lcl-problem-in-the-black-white-formalism"><a class="markdownIt-Anchor" href="#lcl-problem-in-the-black-white-formalism">#</a> LCL Problem in the black-white formalism</h1>
 <p>我们首先考虑一类问题，被称为 &quot;<strong>locally checkable labeling</strong>&quot; (LCL) 问题。<br>
 我们考虑一种它的特殊形式，即 LCL problem in the black-white formalism。</p>
@@ -212,16 +244,16 @@ SuBonan = やがて、平凡な人になる</title>
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2025-09-19 09:19:12" itemprop="dateModified" datetime="2025-09-19T09:19:12+08:00">2025-09-19</time>
+    <span class="text">編集日</span>
+    <time title="修正日：2025-10-13 19:31:21" itemprop="dateModified" datetime="2025-10-13T19:31:21+08:00">2025-10-13</time>
   </span>
-  <span id="2025/09/16/2025-9-16-distributed-quantum-advantage/" class="item leancloud_visitors" data-flag-title="Distributed Quantum Advantage for Local Problems" title="Views">
+  <span id="2025/09/16/2025-9-16-distributed-quantum-advantage/" class="item leancloud_visitors" data-flag-title="Distributed Quantum Advantage for Local Problems" title="閲覧数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
-      <span class="text">Views</span>
+      <span class="text">閲覧数</span>
       <span class="leancloud-visitors-count"></span>
-      <span class="text">times</span>
+      <span class="text">回</span>
   </span>
 </div>
 
@@ -230,14 +262,14 @@ SuBonan = やがて、平凡な人になる</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>SuBonan <i class="ic i-at"><em>@</em></i>やがて、平凡な人になる
+    <strong>著者： </strong>SuBonan <i class="ic i-at"><em>@</em></i>やがて、平凡な人になる
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong>記事へのリンク：</strong>
     <a href="http://sugarsbn.github.io/2025/09/16/2025-9-16-distributed-quantum-advantage/" title="Distributed Quantum Advantage for Local Problems">http://sugarsbn.github.io/2025/09/16/2025-9-16-distributed-quantum-advantage/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong>著作権表示： </strong>このブログ内のすべての記事は、特別な記載がない限り <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> の下のライセンスで保護されています。
   </li>
 </ul>
 </div>
@@ -253,8 +285,8 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item left">
       
 
-  <a href="/2025/09/14/2025-9-14-distributed-algorithms/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5lrN.jpg" title="Distributed Algorithms">
-  <span class="type">Previous Post</span>
+  <a href="/2025/09/14/2025-9-14-distributed-algorithms/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5ghr.jpg" title="Distributed Algorithms">
+  <span class="type">前の記事</span>
   <span class="category"><i class="ic i-flag"></i> - 计算机基础</span>
   <h3>Distributed Algorithms</h3>
   </a>
@@ -263,8 +295,8 @@ SuBonan = やがて、平凡な人になる</title>
     <div class="item right">
       
 
-  <a href="/2025/09/24/2025-9-24-c-algebra-and-operator/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q5mtM.png" title="C*-Algebra and Hilbert Space Operators">
-  <span class="type">Next Post</span>
+  <a href="/2025/09/24/2025-9-24-c-algebra-and-operator/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.imgtg.com&#x2F;2023&#x2F;01&#x2F;12&#x2F;Q502B.png" title="C*-Algebra and Hilbert Space Operators">
+  <span class="type">次の記事</span>
   <span class="category"><i class="ic i-flag"></i> - 数学杂记</span>
   <h3>C*-Algebra and Hilbert Space Operators</h3>
   </a>
@@ -284,15 +316,15 @@ SuBonan = やがて、平凡な人になる</title>
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#lcl-problem-in-the-black-white-formalism"><span class="toc-number">1.</span> <span class="toc-text"> LCL Problem in the black-white formalism</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#port-numbering-model"><span class="toc-number">2.</span> <span class="toc-text"> Port-numbering model</span></a></li></ol>
+      <div class="contents panel pjax" data-title="見出し">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iterated-ghz-game"><span class="toc-number">1.</span> <span class="toc-text"> Iterated GHZ Game</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#lcl-problem-in-the-black-white-formalism"><span class="toc-number">2.</span> <span class="toc-text"> LCL Problem in the black-white formalism</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#port-numbering-model"><span class="toc-number">3.</span> <span class="toc-text"> Port-numbering model</span></a></li></ol>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="関連記事">
         <ul>
           <li><a href="/2021/07/03/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%BC%95%E8%AE%BA/" rel="bookmark" title="量子力学引论">量子力学引论</a></li><li><a href="/2021/07/28/%E9%87%8F%E5%AD%90%E7%BA%BF%E8%B7%AF/" rel="bookmark" title="量子线路">量子线路</a></li><li><a href="/2021/08/05/%E9%87%8F%E5%AD%90Fourier%E5%8F%98%E6%8D%A2/" rel="bookmark" title="量子Fourier变换">量子Fourier变换</a></li><li><a href="/2021/08/20/%E9%87%8F%E5%AD%90%E6%90%9C%E7%B4%A2/" rel="bookmark" title="量子搜索">量子搜索</a></li><li><a href="/2021/08/28/%E9%87%8F%E5%AD%90%E5%99%AA%E5%A3%B0%E5%92%8C%E9%87%8F%E5%AD%90%E8%BF%90%E7%AE%97/" rel="bookmark" title="量子噪声和量子运算">量子噪声和量子运算</a></li><li><a href="/2023/03/08/%E9%87%8F%E5%AD%90%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E3%80%81%E9%9A%90%E5%90%AB%E5%AD%90%E7%BE%A4%E5%92%8C%E7%89%B9%E5%BE%81%E6%A0%87/" rel="bookmark" title="量子傅里叶变换、隐含子群和特征标">量子傅里叶变换、隐含子群和特征标</a></li><li><a href="/2023/03/12/Quantum-Information/" rel="bookmark" title="Quantum Information">Quantum Information</a></li><li><a href="/2023/03/13/Kraus-theorem/" rel="bookmark" title="Kraus Theorem">Kraus Theorem</a></li><li><a href="/2023/05/06/quantum-complexity/" rel="bookmark" title="Quantum Complexity Theory">Quantum Complexity Theory</a></li><li><a href="/2023/10/23/quantum-key-distribution/" rel="bookmark" title="Quantum Key Distribution">Quantum Key Distribution</a></li><li><a href="/2023/11/07/quantum-random-walk/" rel="bookmark" title="Quantum Random Walk">Quantum Random Walk</a></li><li><a href="/2025/04/01/2025-4-1-quantum-simulation/" rel="bookmark" title="Quantum Simulation">Quantum Simulation</a></li><li><a href="/2025/06/30/2025-6-30-dihedral/" rel="bookmark" title="Kuperberg’s algorithm for the dihedral Hidden Subgroup Problem">Kuperberg’s algorithm for the dihedral Hidden Subgroup Problem</a></li><li><a href="/2025/08/22/2025-8-22-pretty-good-measurements/" rel="bookmark" title="Pretty Good Measurements and HSP">Pretty Good Measurements and HSP</a></li><li class="active"><a href="/2025/09/16/2025-9-16-distributed-quantum-advantage/" rel="bookmark" title="Distributed Quantum Advantage for Local Problems">Distributed Quantum Advantage for Local Problems</a></li><li><a href="/2025/10/12/2025-10-12-GHZ-game/" rel="bookmark" title="GHZ Game">GHZ Game</a></li>
         </ul>
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="概要">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="SuBonan"
       data-src="/images/avatar.jpg">
@@ -303,14 +335,14 @@ SuBonan = やがて、平凡な人になる</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">130</span>
-        <span class="name">posts</span>
+        <span class="count">131</span>
+        <span class="name">ポスト</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
         <span class="count">10</span>
-        <span class="name">categories</span>
+        <span class="name">カテゴリ</span>
       </a>
     </div>
 </nav>
@@ -323,27 +355,27 @@ SuBonan = やがて、平凡な人になる</title>
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>ホーム</a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i>プロフィール</a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>投稿</a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>アーカイブ</a>
   </li>
 
         
   <li class="item">
-    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>カテゴリ</a>
   </li>
 
   </ul>
@@ -356,12 +388,12 @@ SuBonan = やがて、平凡な人になる</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2025/09/14/2025-9-14-distributed-algorithms/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="/2025/09/14/2025-9-14-distributed-algorithms/" rel="prev" title="前の記事"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2025/09/24/2025-9-24-c-algebra-and-operator/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2025/09/24/2025-9-24-c-algebra-and-operator/" rel="next" title="次の記事"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -377,73 +409,23 @@ SuBonan = やがて、平凡な人になる</title>
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2>ランダムな記事</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2025/09/24/2025-9-24-c-algebra-and-operator/" title="C*-Algebra and Hilbert Space Operators">C*-Algebra and Hilbert Space Operators</a></span>
+    <span><a href="/2025/04/03/2025-4-3-modern-algebra/" title="应用近世代数 课堂记录">应用近世代数 课堂记录</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
-</div>
-
-    <span><a href="/2019/08/21/%E7%BA%AA%E5%BF%B5%E5%BE%90%E5%AD%90%E7%84%93/" title="纪念徐子焓">纪念徐子焓</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2021/06/16/%E5%85%B3%E4%BA%8E%E5%8F%B2%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84%E5%92%8C%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于史瓦西度规和拉格朗日方程的推导">关于史瓦西度规和拉格朗日方程的推导</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
-</div>
-
-    <span><a href="/2023/02/11/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%BC%98%E5%8C%96/" title="汇编语言乱七八糟的优化">汇编语言乱七八糟的优化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
-</div>
-
-    <span><a href="/2023/06/14/Database/" title="Introduction to Database">Introduction to Database</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
-</div>
-
-    <span><a href="/2022/02/07/MCMC-MH/" title="马尔科夫链-蒙特卡洛方法及其一个例子Metropolis-Hastings抽样">马尔科夫链-蒙特卡洛方法及其一个例子Metropolis-Hastings抽样</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="In - 数学杂记">- 数学杂记</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
 </div>
 
     <span><a href="/2023/06/10/JL-theorem/" title="Johnson-Lindenstrauss Lemma">Johnson-Lindenstrauss Lemma</a></span>
@@ -453,36 +435,86 @@ SuBonan = やがて、平凡な人になる</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E6%84%9F/" title="In - 杂感">- 杂感</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2002/08/20/%E5%94%AF%E6%9C%89%E6%80%9D%E5%BF%B5%E5%92%8C%E9%9A%90%E7%9E%92%E4%BB%8E%E6%9C%AA%E5%81%9C%E6%AD%A2/" title="唯有隐瞒和思念从未停止">唯有隐瞒和思念从未停止</a></span>
+    <span><a href="/2025/06/07/2025-6-7-symmetric-group-rep/" title="对称群的表示">对称群的表示</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BB%98%E7%94%BB/" title="In - 绘画">- 绘画</a>
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
 </div>
 
-    <span><a href="/2021/02/14/%E8%89%B2%E5%BD%A9/" title="色彩">色彩</a></span>
+    <span><a href="/2022/12/27/Cryptography/" title="Cryptography">Cryptography</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="In - 计算机基础">- 计算机基础</a>
+<a href="/categories/%E5%A4%96%E8%AF%AD/" title="カテゴリ - 外语">- 外语</a>
 </div>
 
-    <span><a href="/2020/11/23/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" title="基数排序">基数排序</a></span>
+    <span><a href="/2021/02/04/%E6%97%A5%E6%9C%AC%E8%AF%AD%E9%87%8D%E7%82%B9/" title="日本語重点">日本語重点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/04/27/%E5%A4%8D%E6%9D%82%E6%80%A7%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%93%E8%AE%BA%E6%97%A0%E8%AF%81%E6%98%8E/" title="复杂性中的一些结论(无证明)">复杂性中的一些结论(无证明)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2022/04/22/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/" title="Numerical Analysis">Numerical Analysis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2023/03/16/%E7%BE%A4%E8%A1%A8%E7%A4%BA%E8%AE%BA%E5%92%8C%E7%89%B9%E5%BE%81%E6%A0%87/" title="群表示论和特征标">群表示论和特征标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E6%84%9F/" title="カテゴリ - 杂感">- 杂感</a>
+</div>
+
+    <span><a href="/2021/06/26/%E5%8F%A4%E6%80%AA%E7%9A%84%E4%BA%BA/" title="古怪的人">古怪的人</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E8%AE%B0/" title="カテゴリ - 数学杂记">- 数学杂记</a>
+</div>
+
+    <span><a href="/2025/03/30/2025-3-30-group-action/" title="Group Action, Orbits and Stabilizer">Group Action, Orbits and Stabilizer</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2>最近のコメント</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -509,15 +541,15 @@ SuBonan = やがて、平凡な人になる</title>
   var LOCAL = {
     path: '2025/09/16/2025-9-16-distributed-quantum-advantage/',
     favicon: {
-      show: "（●´3｀●）Goooood",
-      hide: "(´Д｀)Booooom"
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
     },
     search : {
-      placeholder: "Search for Posts",
-      empty: "We didn't find any results for the search: ${query}",
-      stats: "${hits} results found in ${time} ms"
+      placeholder: "検索…",
+      empty: "「 ${query} 」については何も見つかりませんでした",
+      stats: "${time} ms以内に ${hits} 件の結果が見つかりました"
     },
-    valine: true,fancybox: true,copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    valine: true,fancybox: true,copyright: 'コピーは成功しました。 <br> 再印刷については、 ％s 契約に従ってください。',
     ignores : [
       function(uri) {
         return uri.includes('#');
