@@ -1,0 +1,196 @@
+<!--
+ * @Author: SuBonan
+ * @Date: 2023-01-11 10:49:36
+ * @LastEditTime: 2023-01-16 20:53:26
+ * @FilePath: \shadowc:\Users\NaiDeKudasai\OneDrive - mail.sdu.edu.cn\SuBonan\Blog\source\computer-graphics\index.html
+ * @Github: https://github.com/SugarSBN
+ * これなに、これなに、これない、これなに、これなに、これなに、ねこ！ヾ(*´∀｀*)ﾉ
+-->
+<html>
+    <head>
+        <script id = "shadow-fragment-shader" type = "x-shader/x-fragment">
+          #version 300 es
+          precision mediump float;
+          out vec4 vColor;
+          void main(){
+             vColor = vec4(0.0, 0.0, 0.0, gl_FragCoord.z);
+          }
+        </script>
+        <script id = "shadow-vertex-shader" type = "x-shader/x-vertex">
+          #version 300 es
+
+          in vec4 aPosition;
+          uniform mat4 u_MvpMatrix;
+
+          void main(){
+            gl_Position = u_MvpMatrix * aPosition;
+          }
+        </script>
+        <script id = "fragment-shader" type = "x-shader/x-fragment">
+          #version 300 es
+
+
+
+          precision mediump float;
+          
+          uniform sampler2D u_ShadowMap;
+          
+          in vec4 vColor;
+          out vec4 fColor;
+          in vec4 ambient_color;
+          
+          in vec4 vertex_relative_to_light;
+          uniform bool is_shadowed;
+          void main()
+          {
+              if (!is_shadowed) {
+                  fColor = vColor;
+                  return;
+              }
+              vec3 shadowCoord = (vertex_relative_to_light.xyz/vertex_relative_to_light.w) / 2.0 + 0.5;
+          
+              
+              vec4 rgbaDepth = texture(u_ShadowMap, shadowCoord.xy);
+              float depth = rgbaDepth.a;
+          
+              if (shadowCoord.z > depth + 0.00001) {
+                  fColor = ambient_color;
+              } else {
+                  fColor = vColor;
+              }
+          }
+        </script>
+        <script id = "vertex-shader" type = "x-shader/x-vertex">
+          #version 300 es
+
+          // assume both position and normal are in homogeneous form
+          
+          in vec4 aPosition;
+          in vec4 aNormal;
+          
+          out vec4 vColor;
+          
+          uniform mat4 modelMatrix;
+          uniform vec4 ambientProduct, diffuseProduct, specularProduct;
+          uniform mat4 viewMatrix;
+          uniform mat4 projectionMatrix;
+          uniform vec4 lightPosition;
+          uniform float shininess;
+          
+          uniform mat4 u_MvpMatrix;
+          out vec4 vertex_relative_to_light;
+          out vec4 ambient_color;
+          
+          void
+          main()
+          {
+              vertex_relative_to_light = u_MvpMatrix * modelMatrix * aPosition;
+          
+              // pos is vertex position in eye coordinates
+          
+              vec3 pos = (viewMatrix * modelMatrix * aPosition).xyz;
+          
+              // vector from vertex position to light source
+          
+              vec3 L;
+          
+              // check for directional light
+          
+              if(lightPosition.w == 0.0) L = normalize((viewMatrix*lightPosition).xyz);
+              else L = normalize((viewMatrix*lightPosition).xyz - pos);
+          
+              // Because the eye point the is at the orgin
+              // the vector from the vertex position to the eye is
+          
+              vec3 E = -normalize(pos);
+          
+              // halfway vector
+          
+              vec3 H = normalize(L + E);
+          
+              // Transform vertex normal into eye coordinates
+          
+              // vec3 N = normalize( uNormalMatrix*vNormal.xyz);
+          
+              // as long as there is no nonuniform scaling
+              // we don't need the normal matrix and can use
+          
+              vec3 N = normalize((viewMatrix*modelMatrix*aNormal).xyz);
+          
+              // Compute terms in the illumination equation
+              vec4 ambient = ambientProduct;
+          
+              float Kd = max(dot(L, N), 0.0);
+              vec4  diffuse = Kd*diffuseProduct;
+          
+              float Ks = pow(max(dot(N, H), 0.0), shininess);
+              vec4  specular = Ks * specularProduct;
+          
+              if( dot(L, N) < 0.0 ) {
+            specular = vec4(0.0, 0.0, 0.0, 1.0);
+              }
+          
+              gl_Position = projectionMatrix * viewMatrix * modelMatrix * aPosition;
+          
+              float d = length(viewMatrix * modelMatrix * aPosition - viewMatrix * lightPosition);
+              
+              vColor = ambient + (diffuse + specular) / (0.01 * d * d + 0.01 * d);
+              ambient_color = ambient;
+              
+              vColor.a = 1.0;
+          }
+
+	
+        </script>
+        <script src="/js/src/computer-graphics-js/jquery.js"></script>
+        <script src = "/js/src/computer-graphics-js/initShader.js"></script>
+        <script src = "/js/src/computer-graphics-js/MV.js"></script>
+        <script src = "/js/src/computer-graphics-js/vertices.js"></script>
+        <script src = "/js/src/computer-graphics-js/patches.js"></script>
+        <script src = "/js/src/computer-graphics-js/camera.js"></script>
+        <script src = "/js/src/computer-graphics-js/addPoints.js"></script>
+        <script src = "/js/src/computer-graphics-js/object.js"></script>
+        <script src = "/js/src/computer-graphics-js/animation.js"></script>
+        <script src = "/js/src/computer-graphics-js/main.js"></script>
+        <style>
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            div {
+                display: flat;
+            }
+            html, body {
+              height: 100%;
+              width: 100%;
+            }
+            canvas {
+              display: block;
+              background: #D6F8FF;
+            }
+          </style>
+          <script type="text/javascript">
+            $(function() {
+              //添加窗口尺寸改变响应监听
+              $(window).resize(resizeCanvas);
+              //页面加载后先设置一下canvas大小
+              resizeCanvas();
+            });
+       
+            //窗口尺寸改变响应（修改canvas大小）
+            function resizeCanvas() {
+              $("#gl-canvas").attr("width", $(window).get(0).innerWidth);
+              $("#gl-canvas").attr("height", $(window).get(0).innerHeight);
+              var aspect = window.innerHeight / window.innerWidth;
+              projectionMatrix = perspective(45.0, 1.0 / aspect, 0.1, 100.0);
+              gl.uniformMatrix4fv(gl.getUniformLocation(program, "projectionMatrix"), false, flatten(projectionMatrix));
+              gl.viewport(0, 0, window.innerWidth, window.innerHeight); 
+            };
+          </script>
+    </head>
+    <body>
+        <canvas id = "gl-canvas" width = "512" height = "512">
+            Your browser does not support the HTML5 canvas element!
+        </canvas>
+    </body>
+</html>
